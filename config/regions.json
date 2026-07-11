@@ -1,0 +1,129 @@
+{
+  "defaultRegionId": "lee-county-fl",
+  "regions": [
+    {
+      "id": "lee-county-fl",
+      "name": "Lee County",
+      "county": "Lee",
+      "state": "FL",
+      "bounds": {
+        "west": -82.28,
+        "east": -81.6,
+        "south": 26.35,
+        "north": 26.78
+      },
+      "center": { "lat": 26.6, "lng": -81.9 },
+      "cities": ["Cape Coral", "Fort Myers"],
+      "sources": [
+        {
+          "id": "lee-library-storytimes",
+          "name": "Lee County Library System — Storytimes",
+          "type": "municipal",
+          "regionId": "lee-county-fl",
+          "url": "https://www.leelibrary.net/events",
+          "parser": "generic-jsonld",
+          "venue": {
+            "name": "Lee County Library (Downtown Fort Myers)",
+            "lat": 26.6428,
+            "lng": -81.8723,
+            "address": "2050 Lee St, Fort Myers, FL 33901"
+          },
+          "enabled": true
+        },
+        {
+          "id": "capecoral-parks-rec",
+          "name": "City of Cape Coral — Parks & Recreation",
+          "type": "municipal",
+          "regionId": "lee-county-fl",
+          "url": "https://www.capecoral.gov/calendar",
+          "parser": "generic-list",
+          "selectors": {
+            "item": ".calendar-event",
+            "title": ".event-title",
+            "date": ".event-date",
+            "link": "a",
+            "description": ".event-summary"
+          },
+          "venue": {
+            "name": "Cape Coral Parks & Recreation",
+            "lat": 26.5629,
+            "lng": -81.9495,
+            "address": "1015 Cultural Park Blvd, Cape Coral, FL 33990"
+          },
+          "enabled": true
+        },
+        {
+          "id": "fortmyers-city-events",
+          "name": "City of Fort Myers — Community Events",
+          "type": "municipal",
+          "regionId": "lee-county-fl",
+          "url": "https://www.cityftmyers.com/calendar.aspx",
+          "parser": "generic-list",
+          "selectors": {
+            "item": ".listItem",
+            "title": ".title",
+            "date": ".date",
+            "link": "a"
+          },
+          "venue": {
+            "name": "City of Fort Myers",
+            "lat": 26.6406,
+            "lng": -81.8723,
+            "address": "2200 Second St, Fort Myers, FL 33901"
+          },
+          "enabled": true
+        },
+        {
+          "id": "imag-history-science",
+          "name": "IMAG History & Science Center",
+          "type": "venue",
+          "regionId": "lee-county-fl",
+          "url": "https://theimag.org/events/",
+          "parser": "generic-jsonld",
+          "venue": {
+            "name": "IMAG History & Science Center",
+            "lat": 26.6449,
+            "lng": -81.8709,
+            "address": "2000 Cranford Ave, Fort Myers, FL 33916"
+          },
+          "enabled": true
+        },
+        {
+          "id": "lakes-regional-library",
+          "name": "Lakes Regional Library — Family Programs",
+          "type": "venue",
+          "regionId": "lee-county-fl",
+          "url": "https://www.leelibrary.net/lakes",
+          "parser": "generic-jsonld",
+          "venue": {
+            "name": "Lakes Regional Library",
+            "lat": 26.5772,
+            "lng": -81.8807,
+            "address": "15290 Bass Rd, Fort Myers, FL 33919"
+          },
+          "enabled": true
+        },
+        {
+          "id": "rotary-park-cape",
+          "name": "Rotary Park Environmental Center — Community Board",
+          "type": "community",
+          "regionId": "lee-county-fl",
+          "url": "https://www.capecoral.gov/rotary-park",
+          "parser": "generic-list",
+          "selectors": {
+            "item": ".program",
+            "title": ".program-name",
+            "date": ".program-date"
+          },
+          "venue": {
+            "name": "Rotary Park Environmental Center",
+            "lat": 26.5417,
+            "lng": -81.9998,
+            "address": "5505 Rose Garden Rd, Cape Coral, FL 33914"
+          },
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}

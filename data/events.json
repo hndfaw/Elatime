@@ -1,0 +1,359 @@
+{
+  "generatedAt": "2026-07-11T11:00:35.968Z",
+  "schemaVersion": 1,
+  "regionIds": [
+    "lee-county-fl"
+  ],
+  "events": [
+    {
+      "id": "evt_2d3746d5",
+      "title": "Toddler Storytime: Songs & Rhymes",
+      "description": "Lap-sit stories, songs, and rhymes for toddlers ages 1-3 and their grownups. Free, no registration.",
+      "category": "storytime",
+      "ageBands": [
+        "toddler"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "lee-library-storytimes",
+      "venueName": "Lee County Library (Downtown Fort Myers)",
+      "address": "2050 Lee St, Fort Myers, FL 33901",
+      "location": {
+        "lat": 26.6428,
+        "lng": -81.8723
+      },
+      "startsAt": "2026-07-12T15:00:00.000Z",
+      "endsAt": "2026-07-12T16:00:00.000Z",
+      "isFree": true,
+      "price": "Free",
+      "url": "https://www.leelibrary.net/events",
+      "tags": [
+        "municipal",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.968Z"
+    },
+    {
+      "id": "evt_842ebd0f",
+      "title": "Open Play at Cultural Park",
+      "description": "Drop-in open play on the toddler playground with bubbles and sidewalk chalk. All ages welcome.",
+      "category": "playground",
+      "ageBands": [
+        "toddler"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "capecoral-parks-rec",
+      "venueName": "Cape Coral Parks & Recreation",
+      "address": "1015 Cultural Park Blvd, Cape Coral, FL 33990",
+      "location": {
+        "lat": 26.5629,
+        "lng": -81.9495
+      },
+      "startsAt": "2026-07-13T14:00:00.000Z",
+      "endsAt": "2026-07-13T16:00:00.000Z",
+      "isFree": true,
+      "price": "Free",
+      "url": "https://www.capecoral.gov/calendar",
+      "tags": [
+        "municipal",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.969Z"
+    },
+    {
+      "id": "evt_98f8a713",
+      "title": "Music & Movement for Tots",
+      "description": "Shake, sing, and dance with scarves and instruments. Toddlers 1-3 with a caregiver.",
+      "category": "music",
+      "ageBands": [
+        "toddler"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "lakes-regional-library",
+      "venueName": "Lakes Regional Library",
+      "address": "15290 Bass Rd, Fort Myers, FL 33919",
+      "location": {
+        "lat": 26.5772,
+        "lng": -81.8807
+      },
+      "startsAt": "2026-07-13T15:00:00.000Z",
+      "endsAt": "2026-07-13T16:00:00.000Z",
+      "isFree": true,
+      "price": "Free",
+      "url": "https://www.leelibrary.net/lakes",
+      "tags": [
+        "venue",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.970Z"
+    },
+    {
+      "id": "evt_24c76fba",
+      "title": "Baby Lapsit Story Hour",
+      "description": "Gentle books and bounces for infants 0-18 months. A cozy introduction to the library for babies.",
+      "category": "storytime",
+      "ageBands": [
+        "infant"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "lee-library-storytimes",
+      "venueName": "Lee County Library (Downtown Fort Myers)",
+      "address": "2050 Lee St, Fort Myers, FL 33901",
+      "location": {
+        "lat": 26.6428,
+        "lng": -81.8723
+      },
+      "startsAt": "2026-07-14T14:00:00.000Z",
+      "endsAt": "2026-07-14T15:00:00.000Z",
+      "isFree": true,
+      "price": "Free",
+      "url": "https://www.leelibrary.net/events",
+      "tags": [
+        "municipal",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.968Z"
+    },
+    {
+      "id": "evt_dc77edfe",
+      "title": "Little Scientists: Sensory Lab",
+      "description": "A hands-on STEM sensory session designed for toddlers and preschoolers ages 2-5.",
+      "category": "class",
+      "ageBands": [
+        "toddler"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "imag-history-science",
+      "venueName": "IMAG History & Science Center",
+      "address": "2000 Cranford Ave, Fort Myers, FL 33916",
+      "location": {
+        "lat": 26.6449,
+        "lng": -81.8709
+      },
+      "startsAt": "2026-07-14T15:00:00.000Z",
+      "endsAt": "2026-07-14T16:00:00.000Z",
+      "isFree": false,
+      "price": "$12 admission",
+      "url": "https://theimag.org/events/",
+      "tags": [
+        "venue",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.970Z"
+    },
+    {
+      "id": "evt_15456a0b",
+      "title": "Butterfly Garden Explorers",
+      "description": "A guided outdoor walk through the butterfly house and boardwalk for families with little ones.",
+      "category": "outdoor",
+      "ageBands": [
+        "all-ages"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "rotary-park-cape",
+      "venueName": "Rotary Park Environmental Center",
+      "address": "5505 Rose Garden Rd, Cape Coral, FL 33914",
+      "location": {
+        "lat": 26.5417,
+        "lng": -81.9998
+      },
+      "startsAt": "2026-07-15T14:00:00.000Z",
+      "endsAt": "2026-07-15T15:00:00.000Z",
+      "isFree": true,
+      "price": "Free",
+      "url": "https://www.capecoral.gov/rotary-park",
+      "tags": [
+        "community",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.970Z"
+    },
+    {
+      "id": "evt_9163aa6c",
+      "title": "Downtown Family Music Jam",
+      "description": "Live kids music and a dance-along in the riverfront park. Free community event for all ages.",
+      "category": "music",
+      "ageBands": [
+        "all-ages"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "fortmyers-city-events",
+      "venueName": "City of Fort Myers",
+      "address": "2200 Second St, Fort Myers, FL 33901",
+      "location": {
+        "lat": 26.6406,
+        "lng": -81.8723
+      },
+      "startsAt": "2026-07-15T22:00:00.000Z",
+      "endsAt": "2026-07-16T00:00:00.000Z",
+      "isFree": true,
+      "price": "Free",
+      "url": "https://www.cityftmyers.com/calendar.aspx",
+      "tags": [
+        "municipal",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.970Z"
+    },
+    {
+      "id": "evt_f1d73554",
+      "title": "Family Nature Walk",
+      "description": "A ranger-led stroller-friendly nature walk for families with young kids. Outdoor.",
+      "category": "outdoor",
+      "ageBands": [
+        "all-ages"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "capecoral-parks-rec",
+      "venueName": "Cape Coral Parks & Recreation",
+      "address": "1015 Cultural Park Blvd, Cape Coral, FL 33990",
+      "location": {
+        "lat": 26.5629,
+        "lng": -81.9495
+      },
+      "startsAt": "2026-07-16T13:00:00.000Z",
+      "endsAt": "2026-07-16T14:00:00.000Z",
+      "isFree": true,
+      "url": "https://www.capecoral.gov/calendar",
+      "tags": [
+        "municipal",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.969Z"
+    },
+    {
+      "id": "evt_177a40a0",
+      "title": "Preschool Craft & Story Morning",
+      "description": "Stories followed by a hands-on art craft for pre-K children ages 3-5.",
+      "category": "arts-crafts",
+      "ageBands": [
+        "preschool"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "lee-library-storytimes",
+      "venueName": "Lee County Library (Downtown Fort Myers)",
+      "address": "2050 Lee St, Fort Myers, FL 33901",
+      "location": {
+        "lat": 26.6428,
+        "lng": -81.8723
+      },
+      "startsAt": "2026-07-17T15:00:00.000Z",
+      "endsAt": "2026-07-17T16:00:00.000Z",
+      "isFree": true,
+      "url": "https://www.leelibrary.net/events",
+      "tags": [
+        "municipal",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.968Z"
+    },
+    {
+      "id": "evt_7e444526",
+      "title": "STEAM Storytime",
+      "description": "Stories paired with a simple science experiment for preschoolers 3-5.",
+      "category": "storytime",
+      "ageBands": [
+        "preschool"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "lakes-regional-library",
+      "venueName": "Lakes Regional Library",
+      "address": "15290 Bass Rd, Fort Myers, FL 33919",
+      "location": {
+        "lat": 26.5772,
+        "lng": -81.8807
+      },
+      "startsAt": "2026-07-18T14:00:00.000Z",
+      "endsAt": "2026-07-18T15:00:00.000Z",
+      "isFree": true,
+      "price": "Free",
+      "url": "https://www.leelibrary.net/lakes",
+      "tags": [
+        "venue",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.970Z"
+    },
+    {
+      "id": "evt_14f860cf",
+      "title": "Saturday Market Kids Corner",
+      "description": "Toddler crafts and a petting zoo at the weekly downtown market.",
+      "category": "other",
+      "ageBands": [
+        "toddler"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "fortmyers-city-events",
+      "venueName": "City of Fort Myers",
+      "address": "2200 Second St, Fort Myers, FL 33901",
+      "location": {
+        "lat": 26.6406,
+        "lng": -81.8723
+      },
+      "startsAt": "2026-07-19T14:00:00.000Z",
+      "endsAt": "2026-07-19T17:00:00.000Z",
+      "isFree": true,
+      "price": "Free",
+      "url": "https://www.cityftmyers.com/calendar.aspx",
+      "tags": [
+        "municipal",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.970Z"
+    },
+    {
+      "id": "evt_66c86319",
+      "title": "Dino Discovery Day",
+      "description": "Meet life-size dinosaurs and dig for fossils. A kid favorite for ages 3-10.",
+      "category": "museum",
+      "ageBands": [
+        "preschool",
+        "kid"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "imag-history-science",
+      "venueName": "IMAG History & Science Center",
+      "address": "2000 Cranford Ave, Fort Myers, FL 33916",
+      "location": {
+        "lat": 26.6449,
+        "lng": -81.8709
+      },
+      "startsAt": "2026-07-20T16:00:00.000Z",
+      "endsAt": "2026-07-20T20:00:00.000Z",
+      "isFree": false,
+      "price": "$15 admission",
+      "url": "https://theimag.org/events/",
+      "tags": [
+        "venue",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.970Z"
+    },
+    {
+      "id": "evt_1b27a272",
+      "title": "Nature Tots: Pond Life",
+      "description": "Preschool nature program exploring the pond with nets and magnifiers. Ages 3-5.",
+      "category": "outdoor",
+      "ageBands": [
+        "preschool"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "rotary-park-cape",
+      "venueName": "Rotary Park Environmental Center",
+      "address": "5505 Rose Garden Rd, Cape Coral, FL 33914",
+      "location": {
+        "lat": 26.5417,
+        "lng": -81.9998
+      },
+      "startsAt": "2026-07-22T15:00:00.000Z",
+      "endsAt": "2026-07-22T16:00:00.000Z",
+      "isFree": true,
+      "price": "Free",
+      "url": "https://www.capecoral.gov/rotary-park",
+      "tags": [
+        "community",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-11T11:00:35.970Z"
+    }
+  ]
+}
