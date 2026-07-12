@@ -10,6 +10,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "scrape": "tsx scripts/scrape.ts",
+    "refresh": "tsx scripts/refresh.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },

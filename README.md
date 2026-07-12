@@ -130,6 +130,31 @@ re-scrapes de-duplicate instead of piling up.
 
 ---
 
+## Refreshing the data
+
+There is **no cron** — data refreshes are intentional and one-step. Two ways:
+
+**Locally** (recommended):
+
+```bash
+npm run refresh        # live scrape + safety gate, writes data/events.json
+git add data/events.json && git commit -m "chore(data): refresh" && git push
+```
+
+`npm run refresh` runs a **live** scrape and then a **safety gate**
+(`evaluateDataset`): the file is only overwritten when the new dataset is valid,
+non-empty, and fully in-bounds. If a scrape breaks (sources down, a parser
+regression), refresh exits non-zero and **leaves the existing good data
+untouched**. Use `npm run refresh -- --dry-run` to scrape + validate without
+writing.
+
+**In the cloud** (no local setup): Actions → **Manual Scrape** → *Run workflow*,
+with the `commit` input checked. It green-gates, scrapes, and commits.
+
+Once the site is deployed (e.g. on Vercel), pushing the refreshed
+`data/events.json` to `main` triggers a redeploy, so the live map updates. Any
+recurring cadence is driven on request by the Claude Code session — not GitHub.
+
 ## Adding a new region
 
 Elatime is modular by construction — **no code changes required**:

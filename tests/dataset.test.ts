@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import {
   safeLoadDataset,
   isValidEvent,
+  evaluateDataset,
   dataAgeHours,
   isStale,
   formatAge,
@@ -77,6 +78,40 @@ describe("isValidEvent", () => {
     expect(isValidEvent(goodEvent({ title: "" }))).toBe(false);
     expect(isValidEvent({ ...goodEvent(), location: { lat: "no", lng: 1 } })).toBe(false);
     expect(isValidEvent(null)).toBe(false);
+  });
+});
+
+describe("evaluateDataset (refresh safety gate)", () => {
+  it("passes a valid, in-bounds, non-empty dataset", () => {
+    const a = evaluateDataset(goodDataset([goodEvent()]));
+    expect(a.ok).toBe(true);
+    expect(a.eventCount).toBe(1);
+    expect(a.problems).toEqual([]);
+  });
+
+  it("fails an empty dataset", () => {
+    const a = evaluateDataset(goodDataset([]));
+    expect(a.ok).toBe(false);
+    expect(a.problems.join(" ")).toMatch(/no valid events/i);
+  });
+
+  it("fails when an event is outside its region bounds", () => {
+    const a = evaluateDataset(
+      goodDataset([goodEvent({ location: { lat: 40.0, lng: -74.0 } })])
+    );
+    expect(a.ok).toBe(false);
+    expect(a.problems.join(" ")).toMatch(/outside their region bounds/i);
+  });
+
+  it("fails when an event references an unknown region", () => {
+    const a = evaluateDataset(goodDataset([goodEvent({ regionId: "atlantis" })]));
+    expect(a.ok).toBe(false);
+    expect(a.problems.join(" ")).toMatch(/unknown region/i);
+  });
+
+  it("fails a malformed dataset", () => {
+    expect(evaluateDataset(null).ok).toBe(false);
+    expect(evaluateDataset({ events: [] }).ok).toBe(false);
   });
 });
 
