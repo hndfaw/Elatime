@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T16:52:53.972Z",
+  "generatedAt": "2026-07-12T20:32:13.395Z",
   "schemaVersion": 1,
   "regionIds": [
     "lee-county-fl"
@@ -18,8 +18,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-07-13T14:00:00.000Z",
       "endsAt": "2026-07-13T20:00:00.000Z",
@@ -29,7 +29,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_02d33122",
@@ -44,8 +44,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-07-13T14:30:00.000Z",
       "endsAt": "2026-07-13T15:00:00.000Z",
@@ -55,7 +55,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_0132df93",
@@ -70,8 +70,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-07-13T14:30:00.000Z",
       "endsAt": "2026-07-13T15:15:00.000Z",
@@ -81,58 +81,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_a36f9f16",
-      "title": "Kids Read Down Fines",
-      "category": "storytime",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-13T20:00:00.000Z",
-      "endsAt": "2026-07-13T21:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/kids-read-down-fines-141934",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_78cd0294",
-      "title": "Spring Creek Elementary Summer Learning",
-      "description": "Summer learning for students and families",
-      "category": "other",
-      "ageBands": [
-        "kid"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-13T20:00:00.000Z",
-      "endsAt": "2026-07-13T21:30:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/spring-creek-elementary-summer-learning-145319",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_e3dbd0ca",
@@ -147,8 +96,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-07-13T22:00:00.000Z",
       "endsAt": "2026-07-13T23:00:00.000Z",
@@ -158,7 +107,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_b5f19ad0",
@@ -173,8 +122,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-13T22:00:00.000Z",
       "endsAt": "2026-07-13T23:30:00.000Z",
@@ -184,7 +133,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_3731896c",
@@ -199,8 +148,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-07-14T14:00:00.000Z",
       "endsAt": "2026-07-14T17:00:00.000Z",
@@ -210,7 +159,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_820dee62",
@@ -237,7 +186,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:53:00.770Z"
+      "scrapedAt": "2026-07-12T20:32:20.108Z"
     },
     {
       "id": "evt_27776498",
@@ -252,8 +201,8 @@
       "venueName": "Lee County Library",
       "address": "1040 West 10th Street, Boca Grande, FL, 33921, US",
       "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
+        "lat": 26.7559245,
+        "lng": -82.2636131
       },
       "startsAt": "2026-07-14T14:30:00.000Z",
       "endsAt": "2026-07-18T20:30:00.000Z",
@@ -263,7 +212,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_6c26c7ed",
@@ -278,8 +227,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-14T15:00:00.000Z",
       "endsAt": "2026-07-14T16:00:00.000Z",
@@ -289,7 +238,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_b31ed837",
@@ -304,8 +253,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-07-14T18:00:00.000Z",
       "endsAt": "2026-07-14T19:00:00.000Z",
@@ -315,33 +264,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_b1b5d274",
-      "title": "Unearth a Story with Windell Campbell",
-      "description": "For ages 6-11. Experience the art of puppetry with the art of storytelling. This summer reading program uses songs, props and audience participation to bring stories to life. Registration is required and is only guaranteed until the start of the program. Space is limited to each registered child and one caregiver.",
-      "category": "storytime",
-      "ageBands": [
-        "kid"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-14T21:00:00.000Z",
-      "endsAt": "2026-07-14T22:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/kids-storytelling-Windell-Campbell-132959",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_21015e1c",
@@ -356,8 +279,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-07-14T22:00:00.000Z",
       "endsAt": "2026-07-14T23:00:00.000Z",
@@ -367,7 +290,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_1b497d0f",
@@ -382,8 +305,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-07-15T14:00:00.000Z",
       "endsAt": "2026-07-15T14:30:00.000Z",
@@ -393,7 +316,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_13fe5d90",
@@ -408,8 +331,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-07-15T14:00:00.000Z",
       "endsAt": "2026-07-15T15:00:00.000Z",
@@ -419,7 +342,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_1328b1d0",
@@ -434,8 +357,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-07-15T14:00:00.000Z",
       "endsAt": "2026-07-15T20:00:00.000Z",
@@ -445,7 +368,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_d6f17e4c",
@@ -460,8 +383,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-07-15T14:30:00.000Z",
       "endsAt": "2026-07-15T15:30:00.000Z",
@@ -471,7 +394,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_2ca5b902",
@@ -486,8 +409,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-15T15:00:00.000Z",
       "endsAt": "2026-07-15T16:00:00.000Z",
@@ -497,33 +420,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_613c5bc5",
-      "title": "Teen Escape Room: Jurassic Park Rogue Lab; Session 1",
-      "description": "For ages 12-18. The fences are down. The lead geneticist is gone. The park is yours to save. A high-level saboteur has wiped the park's security server and your team has 60 minutes to stop the park from losing total containment. The clock is ticking. Evolution waits for no one. Registration is required and begins two weeks before the program. Registration is only guaranteed until the start of the…",
-      "category": "outdoor",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-15T15:00:00.000Z",
-      "endsAt": "2026-07-15T16:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/teen-summer-reading-program-132953",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_88e02d51",
@@ -550,7 +447,7 @@
         "venue",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:53:04.072Z"
+      "scrapedAt": "2026-07-12T20:32:23.758Z"
     },
     {
       "id": "evt_bf2c8080",
@@ -565,8 +462,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-07-15T18:00:00.000Z",
       "endsAt": "2026-07-15T19:00:00.000Z",
@@ -576,33 +473,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_97626d2f",
-      "title": "Teen Escape Room: Jurassic Park Rogue Lab; Session 2",
-      "description": "For ages 12-18. The fences are down. The lead geneticist is gone. The park is yours to save. A high-level saboteur has wiped the park's security server and your team has 60 minutes to stop the park from losing total containment. The clock is ticking. Evolution waits for no one. Registration is required and begins two weeks before the program. Registration is only guaranteed until the start of the…",
-      "category": "outdoor",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-15T18:00:00.000Z",
-      "endsAt": "2026-07-15T19:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/copy-teen-escape-room-jurassic-park-rogue-lab-session-2-142080",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_3aa005eb",
@@ -617,8 +488,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-07-15T18:00:00.000Z",
       "endsAt": "2026-07-15T20:00:00.000Z",
@@ -628,7 +499,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_acd475e4",
@@ -642,8 +513,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-15T19:00:00.000Z",
       "endsAt": "2026-07-15T23:00:00.000Z",
@@ -653,7 +524,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_96c13abd",
@@ -668,8 +539,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-07-15T20:00:00.000Z",
       "endsAt": "2026-07-15T21:00:00.000Z",
@@ -679,33 +550,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_9357d63b",
-      "title": "Teen Escape Room: Jurassic Park Rogue Lab; Session 3",
-      "description": "For ages 12-18. The fences are down. The lead geneticist is gone. The park is yours to save. A high-level saboteur has wiped the park's security server and your team has 60 minutes to stop the park from losing total containment. The clock is ticking. Evolution waits for no one. Registration is required and begins two weeks before the program. Registration is only guaranteed until the start of the…",
-      "category": "outdoor",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-15T20:00:00.000Z",
-      "endsAt": "2026-07-15T21:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/teen-escape-room-jurassic-park-rogue-lab-session-3-142081",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_0183312c",
@@ -720,8 +565,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-07-16T14:00:00.000Z",
       "endsAt": "2026-07-16T14:45:00.000Z",
@@ -731,7 +576,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_864239fa",
@@ -758,7 +603,7 @@
         "community",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:53:05.300Z"
+      "scrapedAt": "2026-07-12T20:32:25.448Z"
     },
     {
       "id": "evt_bf89653e",
@@ -773,8 +618,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-07-16T14:30:00.000Z",
       "endsAt": "2026-07-16T15:30:00.000Z",
@@ -784,33 +629,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_360379b7",
-      "title": "Community Helper Storytime: Naples Therapeutic Riding Center",
-      "description": "For ages Birth - 5. The Naples Therapeutic Riding Center will share their Mini Horse Program which encourages literacy and brings therapeutic benefits to children through calm, connection and joy. This engaging summer reading storytime will create lasting memories with a visit from a special guest mini horse. Naples Therapeutic Riding Center serves children and adults with physical, social, and m…",
-      "category": "storytime",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-16T15:00:00.000Z",
-      "endsAt": "2026-07-16T16:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/birth-preschool-Community-Helper-NTRC-Storytime-133887",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_a23e960c",
@@ -825,8 +644,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-16T15:00:00.000Z",
       "endsAt": "2026-07-16T16:00:00.000Z",
@@ -836,7 +655,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_368bc478",
@@ -851,8 +670,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-07-16T15:00:00.000Z",
       "endsAt": "2026-07-16T16:00:00.000Z",
@@ -862,7 +681,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_b53aa434",
@@ -877,8 +696,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-07-16T18:00:00.000Z",
       "endsAt": "2026-07-16T19:30:00.000Z",
@@ -888,7 +707,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_62aa5875",
@@ -903,8 +722,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-07-16T18:00:00.000Z",
       "endsAt": "2026-07-16T20:00:00.000Z",
@@ -914,7 +733,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_fcba4fe8",
@@ -929,8 +748,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-07-16T18:30:00.000Z",
       "endsAt": "2026-07-16T19:30:00.000Z",
@@ -940,7 +759,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_bdab2d51",
@@ -955,8 +774,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-16T20:30:00.000Z",
       "endsAt": "2026-07-16T21:30:00.000Z",
@@ -966,7 +785,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_181a6fab",
@@ -992,7 +811,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:53:00.770Z"
+      "scrapedAt": "2026-07-12T20:32:20.108Z"
     },
     {
       "id": "evt_5c38fbc5",
@@ -1007,8 +826,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-07-17T14:00:00.000Z",
       "endsAt": "2026-07-17T14:30:00.000Z",
@@ -1018,7 +837,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_b6cfcbc6",
@@ -1033,8 +852,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-07-17T14:00:00.000Z",
       "endsAt": "2026-07-17T14:45:00.000Z",
@@ -1044,7 +863,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_ebfd7d46",
@@ -1059,8 +878,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-07-17T14:00:00.000Z",
       "endsAt": "2026-07-17T20:00:00.000Z",
@@ -1070,7 +889,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_56141645",
@@ -1085,8 +904,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-07-17T18:00:00.000Z",
       "endsAt": "2026-07-17T19:00:00.000Z",
@@ -1096,7 +915,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_e3b79067",
@@ -1111,8 +930,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-07-17T18:30:00.000Z",
       "endsAt": "2026-07-17T19:30:00.000Z",
@@ -1122,7 +941,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_01cf3865",
@@ -1136,8 +955,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-07-18T14:00:00.000Z",
       "endsAt": "2026-07-18T14:30:00.000Z",
@@ -1147,7 +966,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_7f1160a1",
@@ -1162,8 +981,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-07-18T14:00:00.000Z",
       "endsAt": "2026-07-18T16:00:00.000Z",
@@ -1173,7 +992,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_0014ba75",
@@ -1188,8 +1007,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-18T15:00:00.000Z",
       "endsAt": "2026-07-18T16:00:00.000Z",
@@ -1199,7 +1018,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_c0f13381",
@@ -1214,8 +1033,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-07-18T15:00:00.000Z",
       "endsAt": "2026-07-18T16:00:00.000Z",
@@ -1225,7 +1044,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_60e32188",
@@ -1239,8 +1058,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-07-18T16:00:00.000Z",
       "endsAt": "2026-07-18T20:00:00.000Z",
@@ -1250,7 +1069,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_02c73b55",
@@ -1264,8 +1083,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-07-18T17:00:00.000Z",
       "endsAt": "2026-07-18T18:00:00.000Z",
@@ -1275,7 +1094,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_a2bb72de",
@@ -1290,8 +1109,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-07-18T17:00:00.000Z",
       "endsAt": "2026-07-18T19:00:00.000Z",
@@ -1301,7 +1120,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_fe6af536",
@@ -1316,8 +1135,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-20T14:00:00.000Z",
       "endsAt": "2026-07-20T17:00:00.000Z",
@@ -1327,7 +1146,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_8e2acc7c",
@@ -1342,8 +1161,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-07-20T14:00:00.000Z",
       "endsAt": "2026-07-20T20:00:00.000Z",
@@ -1353,7 +1172,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_b5fdbdc0",
@@ -1368,8 +1187,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-07-20T14:30:00.000Z",
       "endsAt": "2026-07-20T15:00:00.000Z",
@@ -1379,7 +1198,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_937e7159",
@@ -1394,8 +1213,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-07-20T14:30:00.000Z",
       "endsAt": "2026-07-20T15:15:00.000Z",
@@ -1405,59 +1224,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_374d67f7",
-      "title": "Baby Social Hour",
-      "description": "For ages birth to 23 months. Designed especially for babies, this informal social hour offers a cozy space to play, move, and explore while caregivers connect and chat. Soft music will be playing in the background to create a calm, welcoming space for play and early socialization. No registration required. All supplies provided while they last. This event is a part of our summer reading program.",
-      "category": "storytime",
-      "ageBands": [
-        "infant"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-20T14:30:00.000Z",
-      "endsAt": "2026-07-20T15:30:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/baby-social-hour-142105",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_8d7c0d92",
-      "title": "Spring Creek Elementary Summer Learning",
-      "description": "Summer learning for students and families",
-      "category": "other",
-      "ageBands": [
-        "kid"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-20T20:00:00.000Z",
-      "endsAt": "2026-07-20T21:30:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/spring-creek-elementary-summer-learning-145320",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_2cea0a56",
@@ -1472,8 +1239,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-20T22:00:00.000Z",
       "endsAt": "2026-07-20T22:30:00.000Z",
@@ -1483,7 +1250,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_817ae998",
@@ -1498,8 +1265,8 @@
       "venueName": "Lee County Library",
       "address": "1040 West 10th Street, Boca Grande, FL, 33921, US",
       "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
+        "lat": 26.7559245,
+        "lng": -82.2636131
       },
       "startsAt": "2026-07-21T14:30:00.000Z",
       "endsAt": "2026-07-25T20:30:00.000Z",
@@ -1509,7 +1276,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_75f08e56",
@@ -1537,7 +1304,7 @@
         "venue",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:53:04.072Z"
+      "scrapedAt": "2026-07-12T20:32:23.758Z"
     },
     {
       "id": "evt_dc8c4419",
@@ -1552,8 +1319,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-07-21T18:00:00.000Z",
       "endsAt": "2026-07-21T19:00:00.000Z",
@@ -1563,7 +1330,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_fb5b2117",
@@ -1578,8 +1345,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-07-21T18:00:00.000Z",
       "endsAt": "2026-07-21T19:00:00.000Z",
@@ -1589,7 +1356,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_bb304d45",
@@ -1604,8 +1371,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-07-21T18:00:00.000Z",
       "endsAt": "2026-07-21T20:00:00.000Z",
@@ -1615,33 +1382,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_3cd21648",
-      "title": "Ranger Rob: Discover How You Affect the World",
-      "description": "For ages 6-11. Enjoy a special summer reading program from local naturalist Ranger Rob. His engaging presentation is designed for curious teens, bringing a hands-on experience to uncover what a large impact our small actions can have on the world around us. Registration is required and is only guaranteed until the start of the program. Space is limited to each registered child and one caregiver.",
-      "category": "storytime",
-      "ageBands": [
-        "kid"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-21T21:00:00.000Z",
-      "endsAt": "2026-07-21T22:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/kids-Ranger-Rob-133885",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_a88d3cc4",
@@ -1656,8 +1397,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-07-21T21:30:00.000Z",
       "endsAt": "2026-07-21T23:00:00.000Z",
@@ -1667,7 +1408,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_7984c5ed",
@@ -1682,8 +1423,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-07-21T22:00:00.000Z",
       "endsAt": "2026-07-21T23:00:00.000Z",
@@ -1693,7 +1434,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_41ad2194",
@@ -1708,8 +1449,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-07-22T14:00:00.000Z",
       "endsAt": "2026-07-22T15:00:00.000Z",
@@ -1719,7 +1460,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_73af7e65",
@@ -1734,8 +1475,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-07-22T14:00:00.000Z",
       "endsAt": "2026-07-22T17:00:00.000Z",
@@ -1745,7 +1486,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_41897792",
@@ -1760,8 +1501,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-07-22T14:00:00.000Z",
       "endsAt": "2026-07-22T20:00:00.000Z",
@@ -1771,7 +1512,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_964540fe",
@@ -1786,8 +1527,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-07-22T14:30:00.000Z",
       "endsAt": "2026-07-22T15:30:00.000Z",
@@ -1797,7 +1538,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_4358f1c5",
@@ -1812,8 +1553,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-07-22T14:30:00.000Z",
       "endsAt": "2026-07-22T15:30:00.000Z",
@@ -1823,7 +1564,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_7e3562b8",
@@ -1838,8 +1579,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-22T15:00:00.000Z",
       "endsAt": "2026-07-22T16:00:00.000Z",
@@ -1849,7 +1590,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_92a9576d",
@@ -1864,8 +1605,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-07-22T15:00:00.000Z",
       "endsAt": "2026-07-22T16:00:00.000Z",
@@ -1875,7 +1616,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_c606b149",
@@ -1890,8 +1631,8 @@
       "venueName": "Lee County Library",
       "address": "1651 Lee St, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6442804,
+        "lng": -81.8671148
       },
       "startsAt": "2026-07-22T18:00:00.000Z",
       "endsAt": "2026-07-22T20:00:00.000Z",
@@ -1901,7 +1642,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_4661a5bc",
@@ -1916,8 +1657,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-07-22T18:00:00.000Z",
       "endsAt": "2026-07-22T20:00:00.000Z",
@@ -1927,7 +1668,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_ee3e338e",
@@ -1941,8 +1682,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-22T19:00:00.000Z",
       "endsAt": "2026-07-22T23:00:00.000Z",
@@ -1952,7 +1693,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_936184ca",
@@ -1967,8 +1708,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-07-23T14:00:00.000Z",
       "endsAt": "2026-07-23T14:45:00.000Z",
@@ -1978,7 +1719,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_0f99eae9",
@@ -1993,8 +1734,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-07-23T14:30:00.000Z",
       "endsAt": "2026-07-23T15:30:00.000Z",
@@ -2004,7 +1745,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_d60fed52",
@@ -2020,8 +1761,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-07-23T14:30:00.000Z",
       "endsAt": "2026-07-23T15:30:00.000Z",
@@ -2031,7 +1772,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_a1b8e26b",
@@ -2046,8 +1787,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-07-23T15:00:00.000Z",
       "endsAt": "2026-07-23T16:00:00.000Z",
@@ -2057,33 +1798,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_56dcb871",
-      "title": "Community Helper Storytime: Solid Waste",
-      "description": "For ages Birth - 5. Celebrate our community helpers with a special visit from the Lee County Solid Waste and Recycling department. We'll learn about keeping our community clean and how recycling helps take care of our world! Registration is required and is only guaranteed until the start of the program. Space is limited to each registered child and one caregiver. This event is part of the Summer…",
-      "category": "storytime",
-      "ageBands": [
-        "kid"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-23T15:00:00.000Z",
-      "endsAt": "2026-07-23T16:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/birth-preschool-summer-program-133888",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_7dea7df4",
@@ -2098,8 +1813,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-23T15:00:00.000Z",
       "endsAt": "2026-07-23T16:00:00.000Z",
@@ -2109,7 +1824,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_72887d05",
@@ -2136,7 +1851,7 @@
         "community",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:53:05.300Z"
+      "scrapedAt": "2026-07-12T20:32:25.448Z"
     },
     {
       "id": "evt_04a7b14b",
@@ -2151,8 +1866,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-07-23T18:00:00.000Z",
       "endsAt": "2026-07-23T19:00:00.000Z",
@@ -2162,7 +1877,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_efda8444",
@@ -2177,8 +1892,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-07-23T18:00:00.000Z",
       "endsAt": "2026-07-23T20:00:00.000Z",
@@ -2188,7 +1903,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_484f9425",
@@ -2203,8 +1918,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-07-24T14:00:00.000Z",
       "endsAt": "2026-07-24T14:45:00.000Z",
@@ -2214,7 +1929,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_1ce47bb8",
@@ -2229,8 +1944,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-07-24T14:00:00.000Z",
       "endsAt": "2026-07-24T20:00:00.000Z",
@@ -2240,7 +1955,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_768e4b5e",
@@ -2255,8 +1970,8 @@
       "venueName": "Lee County Library",
       "address": "3095 Blount St., Fort Myers, FL, 33916, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6431889,
+        "lng": -81.8510371
       },
       "startsAt": "2026-07-25T15:00:00.000Z",
       "endsAt": "2026-07-25T17:00:00.000Z",
@@ -2266,7 +1981,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_1754d4a8",
@@ -2280,8 +1995,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-07-25T16:00:00.000Z",
       "endsAt": "2026-07-25T20:00:00.000Z",
@@ -2291,7 +2006,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_a50d9631",
@@ -2306,8 +2021,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-07-25T16:00:00.000Z",
       "endsAt": "2026-07-25T20:15:00.000Z",
@@ -2317,7 +2032,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_b3d72f6e",
@@ -2332,8 +2047,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-07-25T17:00:00.000Z",
       "endsAt": "2026-07-25T18:00:00.000Z",
@@ -2343,7 +2058,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_0bbdf44e",
@@ -2355,20 +2070,20 @@
       "regionId": "lee-county-fl",
       "sourceId": "lee-library-storytimes",
       "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
+      "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-07-25T18:00:00.000Z",
       "endsAt": "2026-07-25T19:00:00.000Z",
       "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/kids-read-down-fines-141941",
+      "url": "https://leelibrary.librarymarket.com/event/kids-read-down-fines-140269",
       "tags": [
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_8c87b363",
@@ -2393,7 +2108,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:53:03.085Z"
+      "scrapedAt": "2026-07-12T20:32:22.595Z"
     },
     {
       "id": "evt_03204f2d",
@@ -2408,8 +2123,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-07-27T14:00:00.000Z",
       "endsAt": "2026-07-27T20:00:00.000Z",
@@ -2419,33 +2134,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_02310f37",
-      "title": "Spring Creek Elementary Summer Learning",
-      "description": "Summer learning for students and families",
-      "category": "other",
-      "ageBands": [
-        "kid"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-27T20:00:00.000Z",
-      "endsAt": "2026-07-27T21:30:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/spring-creek-elementary-summer-learning-145321",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_20e22275",
@@ -2460,8 +2149,8 @@
       "venueName": "Lee County Library",
       "address": "1040 West 10th Street, Boca Grande, FL, 33921, US",
       "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
+        "lat": 26.7559245,
+        "lng": -82.2636131
       },
       "startsAt": "2026-07-28T14:30:00.000Z",
       "endsAt": "2026-08-01T20:30:00.000Z",
@@ -2471,7 +2160,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_7e3b1391",
@@ -2486,8 +2175,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-07-28T18:00:00.000Z",
       "endsAt": "2026-07-28T20:00:00.000Z",
@@ -2497,7 +2186,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_ba49f7ab",
@@ -2512,8 +2201,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-07-29T14:00:00.000Z",
       "endsAt": "2026-07-29T20:00:00.000Z",
@@ -2523,7 +2212,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_4e8fc227",
@@ -2537,8 +2226,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-07-29T19:00:00.000Z",
       "endsAt": "2026-07-29T23:00:00.000Z",
@@ -2548,7 +2237,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_e00f2a3d",
@@ -2563,8 +2252,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-07-30T13:45:00.000Z",
       "endsAt": "2026-07-30T16:30:00.000Z",
@@ -2574,7 +2263,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_7a57af5e",
@@ -2589,8 +2278,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-07-31T14:00:00.000Z",
       "endsAt": "2026-07-31T20:00:00.000Z",
@@ -2600,7 +2289,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_b1138ded",
@@ -2614,8 +2303,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-08-01T16:00:00.000Z",
       "endsAt": "2026-08-01T20:00:00.000Z",
@@ -2625,7 +2314,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_93803f40",
@@ -2639,8 +2328,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-08-01T17:00:00.000Z",
       "endsAt": "2026-08-01T18:00:00.000Z",
@@ -2650,7 +2339,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_cf60dc90",
@@ -2665,8 +2354,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-01T18:00:00.000Z",
       "endsAt": "2026-08-01T19:30:00.000Z",
@@ -2676,7 +2365,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_c3d9a92f",
@@ -2691,8 +2380,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-08-01T18:00:00.000Z",
       "endsAt": "2026-08-01T20:00:00.000Z",
@@ -2702,7 +2391,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_246e115a",
@@ -2717,8 +2406,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-08-03T14:00:00.000Z",
       "endsAt": "2026-08-03T20:00:00.000Z",
@@ -2728,33 +2417,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_b11f6f13",
-      "title": "Lego Club",
-      "description": "This program is intended for ages 3-11. All supplies provided. No registration required.",
-      "category": "other",
-      "ageBands": [
-        "preschool"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-08-03T19:00:00.000Z",
-      "endsAt": "2026-08-03T20:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/lego-club-146069",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f4c46f1f",
@@ -2769,8 +2432,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-08-04T04:00:00.000Z",
       "endsAt": "2026-08-04T04:00:00.000Z",
@@ -2780,7 +2443,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f1560d4b",
@@ -2806,7 +2469,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_423c613c",
@@ -2832,33 +2495,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_6662f5db",
-      "title": "Diamond Art Bookmarks for Teens",
-      "description": "Ages 11-18. Wind down the summer by joining us for a chill and fun time as we decorate pre-designed bookmarks (various designs) with rhinestones. Snack and talk while you work or simply enjoy the zen vibes. All snacks and supplies provided. This program is intended for attendees ages 11-18 to attend independently. Please speak with staff if caregiver assistance is needed.",
-      "category": "arts-crafts",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-08-04T21:30:00.000Z",
-      "endsAt": "2026-08-04T23:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/diamond-art-bookmarks-teens-145266",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_39412de0",
@@ -2873,8 +2510,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-08-05T14:00:00.000Z",
       "endsAt": "2026-08-05T20:00:00.000Z",
@@ -2884,7 +2521,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f1f95992",
@@ -2898,8 +2535,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-05T19:00:00.000Z",
       "endsAt": "2026-08-05T23:00:00.000Z",
@@ -2909,7 +2546,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_ce55f626",
@@ -2924,8 +2561,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-08-06T17:00:00.000Z",
       "endsAt": "2026-08-06T19:00:00.000Z",
@@ -2935,7 +2572,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_5bdce045",
@@ -2949,8 +2586,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-08-07T14:00:00.000Z",
       "endsAt": "2026-08-07T14:30:00.000Z",
@@ -2960,7 +2597,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_997ce856",
@@ -2975,8 +2612,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-08-07T14:00:00.000Z",
       "endsAt": "2026-08-07T20:00:00.000Z",
@@ -2986,7 +2623,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_986c0e02",
@@ -3001,8 +2638,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-08-08T14:00:00.000Z",
       "endsAt": "2026-08-08T16:00:00.000Z",
@@ -3012,7 +2649,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_505e0a1d",
@@ -3026,8 +2663,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-08-08T15:00:00.000Z",
       "endsAt": "2026-08-08T16:00:00.000Z",
@@ -3037,7 +2674,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_aec14855",
@@ -3052,8 +2689,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-08T15:00:00.000Z",
       "endsAt": "2026-08-08T16:00:00.000Z",
@@ -3063,7 +2700,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_418ef632",
@@ -3077,8 +2714,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-08-08T16:00:00.000Z",
       "endsAt": "2026-08-08T20:00:00.000Z",
@@ -3088,7 +2725,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_32ae5e5e",
@@ -3103,8 +2740,8 @@
       "venueName": "Lee County Library",
       "address": "3095 Blount St., Fort Myers, FL, 33916, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6431889,
+        "lng": -81.8510371
       },
       "startsAt": "2026-08-08T18:00:00.000Z",
       "endsAt": "2026-08-08T19:30:00.000Z",
@@ -3114,7 +2751,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_5494360a",
@@ -3129,8 +2766,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-08-10T14:00:00.000Z",
       "endsAt": "2026-08-10T20:00:00.000Z",
@@ -3140,32 +2777,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_7febd308",
-      "title": "Kids Read Down Fines",
-      "category": "storytime",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-08-10T20:00:00.000Z",
-      "endsAt": "2026-08-10T21:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/kids-read-down-fines-141935",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_52b3d838",
@@ -3180,8 +2792,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-11T18:30:00.000Z",
       "endsAt": "2026-08-11T19:00:00.000Z",
@@ -3191,7 +2803,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_63f11334",
@@ -3206,8 +2818,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-08-12T14:00:00.000Z",
       "endsAt": "2026-08-12T20:00:00.000Z",
@@ -3217,33 +2829,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_78f64fa2",
-      "title": "Drowning Prevention",
-      "description": "Drowning is one of the leading causes of accidental injury and death in young children, yet many incidents are preventable with the right knowledge and preparation. This informative and empowering talk helps parents understand their role in early drowning prevention and how to create safer experiences around water for their children.",
-      "category": "arts-crafts",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-08-12T15:00:00.000Z",
-      "endsAt": "2026-08-12T16:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/drowning-prevention-144040",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_8e8cf789",
@@ -3258,8 +2844,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-12T18:30:00.000Z",
       "endsAt": "2026-08-12T19:00:00.000Z",
@@ -3269,7 +2855,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f1f25209",
@@ -3284,8 +2870,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-08-12T18:30:00.000Z",
       "endsAt": "2026-08-12T19:30:00.000Z",
@@ -3295,7 +2881,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_a306957a",
@@ -3309,8 +2895,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-12T19:00:00.000Z",
       "endsAt": "2026-08-12T23:00:00.000Z",
@@ -3320,7 +2906,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_1816510a",
@@ -3335,8 +2921,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-08-13T18:00:00.000Z",
       "endsAt": "2026-08-13T20:00:00.000Z",
@@ -3346,7 +2932,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_25056a62",
@@ -3361,8 +2947,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-13T18:30:00.000Z",
       "endsAt": "2026-08-13T19:00:00.000Z",
@@ -3372,7 +2958,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_084d1e58",
@@ -3387,8 +2973,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-08-13T20:15:00.000Z",
       "endsAt": "2026-08-13T21:15:00.000Z",
@@ -3398,7 +2984,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_26509719",
@@ -3413,8 +2999,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-08-14T14:00:00.000Z",
       "endsAt": "2026-08-14T14:30:00.000Z",
@@ -3424,7 +3010,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_87846846",
@@ -3439,8 +3025,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-08-14T14:00:00.000Z",
       "endsAt": "2026-08-14T20:00:00.000Z",
@@ -3450,7 +3036,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_1328f2fd",
@@ -3465,8 +3051,8 @@
       "venueName": "Lee County Library",
       "address": "3095 Blount St., Fort Myers, FL, 33916, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6431889,
+        "lng": -81.8510371
       },
       "startsAt": "2026-08-15T14:00:00.000Z",
       "endsAt": "2026-08-15T16:00:00.000Z",
@@ -3476,33 +3062,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_97fd459d",
-      "title": "Community Author Storytime",
-      "description": "For ages birth to 5 with their caregiver. Meet local author Dana Eikenberg during this special storytime event. Enjoy a reading of her new book, Hank the Brave, and learn about her creative journey from idea to finished story. Registration is required and is only guaranteed until the start of the program.",
-      "category": "storytime",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-08-15T14:30:00.000Z",
-      "endsAt": "2026-08-15T15:30:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/authorstorytime",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_683076d5",
@@ -3516,8 +3076,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-08-15T14:30:00.000Z",
       "endsAt": "2026-08-15T15:30:00.000Z",
@@ -3527,7 +3087,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_30b08ef4",
@@ -3541,8 +3101,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-08-15T16:00:00.000Z",
       "endsAt": "2026-08-15T20:00:00.000Z",
@@ -3552,7 +3112,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_799bad41",
@@ -3566,8 +3126,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-08-15T17:00:00.000Z",
       "endsAt": "2026-08-15T18:00:00.000Z",
@@ -3577,7 +3137,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_431061f7",
@@ -3592,8 +3152,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-08-17T14:00:00.000Z",
       "endsAt": "2026-08-17T20:00:00.000Z",
@@ -3603,7 +3163,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f07ce452",
@@ -3618,8 +3178,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-17T18:30:00.000Z",
       "endsAt": "2026-08-17T21:00:00.000Z",
@@ -3629,7 +3189,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_66fbc0c8",
@@ -3644,8 +3204,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-17T22:00:00.000Z",
       "endsAt": "2026-08-17T22:30:00.000Z",
@@ -3655,7 +3215,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_316e1178",
@@ -3670,8 +3230,8 @@
       "venueName": "Lee County Library",
       "address": "1651 Lee St, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6442804,
+        "lng": -81.8671148
       },
       "startsAt": "2026-08-18T14:00:00.000Z",
       "endsAt": "2026-08-18T14:45:00.000Z",
@@ -3681,7 +3241,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_ffda1d71",
@@ -3696,8 +3256,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-08-18T18:00:00.000Z",
       "endsAt": "2026-08-18T20:00:00.000Z",
@@ -3707,7 +3267,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_1ba027a5",
@@ -3722,8 +3282,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-08-18T20:00:00.000Z",
       "endsAt": "2026-08-18T21:00:00.000Z",
@@ -3733,7 +3293,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_d0f90378",
@@ -3748,8 +3308,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-08-18T20:00:00.000Z",
       "endsAt": "2026-08-18T21:30:00.000Z",
@@ -3759,7 +3319,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_2a9ccd3a",
@@ -3773,8 +3333,8 @@
       "venueName": "Lee County Library",
       "address": "3095 Blount St., Fort Myers, FL, 33916, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6431889,
+        "lng": -81.8510371
       },
       "startsAt": "2026-08-18T20:30:00.000Z",
       "endsAt": "2026-08-18T22:00:00.000Z",
@@ -3784,7 +3344,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_089dd00b",
@@ -3799,8 +3359,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-08-18T22:00:00.000Z",
       "endsAt": "2026-08-18T23:00:00.000Z",
@@ -3810,7 +3370,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_e5517a0b",
@@ -3825,8 +3385,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-08-18T22:00:00.000Z",
       "endsAt": "2026-08-18T23:00:00.000Z",
@@ -3836,7 +3396,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_b781c179",
@@ -3851,8 +3411,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-08-19T14:00:00.000Z",
       "endsAt": "2026-08-19T14:30:00.000Z",
@@ -3862,7 +3422,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_cf8a5db6",
@@ -3877,8 +3437,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-08-19T14:00:00.000Z",
       "endsAt": "2026-08-19T14:45:00.000Z",
@@ -3888,7 +3448,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_bff6b5a1",
@@ -3903,8 +3463,8 @@
       "venueName": "Lee County Library",
       "address": "1651 Lee St, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6442804,
+        "lng": -81.8671148
       },
       "startsAt": "2026-08-19T14:00:00.000Z",
       "endsAt": "2026-08-19T14:45:00.000Z",
@@ -3914,7 +3474,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f3f1e811",
@@ -3929,8 +3489,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-08-19T14:00:00.000Z",
       "endsAt": "2026-08-19T20:00:00.000Z",
@@ -3940,7 +3500,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f9b453fa",
@@ -3955,8 +3515,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-19T14:30:00.000Z",
       "endsAt": "2026-08-19T15:00:00.000Z",
@@ -3966,33 +3526,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_c80cb0b0",
-      "title": "Community Helper Storytime: Bonita Springs Fire Dept.",
-      "description": "For ages Birth - 5. Celebrate our community helpers with a special visit from the Bonita Springs Fire Department. We’ll learn about fire safety and what firefighters do to help people in emergencies. Registration is required and is only guaranteed until the start of the program. Space is limited to each registered child and one caregiver. This program is part of the America250 celebration.",
-      "category": "storytime",
-      "ageBands": [
-        "kid"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-08-19T14:30:00.000Z",
-      "endsAt": "2026-08-19T15:30:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/Community-helper-storytime-firefighters-141019",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_12cb0730",
@@ -4007,8 +3541,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-19T18:30:00.000Z",
       "endsAt": "2026-08-19T19:00:00.000Z",
@@ -4018,7 +3552,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_a3ece293",
@@ -4032,8 +3566,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-19T19:00:00.000Z",
       "endsAt": "2026-08-19T23:00:00.000Z",
@@ -4043,7 +3577,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_2209a450",
@@ -4058,8 +3592,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-08-19T19:30:00.000Z",
       "endsAt": "2026-08-19T21:00:00.000Z",
@@ -4069,7 +3603,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_271dd100",
@@ -4084,8 +3618,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-08-20T14:00:00.000Z",
       "endsAt": "2026-08-20T14:45:00.000Z",
@@ -4095,7 +3629,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_beecacdb",
@@ -4111,8 +3645,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-08-20T14:30:00.000Z",
       "endsAt": "2026-08-20T15:30:00.000Z",
@@ -4122,7 +3656,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_08bfc6bc",
@@ -4138,8 +3672,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-08-20T14:30:00.000Z",
       "endsAt": "2026-08-20T15:30:00.000Z",
@@ -4149,7 +3683,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_248ea767",
@@ -4164,8 +3698,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-08-20T15:00:00.000Z",
       "endsAt": "2026-08-20T16:00:00.000Z",
@@ -4175,7 +3709,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_adcfc2c3",
@@ -4190,8 +3724,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-08-20T20:00:00.000Z",
       "endsAt": "2026-08-20T21:30:00.000Z",
@@ -4201,7 +3735,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_ada9e280",
@@ -4216,8 +3750,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-08-21T14:00:00.000Z",
       "endsAt": "2026-08-21T14:30:00.000Z",
@@ -4227,7 +3761,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_158d8291",
@@ -4242,8 +3776,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-08-21T14:00:00.000Z",
       "endsAt": "2026-08-21T14:30:00.000Z",
@@ -4253,7 +3787,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_c8edec6e",
@@ -4268,8 +3802,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-08-21T14:00:00.000Z",
       "endsAt": "2026-08-21T20:00:00.000Z",
@@ -4279,33 +3813,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_fe077c62",
-      "title": "Homeschool Social Hour",
-      "description": "For ages 3-13. Looking for a fun way to connect with other homeschool families? Join us at the library where parents can network, share resources, and exchange ideas while the kids enjoy activities, games, and more. Whether you’re new to homeschooling or a seasoned pro, this is a great opportunity to build community and have some fun. No registration required. All supplies provided.",
-      "category": "other",
-      "ageBands": [
-        "preschool"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-08-21T14:30:00.000Z",
-      "endsAt": "2026-08-21T15:30:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/homeschool-hangout-144144",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f38a6c27",
@@ -4319,8 +3827,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-08-22T14:30:00.000Z",
       "endsAt": "2026-08-22T15:30:00.000Z",
@@ -4330,7 +3838,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_d0e4d837",
@@ -4345,8 +3853,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-22T15:00:00.000Z",
       "endsAt": "2026-08-22T16:00:00.000Z",
@@ -4356,7 +3864,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_9038ed9c",
@@ -4371,8 +3879,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-08-22T15:00:00.000Z",
       "endsAt": "2026-08-22T16:00:00.000Z",
@@ -4382,7 +3890,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_10d2e892",
@@ -4396,8 +3904,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-08-22T16:00:00.000Z",
       "endsAt": "2026-08-22T20:00:00.000Z",
@@ -4407,7 +3915,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_11212d3e",
@@ -4422,8 +3930,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-08-22T17:00:00.000Z",
       "endsAt": "2026-08-22T18:30:00.000Z",
@@ -4433,7 +3941,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_0f916f84",
@@ -4447,8 +3955,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-08-22T18:00:00.000Z",
       "endsAt": "2026-08-22T19:00:00.000Z",
@@ -4458,7 +3966,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_7c3e3b06",
@@ -4473,8 +3981,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-08-22T18:00:00.000Z",
       "endsAt": "2026-08-22T20:00:00.000Z",
@@ -4484,7 +3992,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_d60ce641",
@@ -4499,8 +4007,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-08-24T14:00:00.000Z",
       "endsAt": "2026-08-24T20:00:00.000Z",
@@ -4510,7 +4018,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_41db8777",
@@ -4525,8 +4033,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-08-24T14:30:00.000Z",
       "endsAt": "2026-08-24T15:15:00.000Z",
@@ -4536,7 +4044,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_645d85f1",
@@ -4551,8 +4059,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-08-24T14:30:00.000Z",
       "endsAt": "2026-08-24T15:30:00.000Z",
@@ -4562,7 +4070,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_fb5b19d0",
@@ -4577,8 +4085,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-24T18:30:00.000Z",
       "endsAt": "2026-08-24T21:00:00.000Z",
@@ -4588,7 +4096,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f26b095a",
@@ -4603,8 +4111,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-24T22:00:00.000Z",
       "endsAt": "2026-08-24T22:30:00.000Z",
@@ -4614,7 +4122,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_aa08e5e2",
@@ -4629,8 +4137,8 @@
       "venueName": "Lee County Library",
       "address": "1651 Lee St, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6442804,
+        "lng": -81.8671148
       },
       "startsAt": "2026-08-25T14:00:00.000Z",
       "endsAt": "2026-08-25T15:30:00.000Z",
@@ -4640,7 +4148,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_7d0b6b28",
@@ -4655,8 +4163,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-08-25T14:30:00.000Z",
       "endsAt": "2026-08-25T15:30:00.000Z",
@@ -4666,7 +4174,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_3e32e4ed",
@@ -4681,8 +4189,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-08-25T22:00:00.000Z",
       "endsAt": "2026-08-25T22:45:00.000Z",
@@ -4692,7 +4200,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_db6efb3a",
@@ -4707,8 +4215,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-25T22:00:00.000Z",
       "endsAt": "2026-08-25T23:00:00.000Z",
@@ -4718,7 +4226,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_b119751f",
@@ -4733,8 +4241,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-08-25T22:00:00.000Z",
       "endsAt": "2026-08-25T23:00:00.000Z",
@@ -4744,7 +4252,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_4f5cc4c3",
@@ -4759,8 +4267,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-08-26T14:00:00.000Z",
       "endsAt": "2026-08-26T20:00:00.000Z",
@@ -4770,7 +4278,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_7cf3f79f",
@@ -4785,8 +4293,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-26T14:30:00.000Z",
       "endsAt": "2026-08-26T15:00:00.000Z",
@@ -4796,33 +4304,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_1b53aae2",
-      "title": "Mommy & Me Yoga: Family Edition",
-      "description": "For ages birth to 5 years and a caregiver. Join us for a welcoming Family Yoga class where caregivers can move, stretch and connect alongside their child. This all-levels class is designed for all ages, so bring a yoga mat or blanket and come as you are for movement, bonding and community. Registration is required. Water and juice boxes provided. Registration is only guaranteed until the start of…",
-      "category": "sports",
-      "ageBands": [
-        "kid"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-08-26T14:30:00.000Z",
-      "endsAt": "2026-08-26T15:15:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/mommyandme-yoga-141023",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_cda05966",
@@ -4837,8 +4319,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-26T18:30:00.000Z",
       "endsAt": "2026-08-26T19:00:00.000Z",
@@ -4848,7 +4330,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_3105b3e6",
@@ -4863,8 +4345,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-08-26T18:30:00.000Z",
       "endsAt": "2026-08-26T19:30:00.000Z",
@@ -4874,7 +4356,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_445e3e2d",
@@ -4888,8 +4370,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-26T19:00:00.000Z",
       "endsAt": "2026-08-26T23:00:00.000Z",
@@ -4899,7 +4381,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_305746ee",
@@ -4914,8 +4396,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-08-27T14:00:00.000Z",
       "endsAt": "2026-08-27T15:30:00.000Z",
@@ -4925,7 +4407,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_4f974cf9",
@@ -4941,8 +4423,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-08-27T14:30:00.000Z",
       "endsAt": "2026-08-27T15:30:00.000Z",
@@ -4952,7 +4434,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_6dddf685",
@@ -4967,8 +4449,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-08-27T14:30:00.000Z",
       "endsAt": "2026-08-27T15:30:00.000Z",
@@ -4978,7 +4460,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f0e49f5f",
@@ -4993,8 +4475,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-27T18:30:00.000Z",
       "endsAt": "2026-08-27T20:30:00.000Z",
@@ -5004,7 +4486,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_d9b4411c",
@@ -5020,8 +4502,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-08-28T14:00:00.000Z",
       "endsAt": "2026-08-28T14:30:00.000Z",
@@ -5031,7 +4513,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_c373d40b",
@@ -5046,8 +4528,8 @@
       "venueName": "Lee County Library",
       "address": "3095 Blount St., Fort Myers, FL, 33916, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6431889,
+        "lng": -81.8510371
       },
       "startsAt": "2026-08-28T14:00:00.000Z",
       "endsAt": "2026-08-28T15:00:00.000Z",
@@ -5057,7 +4539,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_8e97b075",
@@ -5072,8 +4554,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-08-28T14:00:00.000Z",
       "endsAt": "2026-08-28T20:00:00.000Z",
@@ -5083,7 +4565,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_c1793fea",
@@ -5097,8 +4579,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-08-29T14:00:00.000Z",
       "endsAt": "2026-08-29T14:30:00.000Z",
@@ -5108,7 +4590,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_1184e3df",
@@ -5122,8 +4604,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-08-29T14:00:00.000Z",
       "endsAt": "2026-08-29T14:30:00.000Z",
@@ -5133,7 +4615,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_4dc5df0a",
@@ -5148,8 +4630,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-08-29T14:00:00.000Z",
       "endsAt": "2026-08-29T16:00:00.000Z",
@@ -5159,33 +4641,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_9f457262",
-      "title": "Family Build-It",
-      "description": "For all ages. We will have a variety of building stations throughout the Youth Services Area. Drop in for building fun the whole family will enjoy! No registration required. All materials are provided.",
-      "category": "other",
-      "ageBands": [
-        "kid"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-08-29T14:30:00.000Z",
-      "endsAt": "2026-08-29T15:30:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/Family-build-it-144022",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_ea7ec9e3",
@@ -5200,8 +4656,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-08-29T15:00:00.000Z",
       "endsAt": "2026-08-29T16:00:00.000Z",
@@ -5211,7 +4667,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_0442294f",
@@ -5226,8 +4682,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-29T15:00:00.000Z",
       "endsAt": "2026-08-29T17:00:00.000Z",
@@ -5237,7 +4693,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f01c74b2",
@@ -5251,8 +4707,8 @@
       "venueName": "Lee County Library",
       "address": "3095 Blount St., Fort Myers, FL, 33916, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6431889,
+        "lng": -81.8510371
       },
       "startsAt": "2026-08-29T16:00:00.000Z",
       "endsAt": "2026-08-29T18:00:00.000Z",
@@ -5262,7 +4718,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_00902dbf",
@@ -5276,8 +4732,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-08-29T16:00:00.000Z",
       "endsAt": "2026-08-29T20:00:00.000Z",
@@ -5287,7 +4743,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_08375189",
@@ -5302,8 +4758,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-08-29T17:00:00.000Z",
       "endsAt": "2026-08-29T18:00:00.000Z",
@@ -5313,7 +4769,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_7008907e",
@@ -5328,8 +4784,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-08-29T17:00:00.000Z",
       "endsAt": "2026-08-29T18:00:00.000Z",
@@ -5339,32 +4795,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_0f4f8bf1",
-      "title": "Kids Read Down Fines",
-      "category": "storytime",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-08-29T18:00:00.000Z",
-      "endsAt": "2026-08-29T19:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/kids-read-down-fines-141942",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_91453aa7",
@@ -5379,8 +4810,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-08-29T18:00:00.000Z",
       "endsAt": "2026-08-29T20:00:00.000Z",
@@ -5390,7 +4821,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_3cc423c6",
@@ -5405,8 +4836,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-31T18:30:00.000Z",
       "endsAt": "2026-08-31T21:00:00.000Z",
@@ -5416,7 +4847,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_b2ca9084",
@@ -5431,8 +4862,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-08-31T22:00:00.000Z",
       "endsAt": "2026-08-31T22:30:00.000Z",
@@ -5442,7 +4873,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_29238a86",
@@ -5457,8 +4888,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-08-31T22:15:00.000Z",
       "endsAt": "2026-08-31T23:00:00.000Z",
@@ -5468,7 +4899,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_6305fae1",
@@ -5484,8 +4915,8 @@
       "venueName": "Lee County Library",
       "address": "1651 Lee St, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6442804,
+        "lng": -81.8671148
       },
       "startsAt": "2026-09-01T14:00:00.000Z",
       "endsAt": "2026-09-01T14:45:00.000Z",
@@ -5495,7 +4926,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_40a939ef",
@@ -5510,8 +4941,8 @@
       "venueName": "Lee County Library",
       "address": "1040 West 10th Street, Boca Grande, FL, 33921, US",
       "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
+        "lat": 26.7559245,
+        "lng": -82.2636131
       },
       "startsAt": "2026-09-01T14:30:00.000Z",
       "endsAt": "2026-09-05T20:30:00.000Z",
@@ -5521,7 +4952,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_91a2b6e1",
@@ -5536,8 +4967,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-09-01T20:00:00.000Z",
       "endsAt": "2026-09-01T21:00:00.000Z",
@@ -5547,7 +4978,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_25c30819",
@@ -5562,8 +4993,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-09-01T20:00:00.000Z",
       "endsAt": "2026-09-01T21:30:00.000Z",
@@ -5573,33 +5004,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_acf4e1e4",
-      "title": "Bad Art Night",
-      "description": "Ages 6-11. Let go of the fear of imperfection for tonight! This program is a chance to let your creativity and silliness out. Kids can create the wackiest and funkiest artwork using a variety of art material. Registration is required and is only guaranteed until the start of the program. All supplies provided while they last.",
-      "category": "arts-crafts",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-09-01T21:00:00.000Z",
-      "endsAt": "2026-09-01T22:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/kids-bad-art-148071",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_e4240c4e",
@@ -5614,8 +5019,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-09-01T22:00:00.000Z",
       "endsAt": "2026-09-01T22:30:00.000Z",
@@ -5625,7 +5030,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_abde896d",
@@ -5640,8 +5045,8 @@
       "venueName": "Lee County Library",
       "address": "1651 Lee St, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6442804,
+        "lng": -81.8671148
       },
       "startsAt": "2026-09-02T14:00:00.000Z",
       "endsAt": "2026-09-02T14:45:00.000Z",
@@ -5651,7 +5056,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_c0f30616",
@@ -5666,8 +5071,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-09-02T14:00:00.000Z",
       "endsAt": "2026-09-02T20:00:00.000Z",
@@ -5677,33 +5082,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_1d184f4d",
-      "title": "Storytime Social",
-      "description": "Ages birth to 5 years and their accompanying caregivers. Join us for a special storytime meet and greet! Meet our friendly librarians, enjoy a fun, shared storytime, and connect with other families before our upcoming storytime session begins. We will finish up with a simple craft and playtime to help children feel comfortable and excited for storytime. Registration is required and is only guaran…",
-      "category": "storytime",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-09-02T14:30:00.000Z",
-      "endsAt": "2026-09-02T15:30:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/storytime-social-144157",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_32d2d48d",
@@ -5718,8 +5097,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-09-02T15:00:00.000Z",
       "endsAt": "2026-09-02T16:00:00.000Z",
@@ -5729,7 +5108,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f63bf8a5",
@@ -5744,8 +5123,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-09-02T18:30:00.000Z",
       "endsAt": "2026-09-02T19:00:00.000Z",
@@ -5755,7 +5134,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_11d5c94e",
@@ -5769,8 +5148,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-09-02T19:00:00.000Z",
       "endsAt": "2026-09-02T23:00:00.000Z",
@@ -5780,7 +5159,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_6c1be96b",
@@ -5795,8 +5174,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-09-03T14:00:00.000Z",
       "endsAt": "2026-09-03T14:45:00.000Z",
@@ -5806,7 +5185,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_cb9b5b41",
@@ -5821,8 +5200,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-09-03T14:00:00.000Z",
       "endsAt": "2026-09-03T15:00:00.000Z",
@@ -5832,7 +5211,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_d88e1a04",
@@ -5847,8 +5226,8 @@
       "venueName": "Lee County Library",
       "address": "1040 West 10th Street, Boca Grande, FL, 33921, US",
       "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
+        "lat": 26.7559245,
+        "lng": -82.2636131
       },
       "startsAt": "2026-09-03T14:30:00.000Z",
       "endsAt": "2026-09-03T15:30:00.000Z",
@@ -5858,7 +5237,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_63963247",
@@ -5872,8 +5251,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-09-03T14:30:00.000Z",
       "endsAt": "2026-09-03T15:30:00.000Z",
@@ -5883,7 +5262,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_fba6a42e",
@@ -5898,8 +5277,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-09-03T14:30:00.000Z",
       "endsAt": "2026-09-03T15:30:00.000Z",
@@ -5909,7 +5288,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_cd3495ad",
@@ -5924,8 +5303,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-09-03T18:30:00.000Z",
       "endsAt": "2026-09-03T19:30:00.000Z",
@@ -5935,7 +5314,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_fb7f6368",
@@ -5950,8 +5329,8 @@
       "venueName": "Lee County Library",
       "address": "3095 Blount St., Fort Myers, FL, 33916, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6431889,
+        "lng": -81.8510371
       },
       "startsAt": "2026-09-04T14:00:00.000Z",
       "endsAt": "2026-09-04T15:00:00.000Z",
@@ -5961,7 +5340,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_46b05784",
@@ -5976,8 +5355,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-09-04T14:00:00.000Z",
       "endsAt": "2026-09-04T20:00:00.000Z",
@@ -5987,7 +5366,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f250cdde",
@@ -6002,8 +5381,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-09-04T14:30:00.000Z",
       "endsAt": "2026-09-04T15:30:00.000Z",
@@ -6013,7 +5392,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_29805e5c",
@@ -6028,8 +5407,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-09-05T14:00:00.000Z",
       "endsAt": "2026-09-05T16:00:00.000Z",
@@ -6039,7 +5418,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_edeb1ead",
@@ -6053,8 +5432,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-09-05T14:30:00.000Z",
       "endsAt": "2026-09-05T15:00:00.000Z",
@@ -6064,7 +5443,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_3aedfd68",
@@ -6078,8 +5457,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-09-05T16:00:00.000Z",
       "endsAt": "2026-09-05T20:00:00.000Z",
@@ -6089,7 +5468,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_2f571d0e",
@@ -6103,8 +5482,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-09-05T18:00:00.000Z",
       "endsAt": "2026-09-05T19:00:00.000Z",
@@ -6114,7 +5493,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_b675417b",
@@ -6129,8 +5508,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-09-05T18:00:00.000Z",
       "endsAt": "2026-09-05T20:00:00.000Z",
@@ -6140,7 +5519,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_64feaf69",
@@ -6155,8 +5534,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-09-08T14:00:00.000Z",
       "endsAt": "2026-09-08T14:30:00.000Z",
@@ -6166,7 +5545,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_beb3be68",
@@ -6181,8 +5560,8 @@
       "venueName": "Lee County Library",
       "address": "1651 Lee St, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6442804,
+        "lng": -81.8671148
       },
       "startsAt": "2026-09-08T14:00:00.000Z",
       "endsAt": "2026-09-08T14:30:00.000Z",
@@ -6192,7 +5571,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_c4c75c9a",
@@ -6206,8 +5585,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-09-08T14:30:00.000Z",
       "endsAt": "2026-09-08T15:00:00.000Z",
@@ -6217,7 +5596,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_1465c553",
@@ -6232,8 +5611,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-09-08T14:30:00.000Z",
       "endsAt": "2026-09-08T15:00:00.000Z",
@@ -6243,7 +5622,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_baf7452e",
@@ -6258,8 +5637,8 @@
       "venueName": "Lee County Library",
       "address": "1040 West 10th Street, Boca Grande, FL, 33921, US",
       "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
+        "lat": 26.7559245,
+        "lng": -82.2636131
       },
       "startsAt": "2026-09-08T14:30:00.000Z",
       "endsAt": "2026-09-12T20:30:00.000Z",
@@ -6269,7 +5648,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_ca1d485c",
@@ -6284,8 +5663,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-09-08T15:30:00.000Z",
       "endsAt": "2026-09-08T16:00:00.000Z",
@@ -6295,7 +5674,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_f7e24916",
@@ -6310,8 +5689,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-09-08T15:30:00.000Z",
       "endsAt": "2026-09-08T16:00:00.000Z",
@@ -6321,7 +5700,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_3ab60c9b",
@@ -6337,8 +5716,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-09-08T17:00:00.000Z",
       "endsAt": "2026-09-08T17:30:00.000Z",
@@ -6348,7 +5727,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_e9bf59fb",
@@ -6363,8 +5742,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-09-08T20:30:00.000Z",
       "endsAt": "2026-09-08T21:00:00.000Z",
@@ -6374,33 +5753,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
-    },
-    {
-      "id": "evt_c496c452",
-      "title": "Teen Boba Slime",
-      "description": "Ages 11-18. Let's get creative and mix up your own squishy masterpiece at our Boba Tea Slime program! Tweens and teens can customize their own batch of fluffy bubble tea slime, complete with \"tapioca pearl\" beads. Registration is required. All supplies provided. This program is intended for attendees ages 11 to 18 years to attend independently. Please speak with staff if caregiver assistance is n…",
-      "category": "arts-crafts",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "lee-library-storytimes",
-      "venueName": "Lee County Library",
-      "address": "10560 Reynolds Street, Bonita Springs, FL, 34135, US",
-      "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-09-08T22:00:00.000Z",
-      "endsAt": "2026-09-08T23:00:00.000Z",
-      "isFree": true,
-      "url": "https://leelibrary.librarymarket.com/event/teen-boba-slime-148072",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_ebe51ecc",
@@ -6416,8 +5769,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-09-09T14:00:00.000Z",
       "endsAt": "2026-09-09T14:30:00.000Z",
@@ -6427,7 +5780,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_c84908da",
@@ -6441,8 +5794,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-09-09T14:00:00.000Z",
       "endsAt": "2026-09-09T14:30:00.000Z",
@@ -6452,7 +5805,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_939c1713",
@@ -6466,8 +5819,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-09-09T14:00:00.000Z",
       "endsAt": "2026-09-09T14:45:00.000Z",
@@ -6477,7 +5830,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_2f183882",
@@ -6492,8 +5845,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-09-09T14:00:00.000Z",
       "endsAt": "2026-09-09T14:45:00.000Z",
@@ -6503,7 +5856,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_a588d5ff",
@@ -6518,8 +5871,8 @@
       "venueName": "Lee County Library",
       "address": "11560 Chapin Lane, Captiva, FL, 33924, US",
       "location": {
-        "lat": 26.448,
-        "lng": -82.11
+        "lat": 26.5201271,
+        "lng": -82.1917984
       },
       "startsAt": "2026-09-09T14:00:00.000Z",
       "endsAt": "2026-09-09T20:00:00.000Z",
@@ -6529,7 +5882,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_3dea1028",
@@ -6544,8 +5897,8 @@
       "venueName": "Lee County Library",
       "address": "519 Chiquita Blvd. N., Cape Coral, FL, 33993, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.6623589,
+        "lng": -82.0063131
       },
       "startsAt": "2026-09-09T14:30:00.000Z",
       "endsAt": "2026-09-09T15:00:00.000Z",
@@ -6555,7 +5908,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_3e1e08b6",
@@ -6570,8 +5923,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-09-09T14:30:00.000Z",
       "endsAt": "2026-09-09T15:30:00.000Z",
@@ -6581,7 +5934,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_8dcc3d66",
@@ -6595,8 +5948,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-09-09T15:00:00.000Z",
       "endsAt": "2026-09-09T15:30:00.000Z",
@@ -6606,7 +5959,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_d5193b47",
@@ -6620,8 +5973,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-09-09T15:00:00.000Z",
       "endsAt": "2026-09-09T16:00:00.000Z",
@@ -6631,7 +5984,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_b9c741bc",
@@ -6646,8 +5999,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-09-09T18:30:00.000Z",
       "endsAt": "2026-09-09T19:00:00.000Z",
@@ -6657,7 +6010,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_1d2c9c3c",
@@ -6672,8 +6025,8 @@
       "venueName": "Lee County Library",
       "address": "2421 Buckingham Rd, Fort Myers, FL, 33905-2413, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.7077613,
+        "lng": -81.7214883
       },
       "startsAt": "2026-09-09T18:30:00.000Z",
       "endsAt": "2026-09-09T19:30:00.000Z",
@@ -6683,7 +6036,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_7228eae7",
@@ -6697,8 +6050,8 @@
       "venueName": "Lee County Library",
       "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
       "location": {
-        "lat": 26.612,
-        "lng": -81.639
+        "lat": 26.6226182,
+        "lng": -81.7168974
       },
       "startsAt": "2026-09-09T19:00:00.000Z",
       "endsAt": "2026-09-09T23:00:00.000Z",
@@ -6708,7 +6061,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_34d81ccc",
@@ -6723,8 +6076,8 @@
       "venueName": "Lee County Library",
       "address": "15290 Bass Road, Fort Myers, FL, 33919, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.522427,
+        "lng": -81.9122994
       },
       "startsAt": "2026-09-09T21:45:00.000Z",
       "endsAt": "2026-09-09T22:45:00.000Z",
@@ -6734,7 +6087,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_bb23331a",
@@ -6748,8 +6101,8 @@
       "venueName": "Lee County Library",
       "address": "2450 First Street, Fort Myers, FL, 33901, US",
       "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
+        "lat": 26.6454329,
+        "lng": -81.8670403
       },
       "startsAt": "2026-09-10T14:00:00.000Z",
       "endsAt": "2026-09-10T14:30:00.000Z",
@@ -6759,7 +6112,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_19105780",
@@ -6774,8 +6127,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-09-10T14:00:00.000Z",
       "endsAt": "2026-09-10T14:30:00.000Z",
@@ -6785,7 +6138,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_1db714d5",
@@ -6801,8 +6154,8 @@
       "venueName": "Lee County Library",
       "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
       "location": {
-        "lat": 26.438,
-        "lng": -81.8067
+        "lat": 26.433552,
+        "lng": -81.7893063
       },
       "startsAt": "2026-09-10T14:00:00.000Z",
       "endsAt": "2026-09-10T14:30:00.000Z",
@@ -6812,7 +6165,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_3bfa1814",
@@ -6827,8 +6180,8 @@
       "venueName": "Lee County Library",
       "address": "1040 West 10th Street, Boca Grande, FL, 33921, US",
       "location": {
-        "lat": 26.6428,
-        "lng": -81.8723
+        "lat": 26.7559245,
+        "lng": -82.2636131
       },
       "startsAt": "2026-09-10T14:30:00.000Z",
       "endsAt": "2026-09-10T15:30:00.000Z",
@@ -6838,7 +6191,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_261aa6cb",
@@ -6852,8 +6205,8 @@
       "venueName": "Lee County Library",
       "address": "10701 Russell Road, Bokeelia, FL, 33922, US",
       "location": {
-        "lat": 26.68,
-        "lng": -82.15
+        "lat": 26.6158921,
+        "lng": -82.1199517
       },
       "startsAt": "2026-09-10T14:30:00.000Z",
       "endsAt": "2026-09-10T15:30:00.000Z",
@@ -6863,7 +6216,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_fc897750",
@@ -6878,8 +6231,8 @@
       "venueName": "Lee County Library",
       "address": "921 S.W. 39th Terrace, Cape Coral, FL, 33914, US",
       "location": {
-        "lat": 26.5629,
-        "lng": -81.9495
+        "lat": 26.5800237,
+        "lng": -81.9949652
       },
       "startsAt": "2026-09-10T15:00:00.000Z",
       "endsAt": "2026-09-10T15:30:00.000Z",
@@ -6889,7 +6242,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     },
     {
       "id": "evt_c7f36587",
@@ -6903,8 +6256,8 @@
       "venueName": "Lee County Library",
       "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
       "location": {
-        "lat": 26.717,
-        "lng": -81.8998
+        "lat": 26.6876539,
+        "lng": -81.8863673
       },
       "startsAt": "2026-09-10T15:00:00.000Z",
       "endsAt": "2026-09-10T16:00:00.000Z",
@@ -6914,7 +6267,85 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T16:52:53.972Z"
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
+    },
+    {
+      "id": "evt_cbf05a6f",
+      "title": "DIY Craft Club: Embroidered Tea Bag Bookmarks",
+      "description": "Join us in learning basic embroidery and sewing skills while creating a one-of-a-kind tea bag bookmark! Everyone will have enough time and materials for 1-2 bookmarks. Registration is required. Registration is guaranteed until the start of the program.",
+      "category": "arts-crafts",
+      "ageBands": [
+        "all-ages"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "lee-library-storytimes",
+      "venueName": "Lee County Library",
+      "address": "2001 N Tamiami Trail, North Fort Myers, FL, 33903, US",
+      "location": {
+        "lat": 26.6876539,
+        "lng": -81.8863673
+      },
+      "startsAt": "2026-09-10T18:00:00.000Z",
+      "endsAt": "2026-09-10T20:00:00.000Z",
+      "isFree": true,
+      "url": "https://leelibrary.librarymarket.com/event/diy-craft-club-140850",
+      "tags": [
+        "municipal",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
+    },
+    {
+      "id": "evt_902a5e92",
+      "title": "Teen Thursday: Pickle This!",
+      "description": "At this hands-on workshop led by Lee County 4-H, teens will learn how to turn fresh cucumbers into crunchy quick pickles—no canning required. Participants will explore the basics of food safety, flavor building, and simple kitchen science. By the end, they’ll have the skills (and confidence) to pickle just about anything! Open to ages 12- 18. This activity is part of the Teen Thursday program ser…",
+      "category": "class",
+      "ageBands": [
+        "all-ages"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "lee-library-storytimes",
+      "venueName": "Lee County Library",
+      "address": "881 Gunnery Road N, Lehigh Acres, FL, 33971, US",
+      "location": {
+        "lat": 26.6226182,
+        "lng": -81.7168974
+      },
+      "startsAt": "2026-09-10T18:30:00.000Z",
+      "endsAt": "2026-09-10T20:00:00.000Z",
+      "isFree": true,
+      "url": "https://leelibrary.librarymarket.com/event/teen-thursday-145169",
+      "tags": [
+        "municipal",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
+    },
+    {
+      "id": "evt_c0876335",
+      "title": "Read to Dogs",
+      "description": "No registration is required, but space is limited. Upon arrival, please visit the children's desk to pick up a ticket to receive a time slot.",
+      "category": "storytime",
+      "ageBands": [
+        "all-ages"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "lee-library-storytimes",
+      "venueName": "Lee County Library",
+      "address": "21100 Three Oaks Parkway, Estero, FL, 33928, US",
+      "location": {
+        "lat": 26.433552,
+        "lng": -81.7893063
+      },
+      "startsAt": "2026-09-10T20:00:00.000Z",
+      "endsAt": "2026-09-10T21:30:00.000Z",
+      "isFree": false,
+      "url": "https://leelibrary.librarymarket.com/event/read-dogs-146392",
+      "tags": [
+        "municipal",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-12T20:32:13.395Z"
     }
   ]
 }

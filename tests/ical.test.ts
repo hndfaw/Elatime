@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { parseIcal, icalDateToIso } from "@/lib/scraper/parsers";
+import { parseIcal, icalDateToIso, parseIcalGeo } from "@/lib/scraper/parsers";
 import { scrapeSource } from "@/lib/scraper";
 import { getEnabledSources } from "@/lib/regions";
 import type { ScrapeSource } from "@/lib/types";
@@ -24,6 +24,7 @@ SUMMARY:Baby Rhyme Time
 DTSTART;TZID=America/New_York:20260720T093000
 DTEND;TZID=America/New_York:20260720T101500
 DESCRIPTION:Rhymes and songs for babies and toddlers\\, ages 0-2.
+GEO:26.6623589;-82.0063131
 LOCATION:Cape Coral-Lee County Public Library
 URL:https://leelibrary.librarymarket.com/event/baby-rhyme-time-1
 END:VEVENT
@@ -55,6 +56,8 @@ describe("parseIcal", () => {
     expect(baby.description).toBe("Rhymes and songs for babies and toddlers, ages 0-2.");
     expect(baby.address).toBe("Cape Coral-Lee County Public Library");
     expect(baby.url).toContain("baby-rhyme-time");
+    // Precise coordinates come straight from the feed's GEO field.
+    expect(baby.location).toEqual({ lat: 26.6623589, lng: -82.0063131 });
 
     // Folded SUMMARY is reconstructed.
     expect(events.some((e) => e.title === "Summer Reading Program Crafts!")).toBe(true);
@@ -68,6 +71,21 @@ describe("parseIcal", () => {
     const crafts = events.find((e) => e.title.startsWith("Summer Reading"))!;
     // All-day 20260726 -> midnight Eastern -> 04:00 UTC.
     expect(crafts.startsAt).toBe("2026-07-26T04:00:00.000Z");
+  });
+});
+
+describe("parseIcalGeo", () => {
+  it("parses a valid GEO value", () => {
+    expect(parseIcalGeo("26.6623589;-82.0063131")).toEqual({
+      lat: 26.6623589,
+      lng: -82.0063131,
+    });
+  });
+  it("rejects missing, malformed, or null-island coordinates", () => {
+    expect(parseIcalGeo(undefined)).toBeUndefined();
+    expect(parseIcalGeo("not;geo")).toBeUndefined();
+    expect(parseIcalGeo("0;0")).toBeUndefined();
+    expect(parseIcalGeo("26.6")).toBeUndefined();
   });
 });
 

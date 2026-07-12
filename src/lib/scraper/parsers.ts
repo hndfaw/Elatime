@@ -444,7 +444,20 @@ function icalEventToRaw(props: Record<string, IcalProp>): RawEvent | null {
     endsAt: end,
     url: props.URL?.value?.trim() || undefined,
     address: location || undefined,
+    // Prefer the feed's real per-building GEO when present (precise geocoding).
+    location: parseIcalGeo(props.GEO?.value),
   };
+}
+
+/** Parse an iCal `GEO:lat;lng` value into a GeoPoint, or undefined. */
+export function parseIcalGeo(value?: string): GeoPoint | undefined {
+  if (!value) return undefined;
+  const [latStr, lngStr] = value.split(";");
+  const lat = Number(latStr);
+  const lng = Number(lngStr);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return undefined;
+  if (lat === 0 && lng === 0) return undefined;
+  return { lat, lng };
 }
 
 /** Convert an iCal date/date-time value to a UTC ISO string. */
