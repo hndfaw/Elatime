@@ -170,6 +170,13 @@ Elatime is modular by construction — **no code changes required**:
 
 ---
 
+## Deployment note
+
+When deploying, set **`NEXT_PUBLIC_SITE_URL`** to the site's origin (e.g.
+`https://elatime.vercel.app`) so OpenGraph/Twitter link-preview image URLs
+resolve absolutely. The favicon (`src/app/icon.svg`) and the generated social
+card (`src/app/opengraph-image.tsx`) need no configuration.
+
 ## Automation model — no GitHub cron
 
 Elatime deliberately has **no scheduled GitHub Actions**. There is no cron, and

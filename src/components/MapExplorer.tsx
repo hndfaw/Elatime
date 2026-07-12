@@ -8,6 +8,7 @@ import MapCanvas from "./MapCanvas";
 import EventDetail from "./EventDetail";
 import EventList from "./EventList";
 import Filters from "./Filters";
+import AboutData from "./AboutData";
 
 interface MapExplorerProps {
   region: Region;
@@ -161,6 +162,8 @@ export default function MapExplorer({
         {hasData && freshness && !freshness.stale && (
           <p className="text-[11px] text-white/30">Data refreshed {freshness.age}</p>
         )}
+
+        <AboutData />
       </aside>
 
       {/* Map */}
