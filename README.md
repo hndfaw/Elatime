@@ -111,7 +111,17 @@ Each source declares a **parser**:
 - `generic-jsonld` — extracts `schema.org/Event` JSON-LD (single, array, or
   `@graph`).
 - `generic-list` — walks a configured list/detail DOM via CSS selectors.
+- `rss` — parses an RSS/XML calendar feed (e.g. a CivicEngage municipal feed),
+  reading the date/time out of the embedded HTML description and converting
+  Eastern wall-clock times to UTC (DST-aware, via `Intl`).
 - `fixture` — fixtures only.
+
+**Real live source today:** the City of Fort Myers CivicEngage RSS feed
+(`fl-fortmyers.civicplus.com`) is wired live with a **kid-relevance filter**
+(`kidFilter`) that strips government meetings/budget hearings and keeps only
+family/kid events. Other sources currently fall back to fixtures pending
+per-source live work (see the open backlog). Run `npm run scrape -- --live` to
+pull the real feed.
 
 Every raw event is normalized: category & age bands are inferred from text,
 free/ticketed is detected, coordinates fall back to the source venue, and
