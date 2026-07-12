@@ -1,6 +1,13 @@
 // Core domain model for Elatime.
 // These types are shared by the scraper (Node) and the frontend (Next.js).
 
+/**
+ * Dataset schema version. Lives here (not in the scraper) so frontend code can
+ * validate committed data without importing the scraper — which would drag
+ * axios/cheerio into the client bundle.
+ */
+export const SCHEMA_VERSION = 1;
+
 /** A geographic bounding box in WGS84 degrees. */
 export interface GeoBounds {
   /** Minimum longitude (west edge). */

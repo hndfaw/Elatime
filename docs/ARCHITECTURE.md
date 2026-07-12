@@ -130,6 +130,22 @@ Vitest + Testing Library, in `tests/`:
 
 Rule: **merge only on a fully green suite.**
 
+## 7a. Resilience (empty / stale / malformed data)
+
+The committed dataset is machine-generated, so the frontend treats it as
+untrusted input:
+
+- **`safeLoadDataset`** (`src/lib/dataset.ts`) validates the schema version and
+  shape, drops individual malformed events, and returns a status of
+  `ok | empty | invalid`. A bad file yields a safe empty dataset, never a crash.
+- **Empty state** — when a region has no events, `MapExplorer` renders a clear
+  empty state (sidebar + map overlay) instead of blank filters and a dead map.
+- **Stale badge** — freshness is computed client-side (post-mount, to avoid a
+  hydration mismatch) from `generatedAt`; data older than 48h shows an amber
+  "may be out of date" notice with a human age label.
+- **Invalid banner** — an `invalid` status surfaces a non-blocking alert
+  explaining the data couldn’t be read and that the next refresh should restore it.
+
 ## 8. Extensibility roadmap
 
 - More sources per region (schools, churches, parenting Facebook groups via RSS).
