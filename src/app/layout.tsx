@@ -1,10 +1,42 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+// Set NEXT_PUBLIC_SITE_URL to the deployed origin so OG/Twitter image URLs
+// resolve absolutely; falls back to a sensible default for local/preview.
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://elatime.vercel.app";
+const description =
+  "Elatime deploys scraping agents to monitor municipal sites, community boards, and venue schedules for toddler and kid-friendly activities, plotted on a custom interactive map. Anchored to Lee County, FL (Cape Coral + Fort Myers).";
+
 export const metadata: Metadata = {
-  title: "Elatime — Kid-friendly events, mapped",
-  description:
-    "Elatime deploys scraping agents to monitor municipal sites, community boards, and venues for toddler and kid-friendly activities, plotted on an interactive map.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Elatime — Kid-friendly events, mapped",
+    template: "%s · Elatime",
+  },
+  description,
+  applicationName: "Elatime",
+  keywords: [
+    "kid-friendly events",
+    "toddler activities",
+    "storytime",
+    "Lee County",
+    "Cape Coral",
+    "Fort Myers",
+    "family events",
+  ],
+  authors: [{ name: "Elatime" }],
+  openGraph: {
+    type: "website",
+    siteName: "Elatime",
+    title: "Elatime — Kid-friendly events, mapped",
+    description,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Elatime — Kid-friendly events, mapped",
+    description,
+  },
 };
 
 export default function RootLayout({
