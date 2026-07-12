@@ -5,6 +5,7 @@ import type { ElaEvent, Region } from "@/lib/types";
 import { project } from "@/lib/geo";
 import { getMapArt, MAP_VIEWPORT } from "@/lib/mapArt";
 import { CATEGORY_COLORS, CATEGORY_LABELS } from "@/lib/format";
+import { clusterByGrid, fanOffset } from "@/lib/cluster";
 
 interface MapCanvasProps {
   region: Region;
@@ -21,6 +22,8 @@ interface Placed {
 
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 6;
+/** Grid cell (in local SVG units) within which markers collapse to one cluster. */
+const CLUSTER_CELL = 30;
 
 /**
  * The interactive illustrated map. Projects each event onto hand-drawn SVG
@@ -38,6 +41,7 @@ export default function MapCanvas({
 
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
+  const [expandedKey, setExpandedKey] = useState<string | null>(null);
   const dragState = useRef<{
     startX: number;
     startY: number;
@@ -46,26 +50,14 @@ export default function MapCanvas({
     moved: boolean;
   } | null>(null);
 
-  const placed = useMemo<Placed[]>(() => {
-    // Spread co-located markers around a small ring so overlaps stay legible.
-    const byKey = new Map<string, number>();
-    return events.map((event) => {
+  // Project every event, then grid-cluster so co-located events (a busy venue)
+  // collapse into one badge instead of an unreadable pile of markers.
+  const clusters = useMemo(() => {
+    const placed: Placed[] = events.map((event) => {
       const base = project(event.location, region.bounds, MAP_VIEWPORT);
-      const key = `${base.x.toFixed(1)},${base.y.toFixed(1)}`;
-      const n = byKey.get(key) ?? 0;
-      byKey.set(key, n + 1);
-      if (n === 0) return { event, x: base.x, y: base.y };
-      // Golden-angle fan-out for co-located markers. Radius grows with sqrt(n)
-      // and is capped so dense venues (e.g. a busy library) stay a tidy cluster
-      // instead of spiraling off-canvas.
-      const angle = (n * 2.399963) % (Math.PI * 2);
-      const radius = Math.min(8 + Math.sqrt(n) * 7, 48);
-      return {
-        event,
-        x: base.x + Math.cos(angle) * radius,
-        y: base.y + Math.sin(angle) * radius,
-      };
+      return { event, x: base.x, y: base.y };
     });
+    return clusterByGrid(placed, CLUSTER_CELL);
   }, [events, region.bounds]);
 
   const clampZoom = (z: number) => Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, z));
@@ -102,8 +94,11 @@ export default function MapCanvas({
     (e: React.PointerEvent) => {
       const st = dragState.current;
       dragState.current = null;
-      // A click that didn't drag on empty canvas clears the selection.
-      if (st && !st.moved && e.target === e.currentTarget) onSelect?.(null);
+      // A click that didn't drag on empty canvas clears selection + expansion.
+      if (st && !st.moved && e.target === e.currentTarget) {
+        onSelect?.(null);
+        setExpandedKey(null);
+      }
     },
     [onSelect]
   );
@@ -248,42 +243,94 @@ export default function MapCanvas({
             </text>
           )}
 
-          {/* Event markers */}
-          {placed.map(({ event, x, y }) => {
-            const selected = event.id === selectedId;
-            const color = CATEGORY_COLORS[event.category] ?? "#9aa5b1";
-            return (
-              <g
-                key={event.id}
-                transform={`translate(${x} ${y})`}
-                className="cursor-pointer"
-                onPointerDown={(e) => e.stopPropagation()}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onSelect?.(event.id);
-                }}
-                role="button"
-                aria-label={`${event.title} — ${CATEGORY_LABELS[event.category]}`}
-              >
-                {selected && (
-                  <circle r={13} fill={color} opacity={0.25}>
-                    <animate
-                      attributeName="r"
-                      values="11;16;11"
-                      dur="1.6s"
-                      repeatCount="indefinite"
-                    />
-                  </circle>
-                )}
-                <circle
-                  r={selected ? 8 : 6}
-                  fill={color}
-                  stroke="#0e1726"
-                  strokeWidth={2}
-                  filter="url(#marker-shadow)"
-                />
-              </g>
-            );
+          {/* Event markers, grid-clustered */}
+          {clusters.map((cluster) => {
+            const multi = cluster.items.length > 1;
+            const expanded = cluster.key === expandedKey;
+
+            // Collapsed multi-event cluster -> a single count badge.
+            if (multi && !expanded) {
+              const count = cluster.items.length;
+              const r = Math.min(12 + Math.log2(count) * 3.5, 26);
+              const hasSelected = cluster.items.some((p) => p.event.id === selectedId);
+              return (
+                <g
+                  key={cluster.key}
+                  transform={`translate(${cluster.x} ${cluster.y})`}
+                  className="cursor-pointer"
+                  onPointerDown={(e) => e.stopPropagation()}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setExpandedKey(cluster.key);
+                  }}
+                  role="button"
+                  aria-label={`Cluster of ${count} events — click to expand`}
+                >
+                  <circle
+                    r={r + 3}
+                    fill="#4cc9f0"
+                    opacity={hasSelected ? 0.35 : 0.18}
+                  />
+                  <circle
+                    r={r}
+                    fill="#12324f"
+                    stroke="#4cc9f0"
+                    strokeWidth={2}
+                    filter="url(#marker-shadow)"
+                  />
+                  <text
+                    textAnchor="middle"
+                    dominantBaseline="central"
+                    className="fill-white"
+                    style={{ fontSize: 13, fontWeight: 700 }}
+                  >
+                    {count}
+                  </text>
+                </g>
+              );
+            }
+
+            // Singleton, or an expanded cluster fanned into its members.
+            return cluster.items.map((placed, i) => {
+              const { event } = placed;
+              const { dx, dy } = expanded ? fanOffset(i) : { dx: 0, dy: 0 };
+              const x = cluster.x + dx;
+              const y = cluster.y + dy;
+              const selected = event.id === selectedId;
+              const color = CATEGORY_COLORS[event.category] ?? "#9aa5b1";
+              return (
+                <g
+                  key={event.id}
+                  transform={`translate(${x} ${y})`}
+                  className="cursor-pointer"
+                  onPointerDown={(e) => e.stopPropagation()}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onSelect?.(event.id);
+                  }}
+                  role="button"
+                  aria-label={`${event.title} — ${CATEGORY_LABELS[event.category]}`}
+                >
+                  {selected && (
+                    <circle r={13} fill={color} opacity={0.25}>
+                      <animate
+                        attributeName="r"
+                        values="11;16;11"
+                        dur="1.6s"
+                        repeatCount="indefinite"
+                      />
+                    </circle>
+                  )}
+                  <circle
+                    r={selected ? 8 : 6}
+                    fill={color}
+                    stroke="#0e1726"
+                    strokeWidth={2}
+                    filter="url(#marker-shadow)"
+                  />
+                </g>
+              );
+            });
           })}
         </g>
       </svg>
