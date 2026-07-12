@@ -77,6 +77,45 @@ describe("scrapeSource", () => {
   });
 });
 
+describe("kidFilter RSS source (Fort Myers)", () => {
+  const fmSource = () =>
+    getEnabledSources("lee-county-fl").find((s) => s.id === "fortmyers-city-events")!;
+
+  const RSS = (items: string) =>
+    `<rss version="2.0"><channel>${items}</channel></rss>`;
+  const boardItem = `<item><title>City Council Budget Hearing</title>
+    <link>https://www.fortmyers.gov/Calendar.aspx?EID=1</link>
+    <description>Event date: July 15, 2026 | Event Time: 04:00 PM - 05:30 PM | Adult civic business.</description></item>`;
+  const kidItem = `<item><title>Family Storytime in the Park</title>
+    <link>https://www.fortmyers.gov/Calendar.aspx?EID=2</link>
+    <description>Event date: July 20, 2026 | Event Time: 09:30 AM - 10:30 AM | Toddler stories.</description></item>`;
+
+  it("keeps kid events, drops gov meetings, and rewrites the link host", async () => {
+    const events = await scrapeSource(fmSource(), {
+      live: true,
+      now: NOW,
+      fetcher: async () => RSS(boardItem + kidItem),
+    });
+    expect(events.map((e) => e.title)).toEqual(["Family Storytime in the Park"]);
+    expect(events[0].url).toContain("fl-fortmyers.civicplus.com");
+    expect(events[0].url).not.toContain("www.fortmyers.gov");
+    // Geolocated to the Fort Myers venue (in-bounds).
+    expect(events[0].location.lat).toBeCloseTo(26.6406, 3);
+  });
+
+  it("falls back to fixtures when every live item is filtered out", async () => {
+    const events = await scrapeSource(fmSource(), {
+      live: true,
+      now: NOW,
+      fetcher: async () => RSS(boardItem),
+    });
+    // No kid events in the feed -> curated fixtures are used instead.
+    expect(events.length).toBeGreaterThan(0);
+    expect(events.every((e) => e.sourceId === "fortmyers-city-events")).toBe(true);
+    expect(events.find((e) => e.title.includes("Budget Hearing"))).toBeUndefined();
+  });
+});
+
 describe("dedupe", () => {
   it("keeps the most recently scraped copy of a duplicate id", () => {
     const base: ElaEvent = {

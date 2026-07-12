@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T12:04:51.258Z",
+  "generatedAt": "2026-07-12T14:47:57.369Z",
   "schemaVersion": 1,
   "regionIds": [
     "lee-county-fl"
@@ -30,7 +30,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T12:04:51.258Z"
+      "scrapedAt": "2026-07-12T14:47:57.369Z"
     },
     {
       "id": "evt_820dee62",
@@ -57,7 +57,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T12:04:51.261Z"
+      "scrapedAt": "2026-07-12T14:47:57.545Z"
     },
     {
       "id": "evt_e20d41ce",
@@ -84,7 +84,7 @@
         "venue",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T12:04:51.264Z"
+      "scrapedAt": "2026-07-12T14:48:02.458Z"
     },
     {
       "id": "evt_c67f6349",
@@ -111,7 +111,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T12:04:51.258Z"
+      "scrapedAt": "2026-07-12T14:47:57.369Z"
     },
     {
       "id": "evt_88e02d51",
@@ -138,7 +138,7 @@
         "venue",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T12:04:51.264Z"
+      "scrapedAt": "2026-07-12T14:48:01.117Z"
     },
     {
       "id": "evt_864239fa",
@@ -165,34 +165,7 @@
         "community",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T12:04:51.264Z"
-    },
-    {
-      "id": "evt_19b48d35",
-      "title": "Downtown Family Music Jam",
-      "description": "Live kids music and a dance-along in the riverfront park. Free community event for all ages.",
-      "category": "music",
-      "ageBands": [
-        "all-ages"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "fortmyers-city-events",
-      "venueName": "City of Fort Myers",
-      "address": "2200 Second St, Fort Myers, FL 33901",
-      "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-16T22:00:00.000Z",
-      "endsAt": "2026-07-17T00:00:00.000Z",
-      "isFree": true,
-      "price": "Free",
-      "url": "https://www.cityftmyers.com/calendar.aspx",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T12:04:51.263Z"
+      "scrapedAt": "2026-07-12T14:48:02.462Z"
     },
     {
       "id": "evt_181a6fab",
@@ -218,7 +191,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T12:04:51.261Z"
+      "scrapedAt": "2026-07-12T14:47:57.545Z"
     },
     {
       "id": "evt_7d47dd31",
@@ -244,7 +217,7 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T12:04:51.258Z"
+      "scrapedAt": "2026-07-12T14:47:57.369Z"
     },
     {
       "id": "evt_02a9bd25",
@@ -271,34 +244,7 @@
         "venue",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T12:04:51.264Z"
-    },
-    {
-      "id": "evt_5348338f",
-      "title": "Saturday Market Kids Corner",
-      "description": "Toddler crafts and a petting zoo at the weekly downtown market.",
-      "category": "other",
-      "ageBands": [
-        "toddler"
-      ],
-      "regionId": "lee-county-fl",
-      "sourceId": "fortmyers-city-events",
-      "venueName": "City of Fort Myers",
-      "address": "2200 Second St, Fort Myers, FL 33901",
-      "location": {
-        "lat": 26.6406,
-        "lng": -81.8723
-      },
-      "startsAt": "2026-07-20T14:00:00.000Z",
-      "endsAt": "2026-07-20T17:00:00.000Z",
-      "isFree": true,
-      "price": "Free",
-      "url": "https://www.cityftmyers.com/calendar.aspx",
-      "tags": [
-        "municipal",
-        "lee-county-fl"
-      ],
-      "scrapedAt": "2026-07-12T12:04:51.263Z"
+      "scrapedAt": "2026-07-12T14:48:02.458Z"
     },
     {
       "id": "evt_75f08e56",
@@ -326,7 +272,7 @@
         "venue",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T12:04:51.264Z"
+      "scrapedAt": "2026-07-12T14:48:01.117Z"
     },
     {
       "id": "evt_72887d05",
@@ -353,7 +299,32 @@
         "community",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-12T12:04:51.264Z"
+      "scrapedAt": "2026-07-12T14:48:02.462Z"
+    },
+    {
+      "id": "evt_8c87b363",
+      "title": "27th Annual Big Backpack Giveaway Event",
+      "category": "other",
+      "ageBands": [
+        "all-ages"
+      ],
+      "regionId": "lee-county-fl",
+      "sourceId": "fortmyers-city-events",
+      "venueName": "City of Fort Myers",
+      "address": "2250 Broadway Fort Myers, FL 33901",
+      "location": {
+        "lat": 26.6406,
+        "lng": -81.8723
+      },
+      "startsAt": "2026-07-26T14:00:00.000Z",
+      "endsAt": "2026-07-26T17:00:00.000Z",
+      "isFree": true,
+      "url": "https://fl-fortmyers.civicplus.com/Calendar.aspx?EID=6864",
+      "tags": [
+        "municipal",
+        "lee-county-fl"
+      ],
+      "scrapedAt": "2026-07-12T14:47:59.957Z"
     }
   ]
 }

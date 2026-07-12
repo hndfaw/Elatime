@@ -2,7 +2,8 @@ import axios from "axios";
 import type { ElaEvent, EventsDataset, ScrapeSource } from "../types";
 import { withinBounds } from "../geo";
 import { getRegion } from "../regions";
-import { parseJsonLd, parseList, normalize, type RawEvent } from "./parsers";
+import { parseJsonLd, parseList, parseRss, normalize, type RawEvent } from "./parsers";
+import { isKidRelevant } from "./classify";
 import { fixturesFor } from "./fixtures";
 
 export const SCHEMA_VERSION = 1;
@@ -47,6 +48,8 @@ export function parseSource(html: string, source: ScrapeSource): RawEvent[] {
       return parseJsonLd(html);
     case "generic-list":
       return parseList(html, source);
+    case "rss":
+      return parseRss(html, source);
     case "fixture":
       return [];
     default:
@@ -67,38 +70,51 @@ export async function scrapeSource(
   const nowIso = now.toISOString();
   const fallbackStart = new Date(now.getTime() + 24 * 3600 * 1000).toISOString();
   const log = opts.log ?? (() => {});
+  const region = getRegion(source.regionId);
 
-  let raws: RawEvent[] = [];
+  // Turn raw events into normalized, in-bounds ElaEvents. `applyKidFilter`
+  // strips non-family items from broad municipal feeds (kidFilter sources).
+  const finalize = (raws: RawEvent[], applyKidFilter: boolean): ElaEvent[] => {
+    const out: ElaEvent[] = [];
+    for (const raw of raws) {
+      if (applyKidFilter && source.kidFilter && !isKidRelevant(raw.title, raw.description)) {
+        continue;
+      }
+      const ev = normalize(raw, source, nowIso, fallbackStart);
+      if (!ev) continue;
+      if (region && !withinBounds(ev.location, region.bounds)) continue;
+      out.push(ev);
+    }
+    return out;
+  };
+
+  // Live path first (when enabled). kidFilter applies to live feeds only.
+  let events: ElaEvent[] = [];
   if (opts.live) {
     const fetcher = opts.fetcher ?? defaultFetcher;
     const html = await fetcher(source.url, opts.timeoutMs ?? 15000);
     if (html) {
       try {
-        raws = parseSource(html, source);
-        log(`  ${source.id}: live parse yielded ${raws.length} raw events`);
+        const raws = parseSource(html, source);
+        events = finalize(raws, true);
+        log(`  ${source.id}: live yielded ${events.length} usable event(s)`);
       } catch (err) {
         log(`  ${source.id}: parse error, will use fixtures — ${String(err)}`);
       }
     } else {
-      log(`  ${source.id}: fetch failed, using fixtures`);
+      log(`  ${source.id}: fetch failed, will use fixtures`);
     }
   }
 
-  if (raws.length === 0) {
-    raws = fixturesFor(source.id, now);
-    if (raws.length) log(`  ${source.id}: using ${raws.length} fixture events`);
+  // Fall back to curated fixtures whenever the live path produced nothing.
+  // Fixtures are already kid-relevant, so they bypass the kid filter.
+  if (events.length === 0) {
+    const fixtures = fixturesFor(source.id, now);
+    events = finalize(fixtures, false);
+    if (events.length) log(`  ${source.id}: using ${events.length} fixture event(s)`);
   }
 
-  const region = getRegion(source.regionId);
-  const normalized: ElaEvent[] = [];
-  for (const raw of raws) {
-    const ev = normalize(raw, source, nowIso, fallbackStart);
-    if (!ev) continue;
-    // Drop events that geolocate outside the region's bounds.
-    if (region && !withinBounds(ev.location, region.bounds)) continue;
-    normalized.push(ev);
-  }
-  return normalized;
+  return events;
 }
 
 /** De-duplicate events by id, keeping the most recently scraped copy. */

@@ -54,16 +54,15 @@
         },
         {
           "id": "fortmyers-city-events",
-          "name": "City of Fort Myers — Community Events",
+          "name": "City of Fort Myers — Community Events (CivicEngage RSS)",
           "type": "municipal",
           "regionId": "lee-county-fl",
-          "url": "https://www.cityftmyers.com/calendar.aspx",
-          "parser": "generic-list",
-          "selectors": {
-            "item": ".listItem",
-            "title": ".title",
-            "date": ".date",
-            "link": "a"
+          "url": "https://fl-fortmyers.civicplus.com/RSSFeed.aspx?ModID=58&CID=All-calendar.xml",
+          "parser": "rss",
+          "kidFilter": true,
+          "linkRewrite": {
+            "from": "www.fortmyers.gov",
+            "to": "fl-fortmyers.civicplus.com"
           },
           "venue": {
             "name": "City of Fort Myers",

@@ -203,3 +203,172 @@ function absoluteUrl(href: string | undefined, base: string): string | undefined
     return undefined;
   }
 }
+
+/**
+ * Parse an RSS/XML calendar feed (e.g. a CivicEngage municipal feed).
+ *
+ * CivicEngage items carry the date/time inside the <description> as
+ * "Event date: July 26, 2026 | Event Time: 10:00 AM - 1:00 PM | ...". We read
+ * the date/time from there (falling back to <pubDate>), and optionally rewrite
+ * the link host for feeds whose emitted domain no longer resolves.
+ */
+export function parseRss(xml: string, source: ScrapeSource): RawEvent[] {
+  const $ = cheerio.load(xml, { xmlMode: true });
+  const out: RawEvent[] = [];
+
+  $("item").each((_, el) => {
+    const node = $(el);
+    const title = node.find("title").first().text().trim();
+    if (!title) return;
+
+    const rawDesc = node.find("description").first().text().trim();
+    // CivicEngage embeds an HTML fragment in <description>; flatten it to text
+    // ("<strong>Event date:</strong> July 15, 2026 <br>Event Time: ...").
+    const plain = stripHtml(rawDesc);
+    const link = rewriteHost(node.find("link").first().text().trim(), source.linkRewrite);
+    const pubDate = node.find("pubDate").first().text().trim();
+
+    const { startsAt, endsAt } = parseCivicDates(plain, pubDate);
+
+    out.push({
+      title,
+      description: cleanDescription(plain),
+      startsAt,
+      endsAt,
+      url: link || undefined,
+      address: extractCivicLocation(plain),
+      priceText: /\$\s?\d/.test(plain) ? plain.match(/\$\s?[\d.,]+/)?.[0] : undefined,
+    });
+  });
+
+  return out;
+}
+
+/** Extract start/end ISO timestamps from a CivicEngage description blob. */
+export function parseCivicDates(
+  description: string,
+  pubDate?: string
+): { startsAt?: string; endsAt?: string } {
+  const dateMatch = description.match(/Event date:\s*([A-Za-z]+\s+\d{1,2},?\s+\d{4})/i);
+  const timeMatch = description.match(
+    /Event Time:\s*([\d]{1,2}:[\d]{2}\s*[APMapm.]{2})\s*-\s*([\d]{1,2}:[\d]{2}\s*[APMapm.]{2})/
+  );
+
+  if (dateMatch) {
+    const date = dateMatch[1];
+    const start = parseEastern(date, timeMatch?.[1]);
+    const end = timeMatch ? parseEastern(date, timeMatch[2]) : undefined;
+    if (start) return { startsAt: start, endsAt: end };
+  }
+  return { startsAt: toIso(pubDate), endsAt: undefined };
+}
+
+const MONTHS: Record<string, number> = {
+  january: 0, february: 1, march: 2, april: 3, may: 4, june: 5,
+  july: 6, august: 7, september: 8, october: 9, november: 10, december: 11,
+};
+
+/**
+ * Parse a "Month D, YYYY" date and optional "H:MM AM" time as America/New_York
+ * wall-clock (Lee County's zone) and return the corresponding UTC ISO string.
+ * DST is handled via Intl, so results are deterministic regardless of the host
+ * machine's timezone.
+ */
+export function parseEastern(dateStr: string, timeStr?: string): string | undefined {
+  const m = dateStr.match(/([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})/);
+  if (!m) return undefined;
+  const month = MONTHS[m[1].toLowerCase()];
+  if (month === undefined) return undefined;
+  const day = Number(m[2]);
+  const year = Number(m[3]);
+
+  let hour = 0;
+  let minute = 0;
+  if (timeStr) {
+    const t = timeStr.match(/(\d{1,2}):(\d{2})\s*([AaPp])/);
+    if (t) {
+      hour = Number(t[1]) % 12;
+      if (/[Pp]/.test(t[3])) hour += 12;
+      minute = Number(t[2]);
+    }
+  }
+  return zonedWallTimeToUtc(year, month, day, hour, minute, "America/New_York");
+}
+
+/** Convert a wall-clock time in `tz` to the matching UTC ISO string. */
+function zonedWallTimeToUtc(
+  year: number,
+  month: number,
+  day: number,
+  hour: number,
+  minute: number,
+  tz: string
+): string {
+  const guess = Date.UTC(year, month, day, hour, minute);
+  const offset = tzOffsetMs(guess, tz);
+  return new Date(guess - offset).toISOString();
+}
+
+/** Offset (ms) of `tz` from UTC at the given instant. */
+function tzOffsetMs(utcMs: number, tz: string): number {
+  const dtf = new Intl.DateTimeFormat("en-US", {
+    timeZone: tz,
+    hourCycle: "h23",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
+  const parts: Record<string, string> = {};
+  for (const p of dtf.formatToParts(new Date(utcMs))) parts[p.type] = p.value;
+  const asUTC = Date.UTC(
+    Number(parts.year),
+    Number(parts.month) - 1,
+    Number(parts.day),
+    Number(parts.hour),
+    Number(parts.minute),
+    Number(parts.second)
+  );
+  return asUTC - utcMs;
+}
+
+/** Flatten an embedded HTML fragment to plain text. */
+function stripHtml(html: string): string {
+  return html
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/**
+ * Remove the CivicEngage metadata (Event date / Event Time / Location) from a
+ * flattened description, leaving any human-written body text.
+ */
+function cleanDescription(plain: string): string | undefined {
+  const cleaned = plain
+    .replace(/Event date:\s*[A-Za-z]+\s+\d{1,2},?\s+\d{4}/i, "")
+    .replace(/Event Time:\s*[\d:\sAPMapm.]+-\s*[\d:\sAPMapm.]+/i, "")
+    .replace(/Location:.*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  return cleaned || undefined;
+}
+
+/** Extract the Location/address line from a flattened CivicEngage description. */
+function extractCivicLocation(plain: string): string | undefined {
+  const m = plain.match(/Location:\s*(.+)$/i);
+  if (!m) return undefined;
+  const loc = m[1].replace(/\s+/g, " ").trim();
+  return loc || undefined;
+}
+
+function rewriteHost(
+  url: string,
+  rewrite?: { from: string; to: string }
+): string {
+  if (!url || !rewrite) return url;
+  return url.split(rewrite.from).join(rewrite.to);
+}

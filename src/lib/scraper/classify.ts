@@ -48,6 +48,32 @@ export function classifyAgeBands(title: string, description = ""): AgeBand[] {
   return [...bands];
 }
 
+// Terms that signal an event is for kids/families. Used to filter broad
+// municipal feeds (which are mostly board meetings, budget hearings, etc.)
+// down to what belongs on Elatime.
+const KID_RELEVANCE = new RegExp(
+  [
+    "\\bkids?\\b", "\\bchild(ren)?\\b", "\\btoddlers?\\b", "\\btots?\\b",
+    "\\bbab(y|ies)\\b", "\\binfants?\\b", "pre-?school", "pre-?k\\b",
+    "\\bfamil(y|ies)\\b", "story ?time", "story ?hour", "\\bcrafts?\\b",
+    "\\bpuppets?\\b", "\\blego\\b", "\\bste[am]m?\\b", "\\bcamps?\\b",
+    "\\byouth\\b", "\\bteens?\\b", "\\bjunior\\b", "\\blittle ones?\\b",
+    "\\bnature\\b", "\\bdino(saur)?s?\\b", "playground", "play ?date",
+    "petting zoo", "backpack", "back to school", "scavenger", "\\bmagic show\\b",
+    "\\bpumpkin\\b", "egg hunt", "\\bsanta\\b", "\\ball ages?\\b",
+  ].join("|"),
+  "i"
+);
+
+/**
+ * True when an event's text looks kid/family relevant. Applied only to sources
+ * flagged `kidFilter` (broad municipal calendars). Curated sources and fixtures
+ * bypass this.
+ */
+export function isKidRelevant(title: string, description = ""): boolean {
+  return KID_RELEVANCE.test(`${title} ${description}`);
+}
+
 /** Detect whether an event is free from price-ish text. */
 export function detectFree(text: string): boolean {
   if (/\b(free|no cost|complimentary|no charge)\b/i.test(text)) return true;
