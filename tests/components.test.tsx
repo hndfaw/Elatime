@@ -121,4 +121,35 @@ describe("MapExplorer", () => {
     );
     expect(screen.getByRole("status")).toHaveTextContent(/may be out of date/i);
   });
+
+  it("has a mobile Map/List toggle that switches the selected tab", () => {
+    const region = getDefaultRegion();
+    render(<MapExplorer region={region} events={[ev()]} generatedAt="2026-07-11T11:00:00.000Z" />);
+    const tabs = screen.getAllByRole("tab");
+    expect(tabs).toHaveLength(2);
+    const [mapTab, listTab] = tabs;
+    // Map is the default view.
+    expect(mapTab).toHaveAttribute("aria-selected", "true");
+    fireEvent.click(listTab);
+    expect(listTab).toHaveAttribute("aria-selected", "true");
+    expect(mapTab).toHaveAttribute("aria-selected", "false");
+  });
+
+  it("jumps back to the map view when an event is picked from the list", () => {
+    const region = getDefaultRegion();
+    render(
+      <MapExplorer
+        region={region}
+        events={[ev(), ev({ id: "b", title: "Dino Day" })]}
+        generatedAt="2026-07-11T11:00:00.000Z"
+      />
+    );
+    const [mapTab, listTab] = screen.getAllByRole("tab");
+    fireEvent.click(listTab);
+    expect(listTab).toHaveAttribute("aria-selected", "true");
+    // Selecting from the list switches back to the map and opens the detail.
+    fireEvent.click(screen.getByText("Dino Day"));
+    expect(mapTab).toHaveAttribute("aria-selected", "true");
+    expect(screen.getByRole("dialog")).toBeInTheDocument();
+  });
 });

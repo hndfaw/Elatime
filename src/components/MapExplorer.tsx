@@ -16,11 +16,15 @@ interface MapExplorerProps {
   status?: DatasetStatus;
 }
 
+type MobileView = "map" | "list";
+
 /**
  * Top-level client surface: owns filter + selection state and composes the
- * map, detail popover, filters, and list into a responsive two-pane layout.
- * Handles the empty / stale / malformed data cases so the app never renders
- * a broken or misleading view.
+ * map, detail popover, filters, and list.
+ *
+ * Layout: two panes side-by-side on large screens; on phones the panes stack
+ * behind a Map/List toggle so each gets the full viewport (rather than the
+ * sidebar squeezing the map). Handles empty / stale / malformed data too.
  */
 export default function MapExplorer({
   region,
@@ -30,6 +34,7 @@ export default function MapExplorer({
 }: MapExplorerProps) {
   const [filters, setFilters] = useState<EventFilters>(EMPTY_FILTERS);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [mobileView, setMobileView] = useState<MobileView>("map");
 
   // Freshness is computed after mount (client-only) so it reflects real elapsed
   // time at view — and avoids a server/client hydration mismatch from Date.now.
@@ -49,11 +54,53 @@ export default function MapExplorer({
 
   const hasData = events.length > 0;
 
+  // Selecting from the list on a phone jumps to the map so the pin is visible.
+  const selectFromList = (id: string) => {
+    setSelectedId(id);
+    setMobileView("map");
+  };
+
   return (
-    <div className="grid h-full grid-rows-[auto,1fr] gap-4 lg:grid-cols-[360px,1fr] lg:grid-rows-1">
+    <div className="flex h-full flex-col gap-3 lg:grid lg:grid-cols-[360px,1fr] lg:gap-4">
+      {/* Compact mobile header (hidden on large screens) */}
+      <div className="flex shrink-0 items-baseline justify-between lg:hidden">
+        <h1 className="font-display text-xl font-bold text-white">
+          <span className="text-coral">Ela</span>time
+        </h1>
+        <p className="text-xs text-white/50">
+          {hasData ? `${filtered.length}/${events.length} events` : region.name}
+        </p>
+      </div>
+
+      {/* Mobile Map/List toggle (hidden on large screens) */}
+      <div
+        role="tablist"
+        aria-label="View"
+        className="flex shrink-0 gap-1 rounded-lg bg-white/5 p-1 lg:hidden"
+      >
+        {(["map", "list"] as MobileView[]).map((view) => (
+          <button
+            key={view}
+            type="button"
+            role="tab"
+            aria-selected={mobileView === view}
+            onClick={() => setMobileView(view)}
+            className={`flex-1 rounded-md py-1.5 text-sm font-medium capitalize transition ${
+              mobileView === view ? "bg-white/15 text-white" : "text-white/60"
+            }`}
+          >
+            {view}
+          </button>
+        ))}
+      </div>
+
       {/* Sidebar */}
-      <aside className="flex min-h-0 flex-col gap-4 lg:h-full">
-        <div>
+      <aside
+        className={`min-h-0 flex-1 flex-col gap-4 lg:flex lg:h-full lg:flex-none ${
+          mobileView === "list" ? "flex" : "hidden"
+        }`}
+      >
+        <div className="hidden lg:block">
           <p className="text-xs uppercase tracking-widest text-white/40">
             {region.name}, {region.state}
           </p>
@@ -93,7 +140,7 @@ export default function MapExplorer({
               <EventList
                 events={filtered}
                 selectedId={selectedId}
-                onSelect={setSelectedId}
+                onSelect={selectFromList}
               />
             </div>
           </>
@@ -117,7 +164,11 @@ export default function MapExplorer({
       </aside>
 
       {/* Map */}
-      <div className="relative min-h-[420px] lg:h-full">
+      <div
+        className={`relative min-h-0 flex-1 lg:block lg:h-full ${
+          mobileView === "map" ? "block" : "hidden"
+        }`}
+      >
         <EventDetail event={selected} onClose={() => setSelectedId(null)} />
         <MapCanvas
           region={region}

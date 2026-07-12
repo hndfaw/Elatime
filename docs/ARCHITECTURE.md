@@ -98,8 +98,15 @@ type; the selected marker pulses.
 
 ### 5.4 Composition (`src/components/MapExplorer.tsx`)
 Owns filter + selection state; composes `Filters`, `EventList`, `EventDetail`,
-and `MapCanvas` into a responsive two-pane layout. Filtering is pure and lives
-in `src/lib/filters.ts`.
+and `MapCanvas`. Filtering is pure and lives in `src/lib/filters.ts`.
+
+**Responsive layout.** On large screens the two panes sit side-by-side
+(`lg:grid-cols-[360px,1fr]`). On phones they stack behind a **Map/List toggle**
+so each pane gets the full viewport instead of the sidebar squeezing the map;
+picking an event from the list jumps back to the map so the pin is visible. The
+map itself scales via an SVG `viewBox` (no fixed pixel width), and the detail
+popover is width-capped to the viewport, so there is no horizontal overflow at
+phone widths.
 
 ## 6. Automation model (no GitHub cron)
 
