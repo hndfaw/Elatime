@@ -1,0 +1,61 @@
+name: Manual Scrape
+
+# Manual, on-demand only. There is NO schedule/cron — GitHub never runs this by
+# itself. Trigger it yourself from the Actions tab ("Run workflow") if you ever
+# want to refresh data/events.json in the cloud. Day-to-day, scraping and any
+# scheduled cadence are driven by the Claude Code session, not GitHub Actions.
+
+on:
+  workflow_dispatch:
+    inputs:
+      live:
+        description: "Attempt live HTTP scraping (falls back to fixtures)"
+        type: boolean
+        default: false
+      commit:
+        description: "Commit the refreshed data/events.json back to main"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    name: Routine scrape (manual)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Green-gate before touching data
+        run: npm run typecheck && npm test
+
+      - name: Run scrape
+        run: |
+          if [ "${{ inputs.live }}" = "true" ]; then
+            npm run scrape -- --live
+          else
+            npm run scrape
+          fi
+
+      - name: Optionally commit refreshed data
+        if: ${{ inputs.commit == true }}
+        run: |
+          git config user.name "elatime-bot"
+          git config user.email "elatime-bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data/events.json)" ]; then
+            git add data/events.json
+            git commit -m "chore(data): manual scrape refresh [skip ci]"
+            git push
+            echo "Committed refreshed events.json"
+          else
+            echo "No event changes"
+          fi

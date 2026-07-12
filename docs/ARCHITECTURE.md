@@ -30,7 +30,8 @@ Three cooperating layers:
 3. **Frontend** (`src/app`, `src/components`, `src/lib`) — a Next.js app that
    projects the dataset onto a custom SVG canvas map.
 
-An **autonomous GitHub Actions loop** ties them together on a schedule.
+The **Claude Code session** ties them together, running the pipeline and working
+the backlog on request. There is **no scheduled GitHub Actions cron**.
 
 ## 3. Domain model (`src/lib/types.ts`)
 
@@ -100,20 +101,20 @@ Owns filter + selection state; composes `Filters`, `EventList`, `EventDetail`,
 and `MapCanvas` into a responsive two-pane layout. Filtering is pure and lives
 in `src/lib/filters.ts`.
 
-## 6. Autonomous loop
+## 6. Automation model (no GitHub cron)
 
-`.github/workflows/autonomous-loop.yml`:
+Elatime has **no scheduled GitHub Actions**. Nothing runs or commits on its own
+in the cloud.
 
-- **Cadence:** `*/45 * * * *` (fires at `:00`/`:45`; cron cannot express a true
-  fixed 45-minute period, and GitHub schedules best-effort).
-- **Scrape job (always on):** install → `typecheck` + `test` gate → scrape →
-  commit `data/events.json` only if changed.
-- **Agent job (dormant):** `anthropics/claude-code-action` implements the
-  highest-priority `elatime-backlog` issue end-to-end and self-merges on green.
-  Runs only when `ENABLE_AUTONOMOUS_AGENT == 'true'` **and**
-  `CLAUDE_CODE_OAUTH_TOKEN` is set.
+- **`ci.yml`** — typecheck + test + build, on push/PR to `main` only.
+- **`manual-scrape.yml`** — `workflow_dispatch` only (no `schedule`). Green-gates,
+  runs the scrape, and — only if the `commit` input is set — commits
+  `data/events.json`. Trigger it by hand when you want a cloud refresh.
 
-`ci.yml` runs typecheck + test + build on every push/PR to `main`.
+**Scheduling is session-driven.** The Claude Code session runs the pipeline and
+works the `elatime-backlog` issues on request, and can self-schedule a cadence
+when asked (e.g. "three tasks over three hours"). This keeps Actions minutes and
+repo commits under explicit manual control.
 
 ## 7. Testing strategy
 

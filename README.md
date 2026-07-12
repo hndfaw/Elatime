@@ -24,8 +24,9 @@ boundaries by editing a single config file.
   frontend ships with (no runtime database required).
 - The **frontend** plots every event on an interactive SVG map with zoom, pan,
   category/age/free filters, a synced event list, and a detail popover.
-- An **autonomous GitHub Actions loop** refreshes the data on a schedule and can
-  (once a model credential is added) implement backlog issues on its own.
+- The **Claude Code session** refreshes the data and works the backlog on
+  request; a **manual-only** Actions workflow can also refresh data in the cloud
+  when triggered by hand. No scheduled GitHub jobs.
 
 ---
 
@@ -33,9 +34,9 @@ boundaries by editing a single config file.
 
 ```
 ┌────────────────────────┐      ┌──────────────────────────┐
-│  config/regions.json    │      │  GitHub Actions           │
-│  (scrape targets, geo)  │─────▶│  Autonomous Loop (~45 min)│
-└────────────────────────┘      │  scrape → commit → agent  │
+│  config/regions.json    │      │  Claude Code session      │
+│  (scrape targets, geo)  │─────▶│  runs scrape on request   │
+└────────────────────────┘      │  (session-scheduled)      │
              │                   └────────────┬─────────────┘
              ▼                                │
 ┌────────────────────────┐                    ▼
@@ -71,7 +72,7 @@ Full details in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 | `src/components/` | React UI: `MapCanvas`, `MapExplorer`, `EventList`, `EventDetail`, `Filters`. |
 | `scripts/scrape.ts` | CLI the autonomous loop runs each cycle → writes `data/events.json`. |
 | `data/events.json` | The committed, structured dataset the frontend renders. |
-| `.github/workflows/` | `ci.yml` (typecheck/test/build) and `autonomous-loop.yml` (the cron loop). |
+| `.github/workflows/` | `ci.yml` (typecheck/test/build on push/PR) and `manual-scrape.yml` (manual-only scrape; no cron). |
 | `tests/` | Vitest unit + integration + component tests. |
 
 ---
@@ -134,29 +135,21 @@ Elatime is modular by construction — **no code changes required**:
 
 ---
 
-## Autonomous loop (GitHub Actions)
+## Automation model — no GitHub cron
 
-`.github/workflows/autonomous-loop.yml` runs on a **~45-minute cron**
-(`*/45 * * * *`, i.e. `:00` and `:45`; see the cadence note in the workflow) and
-on manual dispatch. Each cycle it installs deps, **gates on a green suite**
-(`typecheck` + `test`), runs the scrape, and commits a refreshed
-`data/events.json` back to `main` only when it changed.
+Elatime deliberately has **no scheduled GitHub Actions**. There is no cron, and
+nothing runs or commits on its own in the cloud.
 
-### The agent job stays dormant until you add a credential
+- **`ci.yml`** runs only in response to a push / PR to `main` (typecheck + test +
+  build).
+- **`manual-scrape.yml`** is **manual-only** (`workflow_dispatch`). It never runs
+  on a schedule; trigger it yourself from the Actions tab to refresh
+  `data/events.json` in the cloud, with optional `live` and `commit` inputs.
 
-The second job (`autonomous-agent`) uses
-[`anthropics/claude-code-action`](https://github.com/anthropics/claude-code-action)
-to implement the highest-priority backlog issue autonomously. **It runs in the
-cloud only after you provide a model credential and opt in:**
-
-```bash
-gh secret set CLAUDE_CODE_OAUTH_TOKEN --body <your-token>   # model credential
-gh variable set ENABLE_AUTONOMOUS_AGENT --body true         # opt in
-```
-
-Until both exist, the agent job is skipped and only the scrape/commit runs.
-This is intentional: **you build in-session; the cloud loop activates when you
-choose.**
+**Scheduling is session-driven.** Day-to-day scraping and any recurring cadence
+are orchestrated by the Claude Code session on request (e.g. "handle these three
+tasks over the next three hours, one per hour"), not by GitHub's scheduler. This
+keeps Actions minutes and repo commits fully under manual control.
 
 ---
 
@@ -164,7 +157,7 @@ choose.**
 
 The backlog is tracked as **GitHub Issues** labeled `elatime-backlog` with
 `priority/{p0,p1,p2}` labels — a scope-portable equivalent of a Projects board.
-The autonomous agent reads this backlog to pick its next unit of work.
+The Claude Code session reads this backlog to pick its next unit of work.
 
 ---
 
