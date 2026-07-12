@@ -2,8 +2,16 @@ import axios from "axios";
 import type { ElaEvent, EventsDataset, ScrapeSource } from "../types";
 import { withinBounds } from "../geo";
 import { getRegion } from "../regions";
-import { parseJsonLd, parseList, parseRss, normalize, type RawEvent } from "./parsers";
+import {
+  parseJsonLd,
+  parseList,
+  parseRss,
+  parseIcal,
+  normalize,
+  type RawEvent,
+} from "./parsers";
 import { isKidRelevant } from "./classify";
+import { locateLeeBranch } from "./leeBranches";
 import { fixturesFor } from "./fixtures";
 
 export const SCHEMA_VERSION = 1;
@@ -19,6 +27,10 @@ export interface ScrapeOptions {
   fetcher?: (url: string, timeoutMs: number) => Promise<string | null>;
   /** Optional logger. */
   log?: (msg: string) => void;
+  /** Keep events starting no more than this many days ahead (default 120). */
+  horizonDays?: number;
+  /** Also keep events that started within this many hours ago (default 24). */
+  pastHours?: number;
 }
 
 /** Default HTTP fetch using axios with a browser-like UA. */
@@ -50,6 +62,8 @@ export function parseSource(html: string, source: ScrapeSource): RawEvent[] {
       return parseList(html, source);
     case "rss":
       return parseRss(html, source);
+    case "ical":
+      return parseIcal(html, source);
     case "fixture":
       return [];
     default:
@@ -72,17 +86,29 @@ export async function scrapeSource(
   const log = opts.log ?? (() => {});
   const region = getRegion(source.regionId);
 
+  // Only keep events within a sensible time window around now, so large feeds
+  // (e.g. a full library iCal) don't flood the map with far-future or past dates.
+  const minMs = now.getTime() - (opts.pastHours ?? 24) * 3600_000;
+  const maxMs = now.getTime() + (opts.horizonDays ?? 120) * 24 * 3600_000;
+
   // Turn raw events into normalized, in-bounds ElaEvents. `applyKidFilter`
   // strips non-family items from broad municipal feeds (kidFilter sources).
   const finalize = (raws: RawEvent[], applyKidFilter: boolean): ElaEvent[] => {
     const out: ElaEvent[] = [];
-    for (const raw of raws) {
+    for (let raw of raws) {
       if (applyKidFilter && source.kidFilter && !isKidRelevant(raw.title, raw.description)) {
         continue;
+      }
+      // Resolve branch coordinates from the location text when configured.
+      if (source.branchGeocode && !raw.location) {
+        const point = locateLeeBranch(raw.address);
+        if (point) raw = { ...raw, location: point };
       }
       const ev = normalize(raw, source, nowIso, fallbackStart);
       if (!ev) continue;
       if (region && !withinBounds(ev.location, region.bounds)) continue;
+      const t = Date.parse(ev.startsAt);
+      if (!Number.isNaN(t) && (t < minMs || t > maxMs)) continue;
       out.push(ev);
     }
     return out;

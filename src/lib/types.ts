@@ -25,9 +25,15 @@ export type SourceType = "municipal" | "community" | "venue";
  * Parser keys map a source to a concrete extraction strategy in the scraper.
  * "generic-jsonld" reads schema.org Event JSON-LD; "generic-list" walks a
  * configured list/detail DOM; "rss" parses an RSS/XML calendar feed (e.g. a
- * CivicEngage municipal feed); "fixture" reads a bundled sample (offline-safe).
+ * CivicEngage municipal feed); "ical" parses an iCalendar (.ics) feed (e.g. a
+ * Library Market calendar); "fixture" reads a bundled sample (offline-safe).
  */
-export type ParserKey = "generic-jsonld" | "generic-list" | "rss" | "fixture";
+export type ParserKey =
+  | "generic-jsonld"
+  | "generic-list"
+  | "rss"
+  | "ical"
+  | "fixture";
 
 export interface ScrapeSource {
   id: string;
@@ -63,6 +69,12 @@ export interface ScrapeSource {
    * that no longer resolves. Applied to each event's url during parsing.
    */
   linkRewrite?: { from: string; to: string };
+  /**
+   * When true, resolve each event's coordinates from its location/branch text
+   * (Lee County Library branches) instead of pinning everything to the source
+   * venue. Falls back to the venue when the branch is unrecognized.
+   */
+  branchGeocode?: boolean;
   /** Marks a source as disabled without deleting its config. */
   enabled?: boolean;
 }

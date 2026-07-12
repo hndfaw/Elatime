@@ -38,6 +38,7 @@ async function main() {
 
   const dataset = await runScrape(sources, {
     live: args.live,
+    horizonDays: 60,
     log: (m) => console.log(m),
   });
 
