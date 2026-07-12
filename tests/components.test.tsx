@@ -95,4 +95,30 @@ describe("MapExplorer", () => {
     fireEvent.click(screen.getByLabelText("Free events only"));
     expect(screen.queryByText("Paid Museum")).not.toBeInTheDocument();
   });
+
+  it("shows an empty state (and no filters) when there are no events", () => {
+    const region = getDefaultRegion();
+    render(<MapExplorer region={region} events={[]} generatedAt="2026-07-11T11:00:00.000Z" />);
+    expect(screen.getByText(/No events to show yet/i)).toBeInTheDocument();
+    expect(screen.getByText(/No events plotted yet/i)).toBeInTheDocument();
+    // Filters are not rendered without data.
+    expect(screen.queryByLabelText("Free events only")).not.toBeInTheDocument();
+  });
+
+  it("shows a data-problem alert when status is invalid", () => {
+    const region = getDefaultRegion();
+    render(
+      <MapExplorer region={region} events={[]} generatedAt="" status="invalid" />
+    );
+    expect(screen.getByRole("alert")).toHaveTextContent(/couldn.t read the latest event data/i);
+  });
+
+  it("warns when the data is stale", () => {
+    const region = getDefaultRegion();
+    // generatedAt far in the past -> stale relative to Date.now().
+    render(
+      <MapExplorer region={region} events={[ev()]} generatedAt="2000-01-01T00:00:00.000Z" />
+    );
+    expect(screen.getByRole("status")).toHaveTextContent(/may be out of date/i);
+  });
 });

@@ -1,5 +1,6 @@
 import axios from "axios";
 import type { ElaEvent, EventsDataset, ScrapeSource } from "../types";
+import { SCHEMA_VERSION } from "../types";
 import { withinBounds } from "../geo";
 import { getRegion } from "../regions";
 import {
@@ -14,7 +15,8 @@ import { isKidRelevant } from "./classify";
 import { locateLeeBranch } from "./leeBranches";
 import { fixturesFor } from "./fixtures";
 
-export const SCHEMA_VERSION = 1;
+// Re-exported for existing importers (tests, callers) that reference it here.
+export { SCHEMA_VERSION };
 
 export interface ScrapeOptions {
   /** When false (default in CI/offline), skip live HTTP and use fixtures. */
