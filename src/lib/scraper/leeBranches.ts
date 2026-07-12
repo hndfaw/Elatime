@@ -1,13 +1,13 @@
 import type { GeoPoint } from "../types";
 
 /**
- * Approximate geocoding for Lee County Library branches.
+ * Fallback geocoding for Lee County Library branches.
  *
- * The library iCal feed gives a branch name in LOCATION but no coordinates.
- * We map each branch to the well-known coordinates of the city/area it sits in
- * (documented municipal centroids — not invented), which is accurate enough to
- * place events on the right part of the stylized county map. Precise
- * per-building geocoding is tracked as a follow-up.
+ * The library iCal feed now carries precise per-building `GEO` coordinates,
+ * which the parser uses directly (see parseIcalGeo). This table is only a
+ * FALLBACK for events that lack a GEO — it maps a branch name to the
+ * well-known coordinates of the city/area it sits in (documented municipal
+ * centroids — not invented).
  *
  * Matching is by case-insensitive substring; more specific names (e.g. "north
  * fort myers", "fort myers beach") are checked before the generic "fort myers".
