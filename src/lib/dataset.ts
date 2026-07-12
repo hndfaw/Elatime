@@ -1,5 +1,7 @@
 import type { ElaEvent, EventsDataset } from "./types";
 import { SCHEMA_VERSION } from "./types";
+import { getRegion } from "./regions";
+import { withinBounds } from "./geo";
 
 /**
  * Defensive loading + freshness helpers for the committed events dataset.
@@ -64,6 +66,43 @@ export function isValidEvent(e: unknown): e is ElaEvent {
     Array.isArray(ev.ageBands) &&
     typeof ev.category === "string"
   );
+}
+
+export interface DatasetAssessment {
+  ok: boolean;
+  eventCount: number;
+  problems: string[];
+}
+
+/**
+ * Assess whether a freshly-scraped dataset is safe to commit/publish. Used by
+ * the refresh script as a gate so a broken scrape (empty output, wrong schema,
+ * or events plotted outside their region) can never overwrite good data.
+ */
+export function evaluateDataset(raw: unknown): DatasetAssessment {
+  const problems: string[] = [];
+  const { dataset, status } = safeLoadDataset(raw);
+
+  if (status === "invalid") problems.push("dataset is malformed or has the wrong schema version");
+  if (status === "empty") problems.push("dataset contains no valid events");
+  if (dataset.generatedAt && dataAgeHours(dataset.generatedAt) === null) {
+    problems.push("generatedAt is not a valid timestamp");
+  }
+
+  let outOfBounds = 0;
+  let unknownRegion = 0;
+  for (const ev of dataset.events) {
+    const region = getRegion(ev.regionId);
+    if (!region) {
+      unknownRegion++;
+      continue;
+    }
+    if (!withinBounds(ev.location, region.bounds)) outOfBounds++;
+  }
+  if (unknownRegion > 0) problems.push(`${unknownRegion} event(s) reference an unknown region`);
+  if (outOfBounds > 0) problems.push(`${outOfBounds} event(s) fall outside their region bounds`);
+
+  return { ok: problems.length === 0, eventCount: dataset.events.length, problems };
 }
 
 const MS_PER_HOUR = 3_600_000;
