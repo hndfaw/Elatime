@@ -17,13 +17,15 @@
       "sources": [
         {
           "id": "lee-library-storytimes",
-          "name": "Lee County Library System — Storytimes",
+          "name": "Lee County Library System (all branches, iCal)",
           "type": "municipal",
           "regionId": "lee-county-fl",
-          "url": "https://www.leelibrary.net/events",
-          "parser": "generic-jsonld",
+          "url": "https://leelibrary.librarymarket.com/events/feed/ical",
+          "parser": "ical",
+          "kidFilter": true,
+          "branchGeocode": true,
           "venue": {
-            "name": "Lee County Library (Downtown Fort Myers)",
+            "name": "Lee County Library",
             "lat": 26.6428,
             "lng": -81.8723,
             "address": "2050 Lee St, Fort Myers, FL 33901"
@@ -89,7 +91,7 @@
         },
         {
           "id": "lakes-regional-library",
-          "name": "Lakes Regional Library — Family Programs",
+          "name": "Lakes Regional Library — Family Programs (covered by system iCal)",
           "type": "venue",
           "regionId": "lee-county-fl",
           "url": "https://www.leelibrary.net/lakes",
@@ -100,7 +102,7 @@
             "lng": -81.8807,
             "address": "15290 Bass Rd, Fort Myers, FL 33919"
           },
-          "enabled": true
+          "enabled": false
         },
         {
           "id": "rotary-park-cape",

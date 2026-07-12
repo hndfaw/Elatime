@@ -30,7 +30,9 @@ describe("regions config (committed)", () => {
     for (const region of getRegions()) {
       for (const source of region.sources) {
         expect(source.regionId).toBe(region.id);
-        expect(["generic-jsonld", "generic-list", "rss", "fixture"]).toContain(source.parser);
+        expect(["generic-jsonld", "generic-list", "rss", "ical", "fixture"]).toContain(
+          source.parser
+        );
       }
     }
   });

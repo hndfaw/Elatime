@@ -55,8 +55,11 @@ export default function MapCanvas({
       const n = byKey.get(key) ?? 0;
       byKey.set(key, n + 1);
       if (n === 0) return { event, x: base.x, y: base.y };
-      const angle = (n * 2.399963) % (Math.PI * 2); // golden-angle fan
-      const radius = 9 + n * 3;
+      // Golden-angle fan-out for co-located markers. Radius grows with sqrt(n)
+      // and is capped so dense venues (e.g. a busy library) stay a tidy cluster
+      // instead of spiraling off-canvas.
+      const angle = (n * 2.399963) % (Math.PI * 2);
+      const radius = Math.min(8 + Math.sqrt(n) * 7, 48);
       return {
         event,
         x: base.x + Math.cos(angle) * radius,

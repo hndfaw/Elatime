@@ -372,3 +372,120 @@ function rewriteHost(
   if (!url || !rewrite) return url;
   return url.split(rewrite.from).join(rewrite.to);
 }
+
+/**
+ * Parse an iCalendar (.ics) feed into RawEvents. Handles line folding, common
+ * DTSTART/DTEND forms (UTC "Z", floating/TZID local, and all-day VALUE=DATE),
+ * and iCal text escaping. Floating and TZID times are treated as America/New_York
+ * (Lee County's zone). Location text is captured; geolocation falls back to the
+ * source venue during normalization.
+ */
+export function parseIcal(ics: string, _source: ScrapeSource): RawEvent[] {
+  // Unfold: a CRLF/LF followed by a space or tab continues the previous line.
+  const unfolded = ics.replace(/\r\n[ \t]/g, "").replace(/\n[ \t]/g, "");
+  const lines = unfolded.split(/\r\n|\n|\r/);
+
+  const out: RawEvent[] = [];
+  let cur: Record<string, IcalProp> | null = null;
+
+  for (const line of lines) {
+    if (line === "BEGIN:VEVENT") {
+      cur = {};
+      continue;
+    }
+    if (line === "END:VEVENT") {
+      if (cur) {
+        const ev = icalEventToRaw(cur);
+        if (ev) out.push(ev);
+      }
+      cur = null;
+      continue;
+    }
+    if (!cur) continue;
+
+    const colon = line.indexOf(":");
+    if (colon === -1) continue;
+    const namePart = line.slice(0, colon);
+    const value = line.slice(colon + 1);
+    const [name, ...paramParts] = namePart.split(";");
+    const params: Record<string, string> = {};
+    for (const p of paramParts) {
+      const eq = p.indexOf("=");
+      if (eq > -1) params[p.slice(0, eq).toUpperCase()] = p.slice(eq + 1);
+    }
+    cur[name.toUpperCase()] = { value, params };
+  }
+  return out;
+}
+
+interface IcalProp {
+  value: string;
+  params: Record<string, string>;
+}
+
+function icalEventToRaw(props: Record<string, IcalProp>): RawEvent | null {
+  const title = unescapeIcal(props.SUMMARY?.value ?? "").trim();
+  if (!title) return null;
+
+  const start = props.DTSTART
+    ? icalDateToIso(props.DTSTART.value, props.DTSTART.params)
+    : undefined;
+  const end = props.DTEND
+    ? icalDateToIso(props.DTEND.value, props.DTEND.params)
+    : undefined;
+
+  const description = clip(unescapeIcal(props.DESCRIPTION?.value ?? ""));
+  const location = unescapeIcal(props.LOCATION?.value ?? "").trim();
+
+  return {
+    title,
+    description: description || undefined,
+    startsAt: start,
+    endsAt: end,
+    url: props.URL?.value?.trim() || undefined,
+    address: location || undefined,
+  };
+}
+
+/** Convert an iCal date/date-time value to a UTC ISO string. */
+export function icalDateToIso(
+  value: string,
+  params: Record<string, string> = {}
+): string | undefined {
+  const v = value.trim();
+
+  // All-day date: YYYYMMDD (midnight Eastern).
+  if (params.VALUE === "DATE" || /^\d{8}$/.test(v)) {
+    const m = v.match(/^(\d{4})(\d{2})(\d{2})$/);
+    if (!m) return undefined;
+    return zonedWallTimeToUtc(Number(m[1]), Number(m[2]) - 1, Number(m[3]), 0, 0, "America/New_York");
+  }
+
+  const m = v.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})(Z)?$/);
+  if (!m) return toIso(v);
+  const [, y, mo, d, h, mi, , z] = m;
+  if (z === "Z") {
+    return new Date(
+      Date.UTC(Number(y), Number(mo) - 1, Number(d), Number(h), Number(mi))
+    ).toISOString();
+  }
+  // Floating or TZID local time -> treat as America/New_York.
+  return zonedWallTimeToUtc(Number(y), Number(mo) - 1, Number(d), Number(h), Number(mi), "America/New_York");
+}
+
+/** Unescape iCal TEXT values (RFC 5545 §3.3.11). */
+function unescapeIcal(s: string): string {
+  return s
+    .replace(/\\n/gi, " ")
+    .replace(/\\,/g, ",")
+    .replace(/\\;/g, ";")
+    .replace(/\\\\/g, "\\")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** Trim a long description to a sensible display length. */
+function clip(s: string, max = 400): string {
+  const t = s.trim();
+  return t.length > max ? t.slice(0, max - 1).trimEnd() + "…" : t;
+}
