@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-11T23:36:20.979Z",
+  "generatedAt": "2026-07-12T01:12:55.107Z",
   "schemaVersion": 1,
   "regionIds": [
     "lee-county-fl"
   ],
   "events": [
     {
-      "id": "evt_2d3746d5",
+      "id": "evt_fdf1e2c2",
       "title": "Toddler Storytime: Songs & Rhymes",
       "description": "Lap-sit stories, songs, and rhymes for toddlers ages 1-3 and their grownups. Free, no registration.",
       "category": "storytime",
@@ -21,8 +21,8 @@
         "lat": 26.6428,
         "lng": -81.8723
       },
-      "startsAt": "2026-07-12T15:00:00.000Z",
-      "endsAt": "2026-07-12T16:00:00.000Z",
+      "startsAt": "2026-07-13T15:00:00.000Z",
+      "endsAt": "2026-07-13T16:00:00.000Z",
       "isFree": true,
       "price": "Free",
       "url": "https://www.leelibrary.net/events",
@@ -30,10 +30,10 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.979Z"
+      "scrapedAt": "2026-07-12T01:12:55.108Z"
     },
     {
-      "id": "evt_842ebd0f",
+      "id": "evt_820dee62",
       "title": "Open Play at Cultural Park",
       "description": "Drop-in open play on the toddler playground with bubbles and sidewalk chalk. All ages welcome.",
       "category": "playground",
@@ -48,8 +48,8 @@
         "lat": 26.5629,
         "lng": -81.9495
       },
-      "startsAt": "2026-07-13T14:00:00.000Z",
-      "endsAt": "2026-07-13T16:00:00.000Z",
+      "startsAt": "2026-07-14T14:00:00.000Z",
+      "endsAt": "2026-07-14T16:00:00.000Z",
       "isFree": true,
       "price": "Free",
       "url": "https://www.capecoral.gov/calendar",
@@ -57,10 +57,10 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.982Z"
+      "scrapedAt": "2026-07-12T01:12:55.111Z"
     },
     {
-      "id": "evt_98f8a713",
+      "id": "evt_e20d41ce",
       "title": "Music & Movement for Tots",
       "description": "Shake, sing, and dance with scarves and instruments. Toddlers 1-3 with a caregiver.",
       "category": "music",
@@ -75,8 +75,8 @@
         "lat": 26.5772,
         "lng": -81.8807
       },
-      "startsAt": "2026-07-13T15:00:00.000Z",
-      "endsAt": "2026-07-13T16:00:00.000Z",
+      "startsAt": "2026-07-14T15:00:00.000Z",
+      "endsAt": "2026-07-14T16:00:00.000Z",
       "isFree": true,
       "price": "Free",
       "url": "https://www.leelibrary.net/lakes",
@@ -84,10 +84,10 @@
         "venue",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.985Z"
+      "scrapedAt": "2026-07-12T01:12:55.113Z"
     },
     {
-      "id": "evt_24c76fba",
+      "id": "evt_c67f6349",
       "title": "Baby Lapsit Story Hour",
       "description": "Gentle books and bounces for infants 0-18 months. A cozy introduction to the library for babies.",
       "category": "storytime",
@@ -102,8 +102,8 @@
         "lat": 26.6428,
         "lng": -81.8723
       },
-      "startsAt": "2026-07-14T14:00:00.000Z",
-      "endsAt": "2026-07-14T15:00:00.000Z",
+      "startsAt": "2026-07-15T14:00:00.000Z",
+      "endsAt": "2026-07-15T15:00:00.000Z",
       "isFree": true,
       "price": "Free",
       "url": "https://www.leelibrary.net/events",
@@ -111,10 +111,10 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.979Z"
+      "scrapedAt": "2026-07-12T01:12:55.108Z"
     },
     {
-      "id": "evt_dc77edfe",
+      "id": "evt_88e02d51",
       "title": "Little Scientists: Sensory Lab",
       "description": "A hands-on STEM sensory session designed for toddlers and preschoolers ages 2-5.",
       "category": "class",
@@ -129,8 +129,8 @@
         "lat": 26.6449,
         "lng": -81.8709
       },
-      "startsAt": "2026-07-14T15:00:00.000Z",
-      "endsAt": "2026-07-14T16:00:00.000Z",
+      "startsAt": "2026-07-15T15:00:00.000Z",
+      "endsAt": "2026-07-15T16:00:00.000Z",
       "isFree": false,
       "price": "$12 admission",
       "url": "https://theimag.org/events/",
@@ -138,10 +138,10 @@
         "venue",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.985Z"
+      "scrapedAt": "2026-07-12T01:12:55.112Z"
     },
     {
-      "id": "evt_15456a0b",
+      "id": "evt_864239fa",
       "title": "Butterfly Garden Explorers",
       "description": "A guided outdoor walk through the butterfly house and boardwalk for families with little ones.",
       "category": "outdoor",
@@ -156,8 +156,8 @@
         "lat": 26.5417,
         "lng": -81.9998
       },
-      "startsAt": "2026-07-15T14:00:00.000Z",
-      "endsAt": "2026-07-15T15:00:00.000Z",
+      "startsAt": "2026-07-16T14:00:00.000Z",
+      "endsAt": "2026-07-16T15:00:00.000Z",
       "isFree": true,
       "price": "Free",
       "url": "https://www.capecoral.gov/rotary-park",
@@ -165,10 +165,10 @@
         "community",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.985Z"
+      "scrapedAt": "2026-07-12T01:12:55.113Z"
     },
     {
-      "id": "evt_9163aa6c",
+      "id": "evt_19b48d35",
       "title": "Downtown Family Music Jam",
       "description": "Live kids music and a dance-along in the riverfront park. Free community event for all ages.",
       "category": "music",
@@ -183,8 +183,8 @@
         "lat": 26.6406,
         "lng": -81.8723
       },
-      "startsAt": "2026-07-15T22:00:00.000Z",
-      "endsAt": "2026-07-16T00:00:00.000Z",
+      "startsAt": "2026-07-16T22:00:00.000Z",
+      "endsAt": "2026-07-17T00:00:00.000Z",
       "isFree": true,
       "price": "Free",
       "url": "https://www.cityftmyers.com/calendar.aspx",
@@ -192,10 +192,10 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.984Z"
+      "scrapedAt": "2026-07-12T01:12:55.112Z"
     },
     {
-      "id": "evt_f1d73554",
+      "id": "evt_181a6fab",
       "title": "Family Nature Walk",
       "description": "A ranger-led stroller-friendly nature walk for families with young kids. Outdoor.",
       "category": "outdoor",
@@ -210,18 +210,18 @@
         "lat": 26.5629,
         "lng": -81.9495
       },
-      "startsAt": "2026-07-16T13:00:00.000Z",
-      "endsAt": "2026-07-16T14:00:00.000Z",
+      "startsAt": "2026-07-17T13:00:00.000Z",
+      "endsAt": "2026-07-17T14:00:00.000Z",
       "isFree": true,
       "url": "https://www.capecoral.gov/calendar",
       "tags": [
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.982Z"
+      "scrapedAt": "2026-07-12T01:12:55.111Z"
     },
     {
-      "id": "evt_177a40a0",
+      "id": "evt_7d47dd31",
       "title": "Preschool Craft & Story Morning",
       "description": "Stories followed by a hands-on art craft for pre-K children ages 3-5.",
       "category": "arts-crafts",
@@ -236,18 +236,18 @@
         "lat": 26.6428,
         "lng": -81.8723
       },
-      "startsAt": "2026-07-17T15:00:00.000Z",
-      "endsAt": "2026-07-17T16:00:00.000Z",
+      "startsAt": "2026-07-18T15:00:00.000Z",
+      "endsAt": "2026-07-18T16:00:00.000Z",
       "isFree": true,
       "url": "https://www.leelibrary.net/events",
       "tags": [
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.979Z"
+      "scrapedAt": "2026-07-12T01:12:55.108Z"
     },
     {
-      "id": "evt_7e444526",
+      "id": "evt_02a9bd25",
       "title": "STEAM Storytime",
       "description": "Stories paired with a simple science experiment for preschoolers 3-5.",
       "category": "storytime",
@@ -262,8 +262,8 @@
         "lat": 26.5772,
         "lng": -81.8807
       },
-      "startsAt": "2026-07-18T14:00:00.000Z",
-      "endsAt": "2026-07-18T15:00:00.000Z",
+      "startsAt": "2026-07-19T14:00:00.000Z",
+      "endsAt": "2026-07-19T15:00:00.000Z",
       "isFree": true,
       "price": "Free",
       "url": "https://www.leelibrary.net/lakes",
@@ -271,10 +271,10 @@
         "venue",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.985Z"
+      "scrapedAt": "2026-07-12T01:12:55.113Z"
     },
     {
-      "id": "evt_14f860cf",
+      "id": "evt_5348338f",
       "title": "Saturday Market Kids Corner",
       "description": "Toddler crafts and a petting zoo at the weekly downtown market.",
       "category": "other",
@@ -289,8 +289,8 @@
         "lat": 26.6406,
         "lng": -81.8723
       },
-      "startsAt": "2026-07-19T14:00:00.000Z",
-      "endsAt": "2026-07-19T17:00:00.000Z",
+      "startsAt": "2026-07-20T14:00:00.000Z",
+      "endsAt": "2026-07-20T17:00:00.000Z",
       "isFree": true,
       "price": "Free",
       "url": "https://www.cityftmyers.com/calendar.aspx",
@@ -298,10 +298,10 @@
         "municipal",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.984Z"
+      "scrapedAt": "2026-07-12T01:12:55.112Z"
     },
     {
-      "id": "evt_66c86319",
+      "id": "evt_75f08e56",
       "title": "Dino Discovery Day",
       "description": "Meet life-size dinosaurs and dig for fossils. A kid favorite for ages 3-10.",
       "category": "museum",
@@ -317,8 +317,8 @@
         "lat": 26.6449,
         "lng": -81.8709
       },
-      "startsAt": "2026-07-20T16:00:00.000Z",
-      "endsAt": "2026-07-20T20:00:00.000Z",
+      "startsAt": "2026-07-21T16:00:00.000Z",
+      "endsAt": "2026-07-21T20:00:00.000Z",
       "isFree": false,
       "price": "$15 admission",
       "url": "https://theimag.org/events/",
@@ -326,10 +326,10 @@
         "venue",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.985Z"
+      "scrapedAt": "2026-07-12T01:12:55.112Z"
     },
     {
-      "id": "evt_1b27a272",
+      "id": "evt_72887d05",
       "title": "Nature Tots: Pond Life",
       "description": "Preschool nature program exploring the pond with nets and magnifiers. Ages 3-5.",
       "category": "outdoor",
@@ -344,8 +344,8 @@
         "lat": 26.5417,
         "lng": -81.9998
       },
-      "startsAt": "2026-07-22T15:00:00.000Z",
-      "endsAt": "2026-07-22T16:00:00.000Z",
+      "startsAt": "2026-07-23T15:00:00.000Z",
+      "endsAt": "2026-07-23T16:00:00.000Z",
       "isFree": true,
       "price": "Free",
       "url": "https://www.capecoral.gov/rotary-park",
@@ -353,7 +353,7 @@
         "community",
         "lee-county-fl"
       ],
-      "scrapedAt": "2026-07-11T23:36:20.985Z"
+      "scrapedAt": "2026-07-12T01:12:55.113Z"
     }
   ]
 }
