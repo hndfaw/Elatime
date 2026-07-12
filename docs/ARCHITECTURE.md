@@ -92,9 +92,14 @@ lakes, city tints, and labels — all as SVG paths in the projection's coordinat
 space. Per-region art is keyed by region id with a neutral fallback.
 
 ### 5.3 Interaction (`src/components/MapCanvas.tsx`)
-Wheel/pinch zoom, drag-to-pan (pointer events), marker selection, and a
-golden-angle fan-out so co-located markers stay legible. Category color encodes
-type; the selected marker pulses.
+Wheel/pinch zoom, drag-to-pan (pointer events), and marker selection. Category
+color encodes type; the selected marker pulses.
+
+**Clustering.** Events are grid-clustered (`src/lib/cluster.ts`) so a busy venue
+(e.g. a library branch with dozens of programs) collapses into a single count
+badge rather than a pile of overlapping pins. Clicking a badge expands it into
+its members (golden-angle fan-out); clicking empty canvas collapses. With the
+current real data this turns ~267 markers into ~8 readable clusters.
 
 ### 5.4 Composition (`src/components/MapExplorer.tsx`)
 Owns filter + selection state; composes `Filters`, `EventList`, `EventDetail`,
