@@ -36,15 +36,23 @@ export const AGE_LABELS: Record<AgeBand, string> = {
   "all-ages": "All ages",
 };
 
+// Format event dates/times in the venue's own timezone (Lee County is Eastern),
+// not the viewer's. This keeps the displayed time correct for everyone (a 10am
+// Fort Myers storytime reads "10:00 AM" regardless of where you're viewing) and
+// makes server + client render identical text, avoiding hydration mismatches.
+const EVENT_TZ = "America/New_York";
+
 const DATE_FMT = new Intl.DateTimeFormat("en-US", {
   weekday: "short",
   month: "short",
   day: "numeric",
+  timeZone: EVENT_TZ,
 });
 
 const TIME_FMT = new Intl.DateTimeFormat("en-US", {
   hour: "numeric",
   minute: "2-digit",
+  timeZone: EVENT_TZ,
 });
 
 /** "Sat, Jul 12" style date label. */

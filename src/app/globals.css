@@ -63,6 +63,112 @@ body {
   font-size: 15px;
 }
 
+/* Venue count badge (multi-event place). */
+.ela-venue div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  font-family: var(--font-display), system-ui, sans-serif;
+  border: 3px solid #ffffff;
+  box-shadow: 0 3px 10px rgba(44, 42, 58, 0.3);
+}
+
+/* "You are here" pulsing dot. */
+.ela-me span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 3px;
+  border-radius: 50%;
+  background: #4cc9f0;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 4px rgba(76, 201, 240, 0.35);
+}
+
+/* Themed tooltip naming a place. */
+.leaflet-tooltip.ela-tip {
+  background: #2c2a3a;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 9px;
+  font-size: 12px;
+  line-height: 1.35;
+  box-shadow: 0 6px 18px rgba(44, 42, 58, 0.3);
+  white-space: normal;
+  max-width: 220px;
+}
+.leaflet-tooltip.ela-tip::before {
+  border-top-color: #2c2a3a;
+}
+.ela-tip strong {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+.ela-tip-addr,
+.ela-tip-n {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+}
+.ela-tip-n {
+  margin-top: 2px;
+  color: #ffd166;
+  font-weight: 700;
+}
+
+/* On-map popup listing a venue's events. */
+.ela-popup .leaflet-popup-content-wrapper {
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(44, 42, 58, 0.25);
+}
+.ela-popup .leaflet-popup-content {
+  margin: 10px 12px;
+}
+.ela-pop-head {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  color: #2c2a3a;
+  margin-bottom: 6px;
+}
+.ela-pop-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  width: 100%;
+  padding: 6px;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: left;
+}
+.ela-pop-row:hover {
+  background: #fff6ec;
+}
+.ela-pop-dot {
+  margin-top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+.ela-pop-title {
+  display: block;
+  font-weight: 700;
+  color: #2c2a3a;
+}
+.ela-pop-when {
+  display: block;
+  font-size: 12px;
+  color: #6f6d7e;
+}
+
 /* Soft, unobtrusive scrollbars for the sidebar list. */
 * {
   scrollbar-width: thin;

@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import type { ElaEvent, Region } from "@/lib/types";
+import type { ElaEvent, GeoPoint, Region } from "@/lib/types";
 import { applyFilters, EMPTY_FILTERS, type EventFilters } from "@/lib/filters";
+import { haversineKm } from "@/lib/geo";
 import dynamic from "next/dynamic";
 import { formatAge, isStale, type DatasetStatus } from "@/lib/dataset";
 import EventDetail from "./EventDetail";
@@ -48,6 +49,26 @@ export default function MapExplorer({
   const [filters, setFilters] = useState<EventFilters>(EMPTY_FILTERS);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [mobileView, setMobileView] = useState<MobileView>("map");
+  const [userLocation, setUserLocation] = useState<GeoPoint | null>(null);
+  const [geoState, setGeoState] = useState<"idle" | "locating" | "error">("idle");
+  const [nearestFirst, setNearestFirst] = useState(false);
+
+  const requestLocation = () => {
+    if (typeof navigator === "undefined" || !navigator.geolocation) {
+      setGeoState("error");
+      return;
+    }
+    setGeoState("locating");
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setUserLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude });
+        setGeoState("idle");
+        setNearestFirst(true);
+      },
+      () => setGeoState("error"),
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 60000 }
+    );
+  };
 
   // Freshness is computed after mount (client-only) so it reflects real elapsed
   // time at view — and avoids a server/client hydration mismatch from Date.now.
@@ -64,6 +85,15 @@ export default function MapExplorer({
     () => filtered.find((e) => e.id === selectedId) ?? null,
     [filtered, selectedId]
   );
+
+  // List order: chronological by default, or nearest-first when locating is on.
+  const listed = useMemo(() => {
+    if (!nearestFirst || !userLocation) return filtered;
+    return [...filtered].sort(
+      (a, b) =>
+        haversineKm(userLocation, a.location) - haversineKm(userLocation, b.location)
+    );
+  }, [filtered, nearestFirst, userLocation]);
 
   const hasData = events.length > 0;
 
@@ -159,12 +189,37 @@ export default function MapExplorer({
 
         {hasData ? (
           <>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={requestLocation}
+                className="flex items-center gap-1.5 rounded-full bg-grape px-3 py-1.5 text-sm font-bold text-white shadow-card transition hover:bg-grape/90"
+              >
+                📍 {geoState === "locating" ? "Locating…" : "Near me"}
+              </button>
+              {userLocation && (
+                <label className="flex cursor-pointer items-center gap-1.5 text-xs font-semibold text-ink-soft">
+                  <input
+                    type="checkbox"
+                    checked={nearestFirst}
+                    onChange={(e) => setNearestFirst(e.target.checked)}
+                    className="h-4 w-4 accent-grape"
+                  />
+                  Nearest first
+                </label>
+              )}
+              {geoState === "error" && (
+                <span className="text-xs text-coral">Location unavailable</span>
+              )}
+            </div>
+
             <Filters events={events} filters={filters} onChange={setFilters} />
             <div className="min-h-0 flex-1 overflow-y-auto pr-1">
               <EventList
-                events={filtered}
+                events={listed}
                 selectedId={selectedId}
                 onSelect={selectFromList}
+                userLocation={userLocation}
               />
             </div>
           </>
@@ -195,12 +250,17 @@ export default function MapExplorer({
           mobileView === "map" ? "block" : "hidden"
         }`}
       >
-        <EventDetail event={selected} onClose={() => setSelectedId(null)} />
+        <EventDetail
+          event={selected}
+          onClose={() => setSelectedId(null)}
+          userLocation={userLocation}
+        />
         <RealMap
           region={region}
           events={filtered}
           selectedId={selectedId}
           onSelect={setSelectedId}
+          userLocation={userLocation}
         />
         {!hasData && (
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">

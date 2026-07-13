@@ -4,6 +4,7 @@ import {
   withinBounds,
   haversineKm,
   lngScaleFactor,
+  formatDistanceMiles,
 } from "@/lib/geo";
 import type { GeoBounds } from "@/lib/types";
 
@@ -59,6 +60,12 @@ describe("geo helpers", () => {
     expect(withinBounds({ lat: 26.6, lng: -81.9 }, bounds)).toBe(true);
     expect(withinBounds({ lat: 27.5, lng: -81.9 }, bounds)).toBe(false);
     expect(withinBounds({ lat: 26.6, lng: -80.0 }, bounds)).toBe(false);
+  });
+
+  it("formatDistanceMiles renders friendly labels", () => {
+    expect(formatDistanceMiles(0.05)).toBe("nearby");
+    expect(formatDistanceMiles(3.2)).toBe("2.0 mi"); // ~1.99 mi
+    expect(formatDistanceMiles(40)).toBe("25 mi");
   });
 
   it("haversineKm ~0 for identical points and positive otherwise", () => {

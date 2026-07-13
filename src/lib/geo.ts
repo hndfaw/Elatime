@@ -83,6 +83,14 @@ export function withinBounds(point: GeoPoint, bounds: GeoBounds): boolean {
   );
 }
 
+/** Format a kilometer distance as a friendly US-miles label. */
+export function formatDistanceMiles(km: number): string {
+  const mi = km * 0.621371;
+  if (mi < 0.1) return "nearby";
+  if (mi < 10) return `${mi.toFixed(1)} mi`;
+  return `${Math.round(mi)} mi`;
+}
+
 /** Great-circle distance between two points, in kilometers (Haversine). */
 export function haversineKm(a: GeoPoint, b: GeoPoint): number {
   const R = 6371;
