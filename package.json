@@ -2,7 +2,10 @@
   "name": "elatime",
   "version": "0.1.0",
   "private": true,
-  "description": "Elatime — deploys backend scraping agents to monitor municipal websites, community boards, and venue schedules for kid-friendly and toddler activities, aggregating them onto a custom interactive canvas map.",
+  "description": "Elatime — deploys backend scraping agents to monitor municipal websites, community boards, and venue schedules for kid-friendly and toddler activities, aggregating them onto a real interactive map (Leaflet + OpenStreetMap).",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
