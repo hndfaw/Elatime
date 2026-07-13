@@ -31,21 +31,21 @@ export default function Filters({ events, filters, onChange }: FiltersProps) {
         onChange={(e) => onChange({ ...filters, query: e.target.value })}
         placeholder="Search events, venues…"
         aria-label="Search events"
-        className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white placeholder:text-white/40 focus:border-sky focus:outline-none"
+        className="w-full rounded-full border-2 border-transparent bg-paper px-4 py-2 text-sm text-ink shadow-card placeholder:text-ink-soft/60 focus:border-coral/40 focus:outline-none"
       />
 
-      <label className="flex cursor-pointer items-center gap-2 text-sm text-white/80">
+      <label className="flex cursor-pointer items-center gap-2 text-sm font-medium text-ink">
         <input
           type="checkbox"
           checked={filters.freeOnly}
           onChange={(e) => onChange({ ...filters, freeOnly: e.target.checked })}
-          className="h-4 w-4 accent-mint"
+          className="h-4 w-4 accent-coral"
         />
         Free events only
       </label>
 
       <div>
-        <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-white/50">
+        <h3 className="mb-2 text-xs font-bold uppercase tracking-wide text-ink-soft">
           Category
         </h3>
         <div className="flex flex-wrap gap-2">
@@ -59,18 +59,18 @@ export default function Filters({ events, filters, onChange }: FiltersProps) {
                 onClick={() =>
                   onChange({ ...filters, categories: toggle(filters.categories, c) })
                 }
-                className={`flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs transition ${
+                className={`flex items-center gap-1.5 rounded-full border-2 px-2.5 py-1 text-xs font-semibold shadow-card transition ${
                   active
-                    ? "border-transparent bg-white/15 text-white"
-                    : "border-white/10 text-white/60 hover:bg-white/5"
+                    ? "border-coral bg-coral/10 text-ink"
+                    : "border-transparent bg-paper text-ink-soft hover:border-coral/20"
                 }`}
               >
                 <span
-                  className="inline-block h-2.5 w-2.5 rounded-full"
+                  className="inline-block h-2.5 w-2.5 rounded-full ring-1 ring-white"
                   style={{ backgroundColor: CATEGORY_COLORS[c] }}
                 />
                 {CATEGORY_LABELS[c]}
-                <span className="text-white/40">{counts[c]}</span>
+                <span className="text-ink-soft/60">{counts[c]}</span>
               </button>
             );
           })}
@@ -78,7 +78,7 @@ export default function Filters({ events, filters, onChange }: FiltersProps) {
       </div>
 
       <div>
-        <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-white/50">
+        <h3 className="mb-2 text-xs font-bold uppercase tracking-wide text-ink-soft">
           Age
         </h3>
         <div className="flex flex-wrap gap-2">
@@ -92,10 +92,10 @@ export default function Filters({ events, filters, onChange }: FiltersProps) {
                 onClick={() =>
                   onChange({ ...filters, ageBands: toggle(filters.ageBands, a) })
                 }
-                className={`rounded-full border px-2.5 py-1 text-xs transition ${
+                className={`rounded-full border-2 px-2.5 py-1 text-xs font-semibold shadow-card transition ${
                   active
-                    ? "border-sunshine bg-sunshine/20 text-white"
-                    : "border-white/10 text-white/60 hover:bg-white/5"
+                    ? "border-grape bg-grape/15 text-ink"
+                    : "border-transparent bg-paper text-ink-soft hover:border-grape/30"
                 }`}
               >
                 {AGE_LABELS[a]}

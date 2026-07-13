@@ -9,12 +9,14 @@ import EventDetail from "./EventDetail";
 import EventList from "./EventList";
 import Filters from "./Filters";
 import AboutData from "./AboutData";
+import Mascot from "./Mascot";
 
 // Leaflet touches `window` at import, so the real map is client-only.
 const RealMap = dynamic(() => import("./RealMap"), {
   ssr: false,
   loading: () => (
-    <div className="flex h-full w-full items-center justify-center rounded-2xl bg-canvas text-sm text-white/40">
+    <div className="flex h-full w-full flex-col items-center justify-center gap-2 rounded-3xl bg-paper text-sm text-ink-soft shadow-soft">
+      <Mascot size={44} title="" />
       Loading map…
     </div>
   ),
@@ -71,14 +73,22 @@ export default function MapExplorer({
     setMobileView("map");
   };
 
+  const wordmark = (
+    <span className="font-display font-bold">
+      <span className="text-coral">Ela</span>
+      <span className="text-ink">time</span>
+    </span>
+  );
+
   return (
     <div className="flex h-full flex-col gap-3 lg:grid lg:grid-cols-[360px,1fr] lg:gap-4">
       {/* Compact mobile header (hidden on large screens) */}
-      <div className="flex shrink-0 items-baseline justify-between lg:hidden">
-        <h1 className="font-display text-xl font-bold text-white">
-          <span className="text-coral">Ela</span>time
-        </h1>
-        <p className="text-xs text-white/50">
+      <div className="flex shrink-0 items-center justify-between lg:hidden">
+        <div className="flex items-center gap-2">
+          <Mascot size={30} title="" />
+          <span className="text-xl">{wordmark}</span>
+        </div>
+        <p className="rounded-full bg-paper px-2.5 py-1 text-xs font-semibold text-ink-soft shadow-card">
           {hasData ? `${filtered.length}/${events.length} events` : region.name}
         </p>
       </div>
@@ -87,7 +97,7 @@ export default function MapExplorer({
       <div
         role="tablist"
         aria-label="View"
-        className="flex shrink-0 gap-1 rounded-lg bg-white/5 p-1 lg:hidden"
+        className="flex shrink-0 gap-1 rounded-full bg-paper p-1 shadow-card lg:hidden"
       >
         {(["map", "list"] as MobileView[]).map((view) => (
           <button
@@ -96,8 +106,8 @@ export default function MapExplorer({
             role="tab"
             aria-selected={mobileView === view}
             onClick={() => setMobileView(view)}
-            className={`flex-1 rounded-md py-1.5 text-sm font-medium capitalize transition ${
-              mobileView === view ? "bg-white/15 text-white" : "text-white/60"
+            className={`flex-1 rounded-full py-1.5 text-sm font-semibold capitalize transition ${
+              mobileView === view ? "bg-coral text-white shadow-card" : "text-ink-soft"
             }`}
           >
             {view}
@@ -112,23 +122,26 @@ export default function MapExplorer({
         }`}
       >
         <div className="hidden lg:block">
-          <p className="text-xs uppercase tracking-widest text-white/40">
-            {region.name}, {region.state}
-          </p>
-          <h1 className="font-display text-2xl font-bold text-white">
-            <span className="text-coral">Ela</span>time
-          </h1>
-          <p className="mt-1 text-sm text-white/60">
+          <div className="flex items-center gap-3">
+            <Mascot size={44} title="" />
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-ink-soft">
+                {region.name}, {region.state}
+              </p>
+              <h1 className="font-display text-2xl leading-none">{wordmark}</h1>
+            </div>
+          </div>
+          <p className="mt-2 text-sm text-ink-soft">
             {hasData
               ? `${filtered.length} of ${events.length} kid-friendly events`
-              : "Kid-friendly activities, mapped"}
+              : "Kid-friendly activities, mapped 🎈"}
           </p>
         </div>
 
         {status === "invalid" && (
           <p
             role="alert"
-            className="rounded-lg border border-coral/40 bg-coral/10 px-3 py-2 text-sm text-coral"
+            className="rounded-2xl border border-coral/30 bg-coral/10 px-3 py-2 text-sm font-medium text-coral"
           >
             We couldn’t read the latest event data. Showing an empty map for now —
             the next refresh should restore it.
@@ -138,7 +151,7 @@ export default function MapExplorer({
         {hasData && freshness?.stale && (
           <p
             role="status"
-            className="rounded-lg border border-sunshine/40 bg-sunshine/10 px-3 py-2 text-xs text-sunshine"
+            className="rounded-2xl border border-sunshine/50 bg-sunshine/20 px-3 py-2 text-xs font-medium text-ink"
           >
             ⚠ This data may be out of date (last refreshed {freshness.age}).
           </p>
@@ -156,21 +169,21 @@ export default function MapExplorer({
             </div>
           </>
         ) : (
-          <div className="flex flex-1 flex-col items-center justify-center rounded-xl border border-white/10 bg-white/5 p-6 text-center">
-            <p className="text-3xl" aria-hidden>
-              🗺️
+          <div className="flex flex-1 flex-col items-center justify-center rounded-3xl bg-paper p-6 text-center shadow-soft">
+            <Mascot size={72} title="" />
+            <p className="mt-3 font-display text-lg font-semibold text-ink">
+              No events to show yet
             </p>
-            <p className="mt-2 font-medium text-white">No events to show yet</p>
-            <p className="mt-1 text-sm text-white/50">
+            <p className="mt-1 text-sm text-ink-soft">
               {status === "invalid"
                 ? "The event data couldn’t be loaded."
-                : "The next scrape will populate activities for this area."}
+                : "The next scrape will fill this area with fun things to do."}
             </p>
           </div>
         )}
 
         {hasData && freshness && !freshness.stale && (
-          <p className="text-[11px] text-white/30">Data refreshed {freshness.age}</p>
+          <p className="text-[11px] text-ink-soft/70">Data refreshed {freshness.age}</p>
         )}
 
         <AboutData />
@@ -191,7 +204,7 @@ export default function MapExplorer({
         />
         {!hasData && (
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-            <p className="rounded-full bg-canvas/80 px-4 py-2 text-sm text-white/60 backdrop-blur">
+            <p className="rounded-full bg-paper/90 px-4 py-2 text-sm font-medium text-ink-soft shadow-card backdrop-blur">
               No events plotted yet
             </p>
           </div>

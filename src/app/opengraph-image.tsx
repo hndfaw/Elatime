@@ -16,35 +16,35 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "linear-gradient(135deg, #16283d 0%, #0b1220 70%)",
-          color: "#e6edf3",
+          background: "linear-gradient(135deg, #fff6ec 0%, #ffe9d6 45%, #e8f6fd 100%)",
+          color: "#2c2a3a",
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <div
             style={{
-              width: 64,
-              height: 64,
-              borderRadius: 16,
-              background: "#ff6b6b",
+              width: 84,
+              height: 84,
+              borderRadius: 24,
+              background: "#ffd166",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 40,
+              fontSize: 52,
             }}
           >
             🧸
           </div>
-          <div style={{ display: "flex", fontSize: 68, fontWeight: 800 }}>
+          <div style={{ display: "flex", fontSize: 72, fontWeight: 800 }}>
             <span style={{ color: "#ff6b6b" }}>Ela</span>
             <span>time</span>
           </div>
         </div>
-        <div style={{ marginTop: 28, fontSize: 40, fontWeight: 600, maxWidth: 900 }}>
-          Kid-friendly & toddler activities, mapped.
+        <div style={{ marginTop: 28, fontSize: 42, fontWeight: 700, maxWidth: 900 }}>
+          Kid-friendly & toddler activities, mapped. 🎈
         </div>
-        <div style={{ marginTop: 16, fontSize: 28, color: "#9fb3c8", maxWidth: 900 }}>
+        <div style={{ marginTop: 16, fontSize: 28, color: "#6f6d7e", maxWidth: 900 }}>
           Real events from municipal sites, community boards & venues across Lee
           County, FL — on a custom interactive map.
         </div>

@@ -7,8 +7,8 @@
  */
 export default function AboutData() {
   return (
-    <details className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/60">
-      <summary className="cursor-pointer list-none font-medium text-white/70 marker:content-none">
+    <details className="rounded-2xl bg-paper px-3 py-2 text-xs text-ink-soft shadow-card">
+      <summary className="cursor-pointer list-none font-bold text-ink marker:content-none">
         ⓘ About this data
       </summary>
       <div className="mt-2 space-y-2 leading-relaxed">
@@ -17,16 +17,16 @@ export default function AboutData() {
           County, FL (Cape Coral &amp; Fort Myers).
         </p>
         <p>
-          <span className="text-mint">Live sources:</span> the City of Fort Myers
-          community calendar and the Lee County Library System (storytimes,
-          crafts, and family programs).
+          <span className="font-bold text-emerald-600">Live sources:</span> the
+          City of Fort Myers community calendar and the Lee County Library System
+          (storytimes, crafts, and family programs).
         </p>
         <p>
-          <span className="text-sunshine">Sample data:</span> some listed venues
-          (e.g. IMAG, Cape Coral Parks, Rotary Park) currently show illustrative
-          examples until their live feeds are connected.
+          <span className="font-bold text-amber-600">Sample data:</span> some
+          listed venues (e.g. IMAG, Cape Coral Parks, Rotary Park) currently show
+          illustrative examples until their live feeds are connected.
         </p>
-        <p className="text-white/40">
+        <p className="text-ink-soft/70">
           Always confirm details with the event organizer before heading out.
         </p>
       </div>
