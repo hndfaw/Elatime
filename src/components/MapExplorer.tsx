@@ -3,12 +3,22 @@
 import { useEffect, useMemo, useState } from "react";
 import type { ElaEvent, Region } from "@/lib/types";
 import { applyFilters, EMPTY_FILTERS, type EventFilters } from "@/lib/filters";
+import dynamic from "next/dynamic";
 import { formatAge, isStale, type DatasetStatus } from "@/lib/dataset";
-import MapCanvas from "./MapCanvas";
 import EventDetail from "./EventDetail";
 import EventList from "./EventList";
 import Filters from "./Filters";
 import AboutData from "./AboutData";
+
+// Leaflet touches `window` at import, so the real map is client-only.
+const RealMap = dynamic(() => import("./RealMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-full w-full items-center justify-center rounded-2xl bg-canvas text-sm text-white/40">
+      Loading map…
+    </div>
+  ),
+});
 
 interface MapExplorerProps {
   region: Region;
@@ -173,7 +183,7 @@ export default function MapExplorer({
         }`}
       >
         <EventDetail event={selected} onClose={() => setSelectedId(null)} />
-        <MapCanvas
+        <RealMap
           region={region}
           events={filtered}
           selectedId={selectedId}

@@ -16,6 +16,22 @@ body {
   color: #e6edf3;
 }
 
+/* Leaflet event markers: a colored category dot. */
+.ela-marker span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #0e1726;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Keep the Leaflet container corners rounded to match the app shell. */
+.leaflet-container {
+  background: #0b1522;
+  font-family: inherit;
+}
+
 /* Thin, unobtrusive scrollbars for the sidebar list. */
 * {
   scrollbar-width: thin;
