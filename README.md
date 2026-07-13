@@ -169,12 +169,36 @@ Elatime is modular by construction — **no code changes required**:
 
 ---
 
-## Deployment note
+## Deploying to Vercel
 
-When deploying, set **`NEXT_PUBLIC_SITE_URL`** to the site's origin (e.g.
-`https://elatime.vercel.app`) so OpenGraph/Twitter link-preview image URLs
-resolve absolutely. The favicon (`src/app/icon.svg`) and the generated social
-card (`src/app/opengraph-image.tsx`) need no configuration.
+Elatime is a standard Next.js app and deploys to Vercel with **zero config** —
+no build settings, no serverless tweaks, and **no API keys** (the map uses
+OpenStreetMap tiles). The repo is deploy-ready as-is.
+
+**One-time setup (≈2 minutes):**
+
+1. Go to [vercel.com/new](https://vercel.com/new) and **Import** the `Elatime`
+   GitHub repo.
+2. Framework preset auto-detects **Next.js**. Leave build command
+   (`next build`), output, and install command at their defaults. Click
+   **Deploy**.
+3. (Optional) In **Project → Settings → Environment Variables**, add
+   **`NEXT_PUBLIC_SITE_URL`** = your deployed origin (e.g.
+   `https://elatime.vercel.app`) so OpenGraph/Twitter link-preview images resolve
+   to an absolute URL. See `.env.example`. Redeploy after adding it.
+
+That's it. Every push to `main` triggers a Vercel redeploy, so refreshing the
+data (`npm run refresh` → commit → push) also updates the live site (see
+[Refreshing the data](#refreshing-the-data)).
+
+Notes:
+- **Node**: `engines.node` is pinned to `>=20`; Vercel uses its current default
+  (Node 22).
+- **Fonts**: Fredoka/Nunito Sans are fetched and self-hosted at build via
+  `next/font` — no runtime font requests.
+- **Tiles**: OpenStreetMap's public tile server is fine for an MVP/demo; for
+  production traffic, swap the tile URL in `src/components/RealMap.tsx` for a
+  free-tier provider (Carto, Stadia, MapTiler) per OSM's tile-usage policy.
 
 ## Automation model — no GitHub cron
 
