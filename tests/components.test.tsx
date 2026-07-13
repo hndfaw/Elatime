@@ -72,8 +72,8 @@ describe("MapExplorer", () => {
     );
     // Heading + count line
     expect(screen.getByText(/of 2 kid-friendly events/i)).toBeInTheDocument();
-    // Map is present
-    expect(screen.getByRole("img", { name: /Map of kid-friendly events/i })).toBeInTheDocument();
+    // The map is loaded client-only (Leaflet); the placeholder renders in tests.
+    expect(screen.getByText(/Loading map/i)).toBeInTheDocument();
     // Selecting from the list opens the detail dialog
     fireEvent.click(screen.getByText("Dino Day"));
     expect(screen.getByRole("dialog")).toBeInTheDocument();

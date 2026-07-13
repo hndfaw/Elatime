@@ -28,7 +28,7 @@ Three cooperating layers:
 2. **Data pipeline** (`src/lib/scraper/*`, `scripts/scrape.ts`) — agents that
    fetch, parse, classify, geolocate, de-dupe → `data/events.json`.
 3. **Frontend** (`src/app`, `src/components`, `src/lib`) — a Next.js app that
-   projects the dataset onto a custom SVG canvas map.
+   plots the dataset on a real Leaflet + OpenStreetMap map.
 
 The **Claude Code session** ties them together, running the pipeline and working
 the backlog on request. There is **no scheduled GitHub Actions cron**.
@@ -78,40 +78,35 @@ copy per id and sorts chronologically.
 
 ## 5. Map rendering
 
-### 5.1 Projection (`src/lib/geo.ts`)
-A latitude-corrected equirectangular projection maps lat/lng into the SVG's
-local space. It preserves aspect ratio and centers content, so the bounds'
-center lands at the viewport center. Correcting longitude by
-`cos(centerLat)` keeps horizontal/vertical scale visually consistent at Lee
-County's latitude (~26.6°N).
+### 5.1 Real map (`src/components/RealMap.tsx`)
+Elatime renders a **real interactive map** with **Leaflet** and **OpenStreetMap**
+raster tiles — open-source (Leaflet BSD, OSM data ODbL, markercluster MIT) and
+**key-free**. The map fits to the region's WGS84 bounds; events plot at their
+real scraped coordinates. Leaflet needs the DOM, so `MapExplorer` loads `RealMap`
+via `next/dynamic` with `ssr: false` (a "Loading map…" placeholder renders until
+it hydrates).
 
-### 5.2 Illustrated geometry (`src/lib/mapArt.ts`)
-Rather than map tiles, Elatime draws a **stylized custom map** — landmass,
-coastline, the Caloosahatchee estuary dividing Cape Coral from Fort Myers, inland
-lakes, city tints, and labels — all as SVG paths in the projection's coordinate
-space. Per-region art is keyed by region id with a neutral fallback.
+Markers are category-colored `divIcon`s (no image assets, avoiding the classic
+Leaflet+bundler icon problem). Clicking a marker calls `onSelect`, which drives
+the shared `EventDetail` popover; changing the selection pans the map to it.
 
-### 5.3 Interaction (`src/components/MapCanvas.tsx`)
-Wheel/pinch zoom, drag-to-pan (pointer events), and marker selection. Category
-color encodes type; the selected marker pulses.
+**Clustering.** `leaflet.markercluster` provides proper zoom-aware clustering:
+dense venues collapse into a count badge that splits as you zoom in and
+spiderfies at max zoom. The cluster group is managed imperatively inside a small
+`useMap()` child, since markercluster is an imperative Leaflet plugin.
 
-**Clustering.** Events are grid-clustered (`src/lib/cluster.ts`) so a busy venue
-(e.g. a library branch with dozens of programs) collapses into a single count
-badge rather than a pile of overlapping pins. Clicking a badge expands it into
-its members (golden-angle fan-out); clicking empty canvas collapses. With the
-current real data this turns ~267 markers into ~8 readable clusters.
+`src/lib/geo.ts` retains pure geo helpers (bounds checks + Haversine) used by the
+scraper and the refresh safety gate.
 
-### 5.4 Composition (`src/components/MapExplorer.tsx`)
+### 5.2 Composition (`src/components/MapExplorer.tsx`)
 Owns filter + selection state; composes `Filters`, `EventList`, `EventDetail`,
-and `MapCanvas`. Filtering is pure and lives in `src/lib/filters.ts`.
+and `RealMap`. Filtering is pure and lives in `src/lib/filters.ts`.
 
 **Responsive layout.** On large screens the two panes sit side-by-side
 (`lg:grid-cols-[360px,1fr]`). On phones they stack behind a **Map/List toggle**
-so each pane gets the full viewport instead of the sidebar squeezing the map;
-picking an event from the list jumps back to the map so the pin is visible. The
-map itself scales via an SVG `viewBox` (no fixed pixel width), and the detail
-popover is width-capped to the viewport, so there is no horizontal overflow at
-phone widths.
+so each pane gets the full viewport; picking an event from the list jumps back to
+the map. Leaflet fills its container at any size, so the map is full-bleed on
+phones with no letterboxing.
 
 ## 6. Automation model (no GitHub cron)
 
