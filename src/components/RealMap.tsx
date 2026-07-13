@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, ZoomControl, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet.markercluster";
 import "leaflet/dist/leaflet.css";
@@ -57,6 +57,18 @@ function ClusterLayer({
       maxClusterRadius: 48,
       spiderfyOnMaxZoom: true,
       chunkedLoading: true,
+      // Brand-colored cluster bubbles (see .ela-cluster in globals.css).
+      iconCreateFunction: (cluster) => {
+        const count = cluster.getChildCount();
+        const size = count < 10 ? 36 : count < 50 ? 44 : 54;
+        const tier =
+          count < 10 ? "ela-cluster-sm" : count < 50 ? "ela-cluster-md" : "ela-cluster-lg";
+        return L.divIcon({
+          html: `<div>${count}</div>`,
+          className: `ela-cluster ${tier}`,
+          iconSize: L.point(size, size),
+        });
+      },
     });
 
     for (const event of events) {
@@ -105,9 +117,12 @@ export default function RealMap({ region, events, selectedId, onSelect }: RealMa
     <MapContainer
       bounds={regionBounds(region)}
       scrollWheelZoom
-      className="h-full w-full rounded-2xl"
+      zoomControl={false}
+      className="h-full w-full rounded-3xl"
       aria-label={`Map of kid-friendly events in ${region.name}, ${region.state}`}
     >
+      {/* Top-right so it never collides with the event detail popover. */}
+      <ZoomControl position="topright" />
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -22,12 +22,12 @@ export default function EventDetail({ event, onClose }: EventDetailProps) {
     <div
       role="dialog"
       aria-label={`Details for ${event.title}`}
-      className="pointer-events-auto absolute left-3 top-3 z-10 w-[min(340px,calc(100%-1.5rem))] rounded-2xl border border-white/10 bg-canvas/95 p-4 shadow-2xl backdrop-blur"
+      className="pointer-events-auto absolute left-3 top-3 z-[1000] w-[min(340px,calc(100%-1.5rem))] rounded-3xl border-2 border-white bg-paper p-4 shadow-soft"
     >
       <div className="flex items-start justify-between gap-2">
         <span
-          className="rounded-full px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide"
-          style={{ backgroundColor: `${color}22`, color }}
+          className="rounded-full px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide"
+          style={{ backgroundColor: `${color}26`, color: "#2c2a3a" }}
         >
           {CATEGORY_LABELS[event.category]}
         </span>
@@ -35,42 +35,44 @@ export default function EventDetail({ event, onClose }: EventDetailProps) {
           type="button"
           onClick={onClose}
           aria-label="Close details"
-          className="rounded p-0.5 text-white/50 hover:text-white"
+          className="rounded-full p-0.5 text-ink-soft hover:text-ink"
         >
           ✕
         </button>
       </div>
 
-      <h2 className="mt-2 text-lg font-semibold leading-snug text-white">
+      <h2 className="mt-2 font-display text-lg font-semibold leading-snug text-ink">
         {event.title}
       </h2>
-      <p className="mt-1 text-sm text-sky">{formatWhen(event.startsAt, event.endsAt)}</p>
+      <p className="mt-1 text-sm font-semibold text-coral">
+        {formatWhen(event.startsAt, event.endsAt)}
+      </p>
 
       {event.description && (
-        <p className="mt-2 text-sm leading-relaxed text-white/70">
+        <p className="mt-2 text-sm leading-relaxed text-ink-soft">
           {event.description}
         </p>
       )}
 
       <dl className="mt-3 space-y-1.5 text-sm">
         <div className="flex gap-2">
-          <dt className="w-16 shrink-0 text-white/40">Where</dt>
-          <dd className="text-white/80">
+          <dt className="w-16 shrink-0 font-semibold text-ink-soft/70">Where</dt>
+          <dd className="text-ink">
             {event.venueName}
             {event.address && (
-              <span className="block text-xs text-white/50">{event.address}</span>
+              <span className="block text-xs text-ink-soft">{event.address}</span>
             )}
           </dd>
         </div>
         <div className="flex gap-2">
-          <dt className="w-16 shrink-0 text-white/40">Ages</dt>
-          <dd className="text-white/80">
+          <dt className="w-16 shrink-0 font-semibold text-ink-soft/70">Ages</dt>
+          <dd className="text-ink">
             {event.ageBands.map((b) => AGE_LABELS[b]).join(", ")}
           </dd>
         </div>
         <div className="flex gap-2">
-          <dt className="w-16 shrink-0 text-white/40">Cost</dt>
-          <dd className="text-white/80">
+          <dt className="w-16 shrink-0 font-semibold text-ink-soft/70">Cost</dt>
+          <dd className="text-ink">
             {event.isFree ? "Free" : event.price ?? "Ticketed"}
           </dd>
         </div>
@@ -81,7 +83,7 @@ export default function EventDetail({ event, onClose }: EventDetailProps) {
           href={event.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-3 inline-flex items-center gap-1 rounded-lg bg-coral px-3 py-1.5 text-sm font-medium text-white hover:bg-coral/90"
+          className="mt-3 inline-flex items-center gap-1 rounded-full bg-coral px-4 py-2 text-sm font-bold text-white shadow-card transition hover:bg-coral/90"
         >
           View source ↗
         </a>
