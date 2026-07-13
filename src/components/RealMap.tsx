@@ -7,14 +7,16 @@ import "leaflet.markercluster";
 import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 import "leaflet.markercluster/dist/MarkerCluster.Default.css";
-import type { ElaEvent, Region } from "@/lib/types";
-import { CATEGORY_COLORS, CATEGORY_LABELS } from "@/lib/format";
+import type { ElaEvent, GeoPoint, Region } from "@/lib/types";
+import { CATEGORY_COLORS, formatWhen } from "@/lib/format";
+import { groupByVenue, dominantCategory, type Venue } from "@/lib/venues";
 
 interface RealMapProps {
   region: Region;
   events: ElaEvent[];
   selectedId?: string | null;
   onSelect?: (id: string | null) => void;
+  userLocation?: GeoPoint | null;
 }
 
 /** [south, west] – [north, east] bounds for Leaflet from a region. */
@@ -26,23 +28,64 @@ function regionBounds(region: Region): L.LatLngBoundsExpression {
   ];
 }
 
-/** A colored teardrop divIcon per category (avoids Leaflet's image-asset icons). */
-function markerIcon(event: ElaEvent): L.DivIcon {
-  const color = CATEGORY_COLORS[event.category] ?? "#9aa5b1";
+/** Minimal HTML-escape for scraped text placed into marker tooltips/popups. */
+function esc(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+/** A per-venue icon: a category dot for single events, a count badge otherwise. */
+function venueIcon(venue: Venue): L.DivIcon {
+  if (venue.events.length === 1) {
+    const color = CATEGORY_COLORS[venue.events[0].category] ?? "#9aa5b1";
+    return L.divIcon({
+      className: "ela-marker",
+      html: `<span style="background:${color}"></span>`,
+      iconSize: [18, 18],
+      iconAnchor: [9, 9],
+    });
+  }
+  const color = CATEGORY_COLORS[dominantCategory(venue.events)] ?? "#ff6b6b";
+  const n = venue.events.length;
+  const size = n < 10 ? 30 : n < 50 ? 38 : 46;
   return L.divIcon({
-    className: "ela-marker",
-    html: `<span style="background:${color}"></span>`,
-    iconSize: [18, 18],
-    iconAnchor: [9, 9],
+    className: "ela-venue",
+    html: `<div style="background:${color}">${n}</div>`,
+    iconSize: L.point(size, size),
+    iconAnchor: L.point(size / 2, size / 2),
   });
 }
 
+function tooltipHtml(venue: Venue): string {
+  const n = venue.events.length;
+  const addr = venue.address ? `<span class="ela-tip-addr">${esc(venue.address)}</span>` : "";
+  return `<strong>${esc(venue.label)}</strong>${addr}<span class="ela-tip-n">${n} event${n === 1 ? "" : "s"}</span>`;
+}
+
+function popupHtml(venue: Venue): string {
+  const rows = venue.events
+    .map((e) => {
+      const color = CATEGORY_COLORS[e.category] ?? "#9aa5b1";
+      return `<button type="button" data-eid="${esc(e.id)}" class="ela-pop-row">
+        <span class="ela-pop-dot" style="background:${color}"></span>
+        <span class="ela-pop-body">
+          <span class="ela-pop-title">${esc(e.title)}</span>
+          <span class="ela-pop-when">${esc(formatWhen(e.startsAt, e.endsAt))}</span>
+        </span></button>`;
+    })
+    .join("");
+  return `<div class="ela-pop"><div class="ela-pop-head">${esc(venue.label)}</div>${rows}</div>`;
+}
+
 /**
- * Imperatively manages a leaflet.markercluster group of event markers. Kept
- * outside React's render tree because markercluster is imperative; rebuilt when
- * the event set changes.
+ * Imperatively manages a leaflet.markercluster group of VENUE markers (one pin
+ * per physical place). Tooltips name the place + address; popups list that
+ * place's events. Rebuilt when the event set changes.
  */
-function ClusterLayer({
+function VenueLayer({
   events,
   onSelect,
 }: {
@@ -54,12 +97,14 @@ function ClusterLayer({
   useEffect(() => {
     const group = L.markerClusterGroup({
       showCoverageOnHover: false,
-      maxClusterRadius: 48,
-      spiderfyOnMaxZoom: true,
+      maxClusterRadius: 46,
+      spiderfyOnMaxZoom: false,
       chunkedLoading: true,
-      // Brand-colored cluster bubbles (see .ela-cluster in globals.css).
+      // Cluster badge sums the events across the venues it contains.
       iconCreateFunction: (cluster) => {
-        const count = cluster.getChildCount();
+        const count = cluster
+          .getAllChildMarkers()
+          .reduce((sum, m) => sum + ((m.options as { eventCount?: number }).eventCount ?? 1), 0);
         const size = count < 10 ? 36 : count < 50 ? 44 : 54;
         const tier =
           count < 10 ? "ela-cluster-sm" : count < 50 ? "ela-cluster-md" : "ela-cluster-lg";
@@ -71,13 +116,33 @@ function ClusterLayer({
       },
     });
 
-    for (const event of events) {
-      const marker = L.marker([event.location.lat, event.location.lng], {
-        icon: markerIcon(event),
-        title: `${event.title} — ${CATEGORY_LABELS[event.category]}`,
-        alt: event.title,
+    for (const venue of groupByVenue(events)) {
+      const marker = L.marker([venue.location.lat, venue.location.lng], {
+        icon: venueIcon(venue),
+        eventCount: venue.events.length,
+      } as L.MarkerOptions & { eventCount: number });
+
+      marker.bindTooltip(tooltipHtml(venue), {
+        direction: "top",
+        offset: [0, -8],
+        className: "ela-tip",
+        opacity: 1,
       });
-      marker.on("click", () => onSelect?.(event.id));
+
+      if (venue.events.length === 1) {
+        marker.on("click", () => onSelect?.(venue.events[0].id));
+      } else {
+        marker.bindPopup(popupHtml(venue), { className: "ela-popup", maxHeight: 240, minWidth: 230 });
+        marker.on("popupopen", (e) => {
+          const el = e.popup.getElement();
+          el?.querySelectorAll<HTMLElement>("[data-eid]").forEach((node) => {
+            node.addEventListener("click", () => {
+              onSelect?.(node.getAttribute("data-eid"));
+              marker.closePopup();
+            });
+          });
+        });
+      }
       group.addLayer(marker);
     }
 
@@ -108,11 +173,40 @@ function PanToSelected({
   return null;
 }
 
+/** A "you are here" marker + one-time recenter when the user shares location. */
+function UserLayer({ userLocation }: { userLocation?: GeoPoint | null }) {
+  const map = useMap();
+  useEffect(() => {
+    if (!userLocation) return;
+    const marker = L.marker([userLocation.lat, userLocation.lng], {
+      icon: L.divIcon({ className: "ela-me", html: "<span></span>", iconSize: [22, 22], iconAnchor: [11, 11] }),
+      title: "You are here",
+      interactive: false,
+      keyboard: false,
+    });
+    marker.addTo(map);
+    map.setView([userLocation.lat, userLocation.lng], Math.max(map.getZoom(), 11), {
+      animate: true,
+    });
+    return () => {
+      map.removeLayer(marker);
+    };
+  }, [map, userLocation]);
+  return null;
+}
+
 /**
- * Real interactive map: OpenStreetMap raster tiles via Leaflet, with
- * zoom-aware marker clustering. Open-source and key-free.
+ * Real interactive map: OpenStreetMap raster tiles via Leaflet, with venue-level
+ * markers (named places), clustering, and an optional "you are here" pin.
+ * Open-source and key-free.
  */
-export default function RealMap({ region, events, selectedId, onSelect }: RealMapProps) {
+export default function RealMap({
+  region,
+  events,
+  selectedId,
+  onSelect,
+  userLocation,
+}: RealMapProps) {
   return (
     <MapContainer
       bounds={regionBounds(region)}
@@ -128,8 +222,9 @@ export default function RealMap({ region, events, selectedId, onSelect }: RealMa
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         maxZoom={19}
       />
-      <ClusterLayer events={events} onSelect={onSelect} />
+      <VenueLayer events={events} onSelect={onSelect} />
       <PanToSelected events={events} selectedId={selectedId} />
+      <UserLayer userLocation={userLocation} />
     </MapContainer>
   );
 }

@@ -1,16 +1,23 @@
 "use client";
 
-import type { ElaEvent } from "@/lib/types";
+import type { ElaEvent, GeoPoint } from "@/lib/types";
 import { CATEGORY_COLORS, CATEGORY_LABELS, formatWhen } from "@/lib/format";
+import { haversineKm, formatDistanceMiles } from "@/lib/geo";
 
 interface EventListProps {
   events: ElaEvent[];
   selectedId?: string | null;
   onSelect?: (id: string) => void;
+  userLocation?: GeoPoint | null;
 }
 
 /** Scrollable chronological list of events, synced with the map selection. */
-export default function EventList({ events, selectedId, onSelect }: EventListProps) {
+export default function EventList({
+  events,
+  selectedId,
+  onSelect,
+  userLocation,
+}: EventListProps) {
   if (events.length === 0) {
     return (
       <p className="px-1 py-8 text-center text-sm text-ink-soft">
@@ -56,6 +63,11 @@ export default function EventList({ events, selectedId, onSelect }: EventListPro
                     {event.isFree && (
                       <span className="rounded-full bg-mint/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-emerald-700">
                         Free
+                      </span>
+                    )}
+                    {userLocation && (
+                      <span className="rounded-full bg-sky/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-sky">
+                        📍 {formatDistanceMiles(haversineKm(userLocation, event.location))}
                       </span>
                     )}
                   </div>

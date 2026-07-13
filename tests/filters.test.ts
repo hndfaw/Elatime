@@ -4,6 +4,7 @@ import {
   matchesFilters,
   toggle,
   categoryCounts,
+  dateRangePreset,
   EMPTY_FILTERS,
 } from "@/lib/filters";
 import type { ElaEvent } from "@/lib/types";
@@ -61,6 +62,40 @@ describe("matchesFilters", () => {
     const f = { ...EMPTY_FILTERS, after: "2026-07-14T00:00:00.000Z" };
     expect(matchesFilters(sample[1], f)).toBe(true);
     expect(matchesFilters(sample[0], f)).toBe(false);
+  });
+  it("filters by before timestamp (exclusive)", () => {
+    const f = { ...EMPTY_FILTERS, before: "2026-07-14T00:00:00.000Z" };
+    expect(matchesFilters(sample[0], f)).toBe(true); // Jul 12
+    expect(matchesFilters(sample[1], f)).toBe(false); // Jul 15
+  });
+});
+
+describe("dateRangePreset", () => {
+  const now = new Date("2026-07-15T18:00:00"); // a Wednesday, local time
+
+  it("returns an empty range for 'all'", () => {
+    expect(dateRangePreset("all", now)).toEqual({});
+  });
+  it("'today' spans exactly 24h and contains now", () => {
+    const { after, before } = dateRangePreset("today", now);
+    expect(after && before).toBeTruthy();
+    const span = Date.parse(before!) - Date.parse(after!);
+    expect(span).toBe(24 * 3600 * 1000);
+    expect(Date.parse(after!)).toBeLessThanOrEqual(now.getTime());
+    expect(Date.parse(before!)).toBeGreaterThan(now.getTime());
+  });
+  it("'week' spans ~7 days from now", () => {
+    const { after, before } = dateRangePreset("week", now);
+    const days = (Date.parse(before!) - Date.parse(after!)) / (24 * 3600 * 1000);
+    expect(days).toBeGreaterThan(6); // now → midnight 7 days out
+    expect(days).toBeLessThanOrEqual(7);
+  });
+  it("'weekend' ends at Monday and starts no earlier than now", () => {
+    const { after, before } = dateRangePreset("weekend", now);
+    expect(after && before).toBeTruthy();
+    expect(Date.parse(before!)).toBeGreaterThan(Date.parse(after!));
+    // Upcoming weekend from a Wednesday -> Saturday start, Monday end.
+    expect(new Date(before!).getDay()).toBe(1); // Monday
   });
 });
 

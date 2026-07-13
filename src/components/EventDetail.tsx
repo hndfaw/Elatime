@@ -1,22 +1,28 @@
 "use client";
 
-import type { ElaEvent } from "@/lib/types";
+import type { ElaEvent, GeoPoint } from "@/lib/types";
 import {
   AGE_LABELS,
   CATEGORY_COLORS,
   CATEGORY_LABELS,
   formatWhen,
 } from "@/lib/format";
+import { directionsUrl } from "@/lib/directions";
+import { haversineKm, formatDistanceMiles } from "@/lib/geo";
 
 interface EventDetailProps {
   event: ElaEvent | null;
   onClose: () => void;
+  userLocation?: GeoPoint | null;
 }
 
 /** Detail popover for the selected event. Renders nothing when unselected. */
-export default function EventDetail({ event, onClose }: EventDetailProps) {
+export default function EventDetail({ event, onClose, userLocation }: EventDetailProps) {
   if (!event) return null;
   const color = CATEGORY_COLORS[event.category];
+  const distance = userLocation
+    ? formatDistanceMiles(haversineKm(userLocation, event.location))
+    : null;
 
   return (
     <div
@@ -62,6 +68,11 @@ export default function EventDetail({ event, onClose }: EventDetailProps) {
             {event.address && (
               <span className="block text-xs text-ink-soft">{event.address}</span>
             )}
+            {distance && (
+              <span className="mt-0.5 block text-xs font-semibold text-sky">
+                📍 {distance} away
+              </span>
+            )}
           </dd>
         </div>
         <div className="flex gap-2">
@@ -78,16 +89,26 @@ export default function EventDetail({ event, onClose }: EventDetailProps) {
         </div>
       </dl>
 
-      {event.url && (
+      <div className="mt-3 flex flex-wrap gap-2">
         <a
-          href={event.url}
+          href={directionsUrl(event)}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-3 inline-flex items-center gap-1 rounded-full bg-coral px-4 py-2 text-sm font-bold text-white shadow-card transition hover:bg-coral/90"
+          className="inline-flex items-center gap-1 rounded-full bg-coral px-4 py-2 text-sm font-bold text-white shadow-card transition hover:bg-coral/90"
         >
-          View source ↗
+          Get directions ↗
         </a>
-      )}
+        {event.url && (
+          <a
+            href={event.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 rounded-full border-2 border-coral/30 px-4 py-2 text-sm font-bold text-coral transition hover:border-coral/60"
+          >
+            View source ↗
+          </a>
+        )}
+      </div>
     </div>
   );
 }
