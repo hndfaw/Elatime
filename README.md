@@ -13,6 +13,26 @@ boundaries by editing a single config file.
 
 ---
 
+## Screenshots
+
+<p align="center">
+  <img src="docs/screenshots/hero.png" alt="Elatime — kid-friendly events clustered on an interactive map of Lee County, FL, with search, date filters, and category filters" width="100%">
+</p>
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/event-detail.png" alt="Event detail card with when, where, age, cost, and a Get directions button"><br><em>Event detail — when, where, ages, cost, and one-tap directions.</em></td>
+    <td width="50%"><img src="docs/screenshots/venue-popup.png" alt="On-map popup listing all the events at a single venue"><br><em>Named venue pins — click a place to see everything happening there.</em></td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="docs/screenshots/mobile.png" alt="Elatime on a phone: a Map/List toggle over a full-bleed map" width="300"><br>
+  <em>Mobile — full-bleed map with a Map/List toggle.</em>
+</p>
+
+---
+
 ## What it does
 
 - **Scraping agents** fetch events from municipal calendars, community boards,
